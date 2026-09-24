@@ -37,20 +37,20 @@ The original redacted evidence crops are in [assets/screenshots](../assets/scree
 
 ## Copy-ready LinkedIn post (English)
 
-> **A EUR 6,000 pilot went to Sales. A EUR 120,000 rollout went to human review.**
+> **The EUR 120,000 request got no score. The EUR 6,000 pilot went to Sales.**
 >
-> I built a B2B lead qualification demo in n8n to make the next action clear when an enquiry mentions a budget, a deadline and a lot of possible scope.
+> I built this B2B lead qualification demo to answer a simple question: **Who should handle an enquiry next, and why?**
 >
-> The flow is: **enquiry → JEV through Vercel AI Gateway → explicit business rules → Google Sheets → approved Slack notification.**
+> The n8n flow is: **enquiry → JEV through Vercel AI Gateway → explicit business rules → Google Sheets → approved Slack notification.**
 >
-> JEV interprets the current request through nine structured questions. Is this a new paid project or a support issue? Is the customer asking for one narrow pilot or a multi-country rollout? Is funding reported approved for the work requested *now*? Code validates those answers, then fixed rules choose the route and decide whether a priority score is appropriate.
+> JEV interprets the work requested *now* through nine structured questions. Is it a new purchase or an existing service issue? A narrow pilot or a multi-country rollout? Is funding for this exact phase reported as approved? Code validates the answers; fixed rules choose the next team and decide whether a priority score is appropriate.
 >
 > Three synthetic cases show why that split matters:
-> - A reported-funded EUR 6,000 pilot → personal Sales follow-up, priority 93.02/100.
+> - A EUR 6,000 pilot with customer-reported funding approval → personal Sales follow-up, priority 93.02/100.
 > - A EUR 120,000 rollout across nine offices → human scope review, **no score yet**.
 > - A broken workflow under an existing service agreement → Support, **not a sales lead**.
 >
-> Five fictional enquiries ran through the connected n8n/JEV/Sheets path. I then used a separate, approval-gated n8n sender to deliver five readable case summaries and one recap to a private Slack demo channel. The intake itself stays preview-only, and the workflow remains inactive.
+> I ran five fictional enquiries through the connected n8n/JEV/Sheets path. A separate, approval-gated n8n sender delivered five readable case summaries and a recap to a private Slack demo channel. The intake itself stays preview-only, and the workflow remains inactive.
 >
 > The screenshots are from the real tools; the lead data is synthetic. The score is a business priority, not a prediction that someone will buy. The tests, partial live evaluation and remaining operational limits are documented here: https://github.com/Mvstnz/jev-n8n-b2b-lead-qualification
 >
