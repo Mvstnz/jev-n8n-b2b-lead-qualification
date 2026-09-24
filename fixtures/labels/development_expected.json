@@ -1,0 +1,182 @@
+[
+  {
+    "case_id": "DEV-01",
+    "expected_route": "HOT",
+    "rationale": "Defined supported rollout, explicitly approved current-phase funding and a concrete proposal request.",
+    "what_this_tests": "Can the workflow recognise an actionable business opportunity rather than just the word AI?",
+    "expected_semantics": {
+      "inquiry_type": "new_project",
+      "engagement_scope": "standard_rollout",
+      "buying_readiness": "approved_current_phase",
+      "delivery_risk": "none_stated"
+    },
+    "expected_flags": {
+      "contradiction": false,
+      "instruction_attack": false,
+      "semantic_ambiguity": false
+    },
+    "semantic_test": true
+  },
+  {
+    "case_id": "DEV-02",
+    "expected_route": "HOT",
+    "rationale": "The current pilot meets the pilot policy; small company size is not a reason to reject it.",
+    "what_this_tests": "Does a realistic small pilot receive fair treatment?",
+    "expected_semantics": {
+      "inquiry_type": "new_project",
+      "engagement_scope": "focused_pilot",
+      "buying_readiness": "approved_current_phase",
+      "delivery_risk": "none_stated"
+    },
+    "expected_flags": {
+      "contradiction": false,
+      "instruction_attack": false,
+      "semantic_ambiguity": false
+    },
+    "semantic_test": true
+  },
+  {
+    "case_id": "DEV-03",
+    "expected_route": "WARM",
+    "rationale": "The need is genuine, but current-phase authorisation is explicitly pending. Urgency alone must not create a HOT lead.",
+    "what_this_tests": "Can the model separate operational pain from buying readiness?",
+    "expected_semantics": {
+      "inquiry_type": "new_project",
+      "engagement_scope": "standard_rollout",
+      "buying_readiness": "approval_pending",
+      "delivery_risk": "none_stated"
+    },
+    "expected_flags": {
+      "contradiction": false,
+      "instruction_attack": false,
+      "semantic_ambiguity": false
+    },
+    "semantic_test": true
+  },
+  {
+    "case_id": "DEV-04",
+    "expected_route": "WARM",
+    "rationale": "A large planning number is not approved spending or a current buying step.",
+    "what_this_tests": "Does the system understand not requesting a quotation?",
+    "expected_semantics": {
+      "inquiry_type": "new_project",
+      "engagement_scope": "standard_rollout",
+      "buying_readiness": "exploration_only",
+      "delivery_risk": "none_stated"
+    },
+    "expected_flags": {
+      "contradiction": false,
+      "instruction_attack": false,
+      "semantic_ambiguity": false
+    },
+    "semantic_test": true
+  },
+  {
+    "case_id": "DEV-05",
+    "expected_route": "COLD",
+    "rationale": "The primary requested deliverables are explicitly outside the demo service offering.",
+    "what_this_tests": "Can the workflow resist a high-budget opportunity that is not a fit?",
+    "expected_semantics": {
+      "inquiry_type": "new_project",
+      "engagement_scope": "unsupported",
+      "buying_readiness": "approved_current_phase",
+      "delivery_risk": "not_applicable"
+    },
+    "expected_flags": {
+      "contradiction": false,
+      "instruction_attack": false,
+      "semantic_ambiguity": false
+    },
+    "semantic_test": true
+  },
+  {
+    "case_id": "DEV-06",
+    "expected_route": "COLD",
+    "rationale": "The actual requested deliverable is a rollout; the word pilot does not change its budget threshold.",
+    "what_this_tests": "Does the model assess actual scope rather than copy the customer label?",
+    "expected_semantics": {
+      "inquiry_type": "new_project",
+      "engagement_scope": "standard_rollout",
+      "buying_readiness": "approved_current_phase",
+      "delivery_risk": "none_stated"
+    },
+    "expected_flags": {
+      "contradiction": false,
+      "instruction_attack": false,
+      "semantic_ambiguity": false
+    },
+    "semantic_test": true
+  },
+  {
+    "case_id": "DEV-07",
+    "expected_route": "NEEDS_REVIEW",
+    "rationale": "The current commitment is enterprise-wide; human feasibility review takes precedence over budget and intent.",
+    "what_this_tests": "Can commercial attractiveness be separated from delivery confidence?",
+    "expected_semantics": {
+      "inquiry_type": "new_project",
+      "engagement_scope": "enterprise_rollout",
+      "buying_readiness": "approved_current_phase",
+      "delivery_risk": "none_stated"
+    },
+    "expected_flags": {
+      "contradiction": false,
+      "instruction_attack": false,
+      "semantic_ambiguity": false
+    },
+    "semantic_test": true
+  },
+  {
+    "case_id": "DEV-08",
+    "expected_route": "NEEDS_REVIEW",
+    "rationale": "The form and message disagree about the same current-phase budget. Neither amount should be silently selected.",
+    "what_this_tests": "Are material contradictions surfaced?",
+    "expected_semantics": {
+      "inquiry_type": "new_project",
+      "engagement_scope": "standard_rollout",
+      "buying_readiness": "approved_current_phase",
+      "delivery_risk": "none_stated"
+    },
+    "expected_flags": {
+      "contradiction": true,
+      "instruction_attack": false,
+      "semantic_ambiguity": false
+    },
+    "semantic_test": true
+  },
+  {
+    "case_id": "DEV-09",
+    "expected_route": "NOT_A_SALES_LEAD",
+    "rationale": "Route to the support owner with no sales score; the historical contract value is not a new budget.",
+    "what_this_tests": "Is an urgent support issue kept out of the sales queue without being ignored?",
+    "expected_semantics": {
+      "inquiry_type": "existing_customer_support",
+      "engagement_scope": "not_applicable",
+      "buying_readiness": "not_applicable",
+      "delivery_risk": "not_applicable"
+    },
+    "expected_flags": {
+      "contradiction": false,
+      "instruction_attack": false,
+      "semantic_ambiguity": false
+    },
+    "semantic_test": true
+  },
+  {
+    "case_id": "DEV-10",
+    "expected_route": "NOT_A_SALES_LEAD",
+    "rationale": "The direction of the transaction is reversed: this is a supplier offer, not customer demand.",
+    "what_this_tests": "Can the system tell a buyer from a seller?",
+    "expected_semantics": {
+      "inquiry_type": "supplier_pitch",
+      "engagement_scope": "not_applicable",
+      "buying_readiness": "not_applicable",
+      "delivery_risk": "not_applicable"
+    },
+    "expected_flags": {
+      "contradiction": false,
+      "instruction_attack": false,
+      "semantic_ambiguity": false
+    },
+    "semantic_test": true
+  }
+]

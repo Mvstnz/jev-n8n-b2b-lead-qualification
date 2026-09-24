@@ -1,0 +1,152 @@
+[
+  {
+    "case_id": "DEV-01",
+    "title": "Funded reporting rollout",
+    "input": {
+      "company_name": "Alder Manufacturing",
+      "contact_name": "Demo Contact",
+      "contact_email": "dev-01@example.com",
+      "contact_role": "Project coordinator",
+      "company_size": 120,
+      "budget_eur": 30000,
+      "currency": "EUR",
+      "target_delivery_days_from_reference": 60,
+      "message": "Our operations team spends 12 hours each week combining production and order reports from existing systems. We need automatic collection, an exception list and a daily management report for one department. EUR 30,000 is approved for this rollout and the operations director has authorised procurement. Please prepare a proposal for delivery in 60 days."
+    }
+  },
+  {
+    "case_id": "DEV-02",
+    "title": "Small paid pilot, real buying intent",
+    "input": {
+      "company_name": "Beacon Services",
+      "contact_name": "Demo Contact",
+      "contact_email": "dev-02@example.com",
+      "contact_role": "Project coordinator",
+      "company_size": 12,
+      "budget_eur": 6000,
+      "currency": "EUR",
+      "target_delivery_days_from_reference": 30,
+      "message": "We are a 12-person service company and sometimes forget to follow up quotations. We want one pilot: connect our existing CRM to email reminders for one sales team. EUR 6,000 has been approved for this pilot, to be delivered in 30 days. Please quote the paid pilot; a wider rollout is not part of this purchase."
+    }
+  },
+  {
+    "case_id": "DEV-03",
+    "title": "Urgent, but not authorised",
+    "input": {
+      "company_name": "Cedar Distribution",
+      "contact_name": "Demo Contact",
+      "contact_email": "dev-03@example.com",
+      "contact_role": "Project coordinator",
+      "company_size": 120,
+      "budget_eur": 40000,
+      "currency": "EUR",
+      "target_delivery_days_from_reference": 60,
+      "message": "Missed order-status updates are causing complaints. We would like an automated update and escalation workflow for customer service in 60 days. EUR 40,000 is our planning estimate, not an approved budget. The board has not approved this project; its funding meeting is in 45 days. Can you draft a proposal for that decision?"
+    }
+  },
+  {
+    "case_id": "DEV-04",
+    "title": "Large budget, no buying initiative",
+    "input": {
+      "company_name": "Delta Retail Group",
+      "contact_name": "Demo Contact",
+      "contact_email": "dev-04@example.com",
+      "contact_role": "Project coordinator",
+      "company_size": 2800,
+      "budget_eur": 250000,
+      "currency": "EUR",
+      "target_delivery_days_from_reference": 270,
+      "message": "Our strategy team is researching ways to automate weekly stock reporting. EUR 250,000 is an early planning envelope, not approved funding. We are collecting examples for next year, not requesting a quotation or selecting a supplier. Any departmental rollout would be at least 270 days away."
+    }
+  },
+  {
+    "case_id": "DEV-05",
+    "title": "High value, wrong service",
+    "input": {
+      "company_name": "Elm Logistics",
+      "contact_name": "Demo Contact",
+      "contact_email": "dev-05@example.com",
+      "contact_role": "Project coordinator",
+      "company_size": 120,
+      "budget_eur": 200000,
+      "currency": "EUR",
+      "target_delivery_days_from_reference": 90,
+      "message": "We have approved EUR 200,000 to replace our entire ERP system and supply warehouse robots. We need a supplier to deliver that replacement in 90 days. Please send a full quotation; connecting or automating our existing software is not the requirement."
+    }
+  },
+  {
+    "case_id": "DEV-06",
+    "title": "Rollout budget disguised as a pilot",
+    "input": {
+      "company_name": "Field Wholesale",
+      "contact_name": "Demo Contact",
+      "contact_email": "dev-06@example.com",
+      "contact_role": "Project coordinator",
+      "company_size": 120,
+      "budget_eur": 7000,
+      "currency": "EUR",
+      "target_delivery_days_from_reference": 60,
+      "message": "We call this a pilot, but we need order intake, stock checks, dispatch notifications and exception reporting deployed for the whole sales department. Our full budget of EUR 7,000 is approved; there is no separate implementation budget. Please quote delivery of all four workflows in 60 days."
+    }
+  },
+  {
+    "case_id": "DEV-07",
+    "title": "Promising multi-country programme",
+    "input": {
+      "company_name": "Grove Industrial Group",
+      "contact_name": "Demo Contact",
+      "contact_email": "dev-07@example.com",
+      "contact_role": "Project coordinator",
+      "company_size": 1800,
+      "budget_eur": 120000,
+      "currency": "EUR",
+      "target_delivery_days_from_reference": 90,
+      "message": "Funding of EUR 120,000 is approved to automate quotation approvals across nine country offices. The current purchase includes all nine offices, different approval matrices and central reporting. Please propose a complete rollout in 90 days. We need your team to assess the architecture before committing."
+    }
+  },
+  {
+    "case_id": "DEV-08",
+    "title": "Contradictory current budgets",
+    "input": {
+      "company_name": "Harbour Components",
+      "contact_name": "Demo Contact",
+      "contact_email": "dev-08@example.com",
+      "contact_role": "Project coordinator",
+      "company_size": 120,
+      "budget_eur": 3000,
+      "currency": "EUR",
+      "target_delivery_days_from_reference": 60,
+      "message": "We need a departmental order-reporting rollout in 60 days. The approved budget for this exact rollout is EUR 25,000, not EUR 3,000. Please prepare the implementation proposal."
+    }
+  },
+  {
+    "case_id": "DEV-09",
+    "title": "Urgent existing-customer incident",
+    "input": {
+      "company_name": "Ivy Parts",
+      "contact_name": "Demo Contact",
+      "contact_email": "dev-09@example.com",
+      "contact_role": "Project coordinator",
+      "company_size": 120,
+      "budget_eur": null,
+      "currency": "EUR",
+      "target_delivery_days_from_reference": null,
+      "message": "Your order-notification workflow stopped this morning and our dispatch team cannot see new orders. This is support for the existing EUR 40,000 project, not a new purchase. Please investigate under our current service agreement."
+    }
+  },
+  {
+    "case_id": "DEV-10",
+    "title": "A vendor selling to us",
+    "input": {
+      "company_name": "Juniper Software",
+      "contact_name": "Demo Contact",
+      "contact_email": "dev-10@example.com",
+      "contact_role": "Project coordinator",
+      "company_size": 120,
+      "budget_eur": 20000,
+      "currency": "EUR",
+      "target_delivery_days_from_reference": 60,
+      "message": "We sell a reporting platform and would like ClearFlow Automation to buy an annual licence for EUR 20,000. Can your purchasing team review our offer within 60 days? We are not seeking a process-automation supplier."
+    }
+  }
+]

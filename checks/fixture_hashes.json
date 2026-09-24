@@ -1,0 +1,13 @@
+{
+  "fixtures\\development_inputs.json": "782d18a0af06e14e250e95df29ec6ee875b26434b4739d723c475a5fc05d86a8",
+  "fixtures\\evaluation_inputs.json": "f89bea033915a8d0a9d83c85dcc7b31bcee528fd663ac6a905a4834bc9c698f8",
+  "fixtures\\labels\\development_expected.json": "e4bf24f769ab6154a16982aeca3ed4e8eb17afab42449baceaee9e611f39089f",
+  "fixtures\\labels\\evaluation_expected.json": "9ec775aa75643b17170a3b00ad3eedf9da8ac6250bc1dff64a6b5b7060ccc1af",
+  "fixtures\\mock_answers.json": "1611686d6a5956e7b482156a836f8356466dbdf83a9b97156b13f62606a340bd",
+  "fixtures\\showcase_case_ids.json": "db43278d3065ef9c75c80331e32210ed5ffaa661daee1e6744a67cabfe1596b3",
+  "fixtures\\technical_tests.json": "fe97b760c725a9ea9880458d36f363563f15ad11a1e2bd61b5b9d62726d1edb8",
+  "config\\connections.example.json": "1cba74aca22be7d18038e8c37fe604c6dc7d1cf23454b235c320862086119768",
+  "config\\jev-questions.json": "2f4da86a2ab065c2bfe5f27037bd609162246ce6c5747fcb553cc3f0a0a672a3",
+  "config\\policy.json": "7da6001c160a8663000a5de9979bdb41432efa5a0a00f0842be2f44b599ebed4",
+  "config\\request.example.json": "f2a933a2f4c25f71101742044ffeec2e19d2f197f0ba2f05276e62df603a916b"
+}

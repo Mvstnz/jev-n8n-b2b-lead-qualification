@@ -1,0 +1,34 @@
+# Secrets and private operational files are never repository content.
+PRIVATE_CREDENTIALS*
+private_credentials*
+.private/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+.codex/config.toml
+.codex/auth.json
+raw_exports/
+raw_reports/
+private_reports/
+*.zip
+*.7z
+*.tar
+*.tar.gz
+*.tgz
+*.bak
+*.log
+*.ipynb
+
+# Tooling / local caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+node_modules/
+.DS_Store
+Thumbs.db

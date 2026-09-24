@@ -1,0 +1,2466 @@
+{
+  "test_kind": "OFFLINE_POLICY_AND_FIXTURE_ASSERTIONS_ONLY",
+  "live_jev_calls": 0,
+  "external_integrations_tested": false,
+  "assertions": 292,
+  "passed": 292,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "development_ids_match",
+      "passed": true,
+      "observed": [
+        "DEV-01",
+        "DEV-02",
+        "DEV-03",
+        "DEV-04",
+        "DEV-05",
+        "DEV-06",
+        "DEV-07",
+        "DEV-08",
+        "DEV-09",
+        "DEV-10"
+      ],
+      "expected": [
+        "DEV-01",
+        "DEV-02",
+        "DEV-03",
+        "DEV-04",
+        "DEV-05",
+        "DEV-06",
+        "DEV-07",
+        "DEV-08",
+        "DEV-09",
+        "DEV-10"
+      ]
+    },
+    {
+      "name": "DEV-01_input_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "DEV-01_mock_schema_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "DEV-01_expected_route_from_mock",
+      "passed": true,
+      "observed": "HOT",
+      "expected": "HOT"
+    },
+    {
+      "name": "DEV-01_model_state_fields",
+      "passed": true,
+      "observed": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ],
+      "expected": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ]
+    },
+    {
+      "name": "DEV-01_label_is_not_in_state",
+      "passed": true,
+      "observed": false,
+      "expected": false
+    },
+    {
+      "name": "DEV-02_input_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "DEV-02_mock_schema_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "DEV-02_expected_route_from_mock",
+      "passed": true,
+      "observed": "HOT",
+      "expected": "HOT"
+    },
+    {
+      "name": "DEV-02_model_state_fields",
+      "passed": true,
+      "observed": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ],
+      "expected": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ]
+    },
+    {
+      "name": "DEV-02_label_is_not_in_state",
+      "passed": true,
+      "observed": false,
+      "expected": false
+    },
+    {
+      "name": "DEV-03_input_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "DEV-03_mock_schema_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "DEV-03_expected_route_from_mock",
+      "passed": true,
+      "observed": "WARM",
+      "expected": "WARM"
+    },
+    {
+      "name": "DEV-03_model_state_fields",
+      "passed": true,
+      "observed": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ],
+      "expected": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ]
+    },
+    {
+      "name": "DEV-03_label_is_not_in_state",
+      "passed": true,
+      "observed": false,
+      "expected": false
+    },
+    {
+      "name": "DEV-04_input_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "DEV-04_mock_schema_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "DEV-04_expected_route_from_mock",
+      "passed": true,
+      "observed": "WARM",
+      "expected": "WARM"
+    },
+    {
+      "name": "DEV-04_model_state_fields",
+      "passed": true,
+      "observed": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ],
+      "expected": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ]
+    },
+    {
+      "name": "DEV-04_label_is_not_in_state",
+      "passed": true,
+      "observed": false,
+      "expected": false
+    },
+    {
+      "name": "DEV-05_input_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "DEV-05_mock_schema_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "DEV-05_expected_route_from_mock",
+      "passed": true,
+      "observed": "COLD",
+      "expected": "COLD"
+    },
+    {
+      "name": "DEV-05_gated_score",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "DEV-05_model_state_fields",
+      "passed": true,
+      "observed": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ],
+      "expected": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ]
+    },
+    {
+      "name": "DEV-05_label_is_not_in_state",
+      "passed": true,
+      "observed": false,
+      "expected": false
+    },
+    {
+      "name": "DEV-06_input_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "DEV-06_mock_schema_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "DEV-06_expected_route_from_mock",
+      "passed": true,
+      "observed": "COLD",
+      "expected": "COLD"
+    },
+    {
+      "name": "DEV-06_gated_score",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "DEV-06_model_state_fields",
+      "passed": true,
+      "observed": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ],
+      "expected": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ]
+    },
+    {
+      "name": "DEV-06_label_is_not_in_state",
+      "passed": true,
+      "observed": false,
+      "expected": false
+    },
+    {
+      "name": "DEV-07_input_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "DEV-07_mock_schema_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "DEV-07_expected_route_from_mock",
+      "passed": true,
+      "observed": "NEEDS_REVIEW",
+      "expected": "NEEDS_REVIEW"
+    },
+    {
+      "name": "DEV-07_gated_score",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "DEV-07_model_state_fields",
+      "passed": true,
+      "observed": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ],
+      "expected": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ]
+    },
+    {
+      "name": "DEV-07_label_is_not_in_state",
+      "passed": true,
+      "observed": false,
+      "expected": false
+    },
+    {
+      "name": "DEV-08_input_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "DEV-08_mock_schema_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "DEV-08_expected_route_from_mock",
+      "passed": true,
+      "observed": "NEEDS_REVIEW",
+      "expected": "NEEDS_REVIEW"
+    },
+    {
+      "name": "DEV-08_gated_score",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "DEV-08_model_state_fields",
+      "passed": true,
+      "observed": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ],
+      "expected": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ]
+    },
+    {
+      "name": "DEV-08_label_is_not_in_state",
+      "passed": true,
+      "observed": false,
+      "expected": false
+    },
+    {
+      "name": "DEV-09_input_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "DEV-09_mock_schema_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "DEV-09_expected_route_from_mock",
+      "passed": true,
+      "observed": "NOT_A_SALES_LEAD",
+      "expected": "NOT_A_SALES_LEAD"
+    },
+    {
+      "name": "DEV-09_gated_score",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "DEV-09_model_state_fields",
+      "passed": true,
+      "observed": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ],
+      "expected": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ]
+    },
+    {
+      "name": "DEV-09_label_is_not_in_state",
+      "passed": true,
+      "observed": false,
+      "expected": false
+    },
+    {
+      "name": "DEV-10_input_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "DEV-10_mock_schema_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "DEV-10_expected_route_from_mock",
+      "passed": true,
+      "observed": "NOT_A_SALES_LEAD",
+      "expected": "NOT_A_SALES_LEAD"
+    },
+    {
+      "name": "DEV-10_gated_score",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "DEV-10_model_state_fields",
+      "passed": true,
+      "observed": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ],
+      "expected": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ]
+    },
+    {
+      "name": "DEV-10_label_is_not_in_state",
+      "passed": true,
+      "observed": false,
+      "expected": false
+    },
+    {
+      "name": "evaluation_ids_match",
+      "passed": true,
+      "observed": [
+        "EVAL-01",
+        "EVAL-02",
+        "EVAL-03",
+        "EVAL-04",
+        "EVAL-05",
+        "EVAL-06",
+        "EVAL-07",
+        "EVAL-08",
+        "EVAL-09",
+        "EVAL-10",
+        "EVAL-11",
+        "EVAL-12",
+        "EVAL-13",
+        "EVAL-14",
+        "EVAL-15",
+        "EVAL-16",
+        "EVAL-17",
+        "EVAL-18",
+        "EVAL-19",
+        "EVAL-20",
+        "EVAL-21",
+        "EVAL-22",
+        "EVAL-23",
+        "EVAL-24",
+        "EVAL-25",
+        "EVAL-26",
+        "EVAL-27",
+        "EVAL-28",
+        "EVAL-29",
+        "EVAL-30"
+      ],
+      "expected": [
+        "EVAL-01",
+        "EVAL-02",
+        "EVAL-03",
+        "EVAL-04",
+        "EVAL-05",
+        "EVAL-06",
+        "EVAL-07",
+        "EVAL-08",
+        "EVAL-09",
+        "EVAL-10",
+        "EVAL-11",
+        "EVAL-12",
+        "EVAL-13",
+        "EVAL-14",
+        "EVAL-15",
+        "EVAL-16",
+        "EVAL-17",
+        "EVAL-18",
+        "EVAL-19",
+        "EVAL-20",
+        "EVAL-21",
+        "EVAL-22",
+        "EVAL-23",
+        "EVAL-24",
+        "EVAL-25",
+        "EVAL-26",
+        "EVAL-27",
+        "EVAL-28",
+        "EVAL-29",
+        "EVAL-30"
+      ]
+    },
+    {
+      "name": "EVAL-01_input_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-01_mock_schema_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-01_expected_route_from_mock",
+      "passed": true,
+      "observed": "HOT",
+      "expected": "HOT"
+    },
+    {
+      "name": "EVAL-01_model_state_fields",
+      "passed": true,
+      "observed": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ],
+      "expected": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ]
+    },
+    {
+      "name": "EVAL-01_label_is_not_in_state",
+      "passed": true,
+      "observed": false,
+      "expected": false
+    },
+    {
+      "name": "EVAL-02_input_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-02_mock_schema_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-02_expected_route_from_mock",
+      "passed": true,
+      "observed": "WARM",
+      "expected": "WARM"
+    },
+    {
+      "name": "EVAL-02_model_state_fields",
+      "passed": true,
+      "observed": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ],
+      "expected": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ]
+    },
+    {
+      "name": "EVAL-02_label_is_not_in_state",
+      "passed": true,
+      "observed": false,
+      "expected": false
+    },
+    {
+      "name": "EVAL-03_input_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-03_mock_schema_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-03_expected_route_from_mock",
+      "passed": true,
+      "observed": "COLD",
+      "expected": "COLD"
+    },
+    {
+      "name": "EVAL-03_gated_score",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-03_model_state_fields",
+      "passed": true,
+      "observed": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ],
+      "expected": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ]
+    },
+    {
+      "name": "EVAL-03_label_is_not_in_state",
+      "passed": true,
+      "observed": false,
+      "expected": false
+    },
+    {
+      "name": "EVAL-04_input_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-04_mock_schema_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-04_expected_route_from_mock",
+      "passed": true,
+      "observed": "NEEDS_REVIEW",
+      "expected": "NEEDS_REVIEW"
+    },
+    {
+      "name": "EVAL-04_gated_score",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-04_model_state_fields",
+      "passed": true,
+      "observed": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ],
+      "expected": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ]
+    },
+    {
+      "name": "EVAL-04_label_is_not_in_state",
+      "passed": true,
+      "observed": false,
+      "expected": false
+    },
+    {
+      "name": "EVAL-05_input_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-05_mock_schema_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-05_expected_route_from_mock",
+      "passed": true,
+      "observed": "HOT",
+      "expected": "HOT"
+    },
+    {
+      "name": "EVAL-05_model_state_fields",
+      "passed": true,
+      "observed": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ],
+      "expected": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ]
+    },
+    {
+      "name": "EVAL-05_label_is_not_in_state",
+      "passed": true,
+      "observed": false,
+      "expected": false
+    },
+    {
+      "name": "EVAL-06_input_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-06_mock_schema_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-06_expected_route_from_mock",
+      "passed": true,
+      "observed": "NOT_A_SALES_LEAD",
+      "expected": "NOT_A_SALES_LEAD"
+    },
+    {
+      "name": "EVAL-06_gated_score",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-06_model_state_fields",
+      "passed": true,
+      "observed": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ],
+      "expected": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ]
+    },
+    {
+      "name": "EVAL-06_label_is_not_in_state",
+      "passed": true,
+      "observed": false,
+      "expected": false
+    },
+    {
+      "name": "EVAL-07_input_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-07_mock_schema_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-07_expected_route_from_mock",
+      "passed": true,
+      "observed": "HOT",
+      "expected": "HOT"
+    },
+    {
+      "name": "EVAL-07_model_state_fields",
+      "passed": true,
+      "observed": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ],
+      "expected": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ]
+    },
+    {
+      "name": "EVAL-07_label_is_not_in_state",
+      "passed": true,
+      "observed": false,
+      "expected": false
+    },
+    {
+      "name": "EVAL-08_input_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-08_mock_schema_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-08_expected_route_from_mock",
+      "passed": true,
+      "observed": "WARM",
+      "expected": "WARM"
+    },
+    {
+      "name": "EVAL-08_model_state_fields",
+      "passed": true,
+      "observed": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ],
+      "expected": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ]
+    },
+    {
+      "name": "EVAL-08_label_is_not_in_state",
+      "passed": true,
+      "observed": false,
+      "expected": false
+    },
+    {
+      "name": "EVAL-09_input_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-09_mock_schema_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-09_expected_route_from_mock",
+      "passed": true,
+      "observed": "NEEDS_REVIEW",
+      "expected": "NEEDS_REVIEW"
+    },
+    {
+      "name": "EVAL-09_gated_score",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-09_model_state_fields",
+      "passed": true,
+      "observed": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ],
+      "expected": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ]
+    },
+    {
+      "name": "EVAL-09_label_is_not_in_state",
+      "passed": true,
+      "observed": false,
+      "expected": false
+    },
+    {
+      "name": "EVAL-10_input_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-10_mock_schema_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-10_expected_route_from_mock",
+      "passed": true,
+      "observed": "WARM",
+      "expected": "WARM"
+    },
+    {
+      "name": "EVAL-10_model_state_fields",
+      "passed": true,
+      "observed": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ],
+      "expected": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ]
+    },
+    {
+      "name": "EVAL-10_label_is_not_in_state",
+      "passed": true,
+      "observed": false,
+      "expected": false
+    },
+    {
+      "name": "EVAL-11_input_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-11_mock_schema_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-11_expected_route_from_mock",
+      "passed": true,
+      "observed": "HOT",
+      "expected": "HOT"
+    },
+    {
+      "name": "EVAL-11_model_state_fields",
+      "passed": true,
+      "observed": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ],
+      "expected": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ]
+    },
+    {
+      "name": "EVAL-11_label_is_not_in_state",
+      "passed": true,
+      "observed": false,
+      "expected": false
+    },
+    {
+      "name": "EVAL-12_input_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-12_mock_schema_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-12_expected_route_from_mock",
+      "passed": true,
+      "observed": "WARM",
+      "expected": "WARM"
+    },
+    {
+      "name": "EVAL-12_model_state_fields",
+      "passed": true,
+      "observed": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ],
+      "expected": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ]
+    },
+    {
+      "name": "EVAL-12_label_is_not_in_state",
+      "passed": true,
+      "observed": false,
+      "expected": false
+    },
+    {
+      "name": "EVAL-13_input_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-13_mock_schema_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-13_expected_route_from_mock",
+      "passed": true,
+      "observed": "NEEDS_REVIEW",
+      "expected": "NEEDS_REVIEW"
+    },
+    {
+      "name": "EVAL-13_gated_score",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-13_model_state_fields",
+      "passed": true,
+      "observed": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ],
+      "expected": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ]
+    },
+    {
+      "name": "EVAL-13_label_is_not_in_state",
+      "passed": true,
+      "observed": false,
+      "expected": false
+    },
+    {
+      "name": "EVAL-14_input_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-14_mock_schema_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-14_expected_route_from_mock",
+      "passed": true,
+      "observed": "HOT",
+      "expected": "HOT"
+    },
+    {
+      "name": "EVAL-14_model_state_fields",
+      "passed": true,
+      "observed": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ],
+      "expected": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ]
+    },
+    {
+      "name": "EVAL-14_label_is_not_in_state",
+      "passed": true,
+      "observed": false,
+      "expected": false
+    },
+    {
+      "name": "EVAL-15_input_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-15_mock_schema_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-15_expected_route_from_mock",
+      "passed": true,
+      "observed": "COLD",
+      "expected": "COLD"
+    },
+    {
+      "name": "EVAL-15_gated_score",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-15_model_state_fields",
+      "passed": true,
+      "observed": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ],
+      "expected": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ]
+    },
+    {
+      "name": "EVAL-15_label_is_not_in_state",
+      "passed": true,
+      "observed": false,
+      "expected": false
+    },
+    {
+      "name": "EVAL-16_input_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-16_mock_schema_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-16_expected_route_from_mock",
+      "passed": true,
+      "observed": "NEEDS_REVIEW",
+      "expected": "NEEDS_REVIEW"
+    },
+    {
+      "name": "EVAL-16_gated_score",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-16_model_state_fields",
+      "passed": true,
+      "observed": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ],
+      "expected": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ]
+    },
+    {
+      "name": "EVAL-16_label_is_not_in_state",
+      "passed": true,
+      "observed": false,
+      "expected": false
+    },
+    {
+      "name": "EVAL-17_input_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-17_mock_schema_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-17_expected_route_from_mock",
+      "passed": true,
+      "observed": "NOT_A_SALES_LEAD",
+      "expected": "NOT_A_SALES_LEAD"
+    },
+    {
+      "name": "EVAL-17_gated_score",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-17_model_state_fields",
+      "passed": true,
+      "observed": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ],
+      "expected": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ]
+    },
+    {
+      "name": "EVAL-17_label_is_not_in_state",
+      "passed": true,
+      "observed": false,
+      "expected": false
+    },
+    {
+      "name": "EVAL-18_input_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-18_mock_schema_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-18_expected_route_from_mock",
+      "passed": true,
+      "observed": "HOT",
+      "expected": "HOT"
+    },
+    {
+      "name": "EVAL-18_model_state_fields",
+      "passed": true,
+      "observed": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ],
+      "expected": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ]
+    },
+    {
+      "name": "EVAL-18_label_is_not_in_state",
+      "passed": true,
+      "observed": false,
+      "expected": false
+    },
+    {
+      "name": "EVAL-19_input_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-19_mock_schema_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-19_expected_route_from_mock",
+      "passed": true,
+      "observed": "WARM",
+      "expected": "WARM"
+    },
+    {
+      "name": "EVAL-19_model_state_fields",
+      "passed": true,
+      "observed": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ],
+      "expected": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ]
+    },
+    {
+      "name": "EVAL-19_label_is_not_in_state",
+      "passed": true,
+      "observed": false,
+      "expected": false
+    },
+    {
+      "name": "EVAL-20_input_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-20_mock_schema_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-20_expected_route_from_mock",
+      "passed": true,
+      "observed": "NEEDS_REVIEW",
+      "expected": "NEEDS_REVIEW"
+    },
+    {
+      "name": "EVAL-20_gated_score",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-20_model_state_fields",
+      "passed": true,
+      "observed": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ],
+      "expected": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ]
+    },
+    {
+      "name": "EVAL-20_label_is_not_in_state",
+      "passed": true,
+      "observed": false,
+      "expected": false
+    },
+    {
+      "name": "EVAL-21_input_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-21_mock_schema_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-21_expected_route_from_mock",
+      "passed": true,
+      "observed": "COLD",
+      "expected": "COLD"
+    },
+    {
+      "name": "EVAL-21_gated_score",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-21_model_state_fields",
+      "passed": true,
+      "observed": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ],
+      "expected": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ]
+    },
+    {
+      "name": "EVAL-21_label_is_not_in_state",
+      "passed": true,
+      "observed": false,
+      "expected": false
+    },
+    {
+      "name": "EVAL-22_input_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-22_mock_schema_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-22_expected_route_from_mock",
+      "passed": true,
+      "observed": "NEEDS_REVIEW",
+      "expected": "NEEDS_REVIEW"
+    },
+    {
+      "name": "EVAL-22_gated_score",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-22_model_state_fields",
+      "passed": true,
+      "observed": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ],
+      "expected": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ]
+    },
+    {
+      "name": "EVAL-22_label_is_not_in_state",
+      "passed": true,
+      "observed": false,
+      "expected": false
+    },
+    {
+      "name": "EVAL-23_input_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-23_mock_schema_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-23_expected_route_from_mock",
+      "passed": true,
+      "observed": "HOT",
+      "expected": "HOT"
+    },
+    {
+      "name": "EVAL-23_model_state_fields",
+      "passed": true,
+      "observed": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ],
+      "expected": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ]
+    },
+    {
+      "name": "EVAL-23_label_is_not_in_state",
+      "passed": true,
+      "observed": false,
+      "expected": false
+    },
+    {
+      "name": "EVAL-24_input_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-24_mock_schema_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-24_expected_route_from_mock",
+      "passed": true,
+      "observed": "WARM",
+      "expected": "WARM"
+    },
+    {
+      "name": "EVAL-24_model_state_fields",
+      "passed": true,
+      "observed": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ],
+      "expected": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ]
+    },
+    {
+      "name": "EVAL-24_label_is_not_in_state",
+      "passed": true,
+      "observed": false,
+      "expected": false
+    },
+    {
+      "name": "EVAL-25_input_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-25_mock_schema_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-25_expected_route_from_mock",
+      "passed": true,
+      "observed": "NEEDS_REVIEW",
+      "expected": "NEEDS_REVIEW"
+    },
+    {
+      "name": "EVAL-25_gated_score",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-25_model_state_fields",
+      "passed": true,
+      "observed": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ],
+      "expected": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ]
+    },
+    {
+      "name": "EVAL-25_label_is_not_in_state",
+      "passed": true,
+      "observed": false,
+      "expected": false
+    },
+    {
+      "name": "EVAL-26_input_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-26_mock_schema_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-26_expected_route_from_mock",
+      "passed": true,
+      "observed": "COLD",
+      "expected": "COLD"
+    },
+    {
+      "name": "EVAL-26_gated_score",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-26_model_state_fields",
+      "passed": true,
+      "observed": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ],
+      "expected": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ]
+    },
+    {
+      "name": "EVAL-26_label_is_not_in_state",
+      "passed": true,
+      "observed": false,
+      "expected": false
+    },
+    {
+      "name": "EVAL-27_input_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-27_mock_schema_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-27_expected_route_from_mock",
+      "passed": true,
+      "observed": "HOT",
+      "expected": "HOT"
+    },
+    {
+      "name": "EVAL-27_model_state_fields",
+      "passed": true,
+      "observed": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ],
+      "expected": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ]
+    },
+    {
+      "name": "EVAL-27_label_is_not_in_state",
+      "passed": true,
+      "observed": false,
+      "expected": false
+    },
+    {
+      "name": "EVAL-28_input_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-28_mock_schema_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-28_expected_route_from_mock",
+      "passed": true,
+      "observed": "WARM",
+      "expected": "WARM"
+    },
+    {
+      "name": "EVAL-28_model_state_fields",
+      "passed": true,
+      "observed": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ],
+      "expected": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ]
+    },
+    {
+      "name": "EVAL-28_label_is_not_in_state",
+      "passed": true,
+      "observed": false,
+      "expected": false
+    },
+    {
+      "name": "EVAL-29_input_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-29_mock_schema_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-29_expected_route_from_mock",
+      "passed": true,
+      "observed": "NEEDS_REVIEW",
+      "expected": "NEEDS_REVIEW"
+    },
+    {
+      "name": "EVAL-29_gated_score",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-29_model_state_fields",
+      "passed": true,
+      "observed": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ],
+      "expected": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ]
+    },
+    {
+      "name": "EVAL-29_label_is_not_in_state",
+      "passed": true,
+      "observed": false,
+      "expected": false
+    },
+    {
+      "name": "EVAL-30_input_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-30_mock_schema_valid",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-30_expected_route_from_mock",
+      "passed": true,
+      "observed": "NEEDS_REVIEW",
+      "expected": "NEEDS_REVIEW"
+    },
+    {
+      "name": "EVAL-30_gated_score",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "EVAL-30_model_state_fields",
+      "passed": true,
+      "observed": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ],
+      "expected": [
+        "budget_eur",
+        "currency",
+        "days_until_delivery",
+        "message",
+        "target_delivery_date"
+      ]
+    },
+    {
+      "name": "EVAL-30_label_is_not_in_state",
+      "passed": true,
+      "observed": false,
+      "expected": false
+    },
+    {
+      "name": "weights_total",
+      "passed": true,
+      "observed": 100,
+      "expected": 100
+    },
+    {
+      "name": "question_count",
+      "passed": true,
+      "observed": 9,
+      "expected": 9
+    },
+    {
+      "name": "total_case_count",
+      "passed": true,
+      "observed": 40,
+      "expected": 40
+    },
+    {
+      "name": "unique_case_ids",
+      "passed": true,
+      "observed": 40,
+      "expected": 40
+    },
+    {
+      "name": "DEV_01_score",
+      "passed": true,
+      "observed": 100.0,
+      "expected": 100.0
+    },
+    {
+      "name": "provider_error_routes_review",
+      "passed": true,
+      "observed": "NEEDS_REVIEW",
+      "expected": "NEEDS_REVIEW"
+    },
+    {
+      "name": "provider_error_not_scored",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "missing_answer",
+      "passed": true,
+      "observed": "malformed_model_response",
+      "expected": "malformed_model_response"
+    },
+    {
+      "name": "wrong_score_scale",
+      "passed": true,
+      "observed": "malformed_model_response",
+      "expected": "malformed_model_response"
+    },
+    {
+      "name": "nan_score",
+      "passed": true,
+      "observed": "malformed_model_response",
+      "expected": "malformed_model_response"
+    },
+    {
+      "name": "boolean_instead_of_score",
+      "passed": true,
+      "observed": "malformed_model_response",
+      "expected": "malformed_model_response"
+    },
+    {
+      "name": "missing_probability",
+      "passed": true,
+      "observed": "malformed_model_response",
+      "expected": "malformed_model_response"
+    },
+    {
+      "name": "bad_boolean",
+      "passed": true,
+      "observed": "malformed_model_response",
+      "expected": "malformed_model_response"
+    },
+    {
+      "name": "unknown_choice",
+      "passed": true,
+      "observed": "malformed_model_response",
+      "expected": "malformed_model_response"
+    },
+    {
+      "name": "invalid_probability_sum",
+      "passed": true,
+      "observed": "malformed_model_response",
+      "expected": "malformed_model_response"
+    },
+    {
+      "name": "invalid_budget_eur_-1",
+      "passed": true,
+      "observed": "invalid_budget",
+      "expected": "invalid_budget"
+    },
+    {
+      "name": "invalid_budget_eur_True",
+      "passed": true,
+      "observed": "invalid_budget",
+      "expected": "invalid_budget"
+    },
+    {
+      "name": "invalid_contact_email_not-an-email",
+      "passed": true,
+      "observed": "invalid_contact_email",
+      "expected": "invalid_contact_email"
+    },
+    {
+      "name": "invalid_message_  ",
+      "passed": true,
+      "observed": "invalid_message",
+      "expected": "invalid_message"
+    },
+    {
+      "name": "invalid_currency_USD",
+      "passed": true,
+      "observed": "unsupported_currency",
+      "expected": "unsupported_currency"
+    },
+    {
+      "name": "invalid_company_size_-3",
+      "passed": true,
+      "observed": "invalid_company_size",
+      "expected": "invalid_company_size"
+    },
+    {
+      "name": "invalid_target_delivery_date_2026-02-30",
+      "passed": true,
+      "observed": "invalid_delivery_date",
+      "expected": "invalid_delivery_date"
+    },
+    {
+      "name": "missing_budget_eur",
+      "passed": true,
+      "observed": "missing_commercial_fields",
+      "expected": "missing_commercial_fields"
+    },
+    {
+      "name": "missing_target_delivery_date",
+      "passed": true,
+      "observed": "missing_commercial_fields",
+      "expected": "missing_commercial_fields"
+    },
+    {
+      "name": "zero_is_not_missing",
+      "passed": true,
+      "observed": "budget_below_current_scope",
+      "expected": "budget_below_current_scope"
+    },
+    {
+      "name": "paid_discovery_budget_2999.99",
+      "passed": true,
+      "observed": "COLD",
+      "expected": "COLD"
+    },
+    {
+      "name": "paid_discovery_budget_3000",
+      "passed": true,
+      "observed": "HOT",
+      "expected": "HOT"
+    },
+    {
+      "name": "paid_discovery_budget_4500.0",
+      "passed": true,
+      "observed": "HOT",
+      "expected": "HOT"
+    },
+    {
+      "name": "paid_discovery_date_13",
+      "passed": true,
+      "observed": "NEEDS_REVIEW",
+      "expected": "NEEDS_REVIEW"
+    },
+    {
+      "name": "paid_discovery_date_14",
+      "passed": true,
+      "observed": "HOT",
+      "expected": "HOT"
+    },
+    {
+      "name": "paid_discovery_date_180",
+      "passed": true,
+      "observed": "HOT",
+      "expected": "HOT"
+    },
+    {
+      "name": "paid_discovery_date_181",
+      "passed": true,
+      "observed": "WARM",
+      "expected": "WARM"
+    },
+    {
+      "name": "focused_pilot_budget_4999.99",
+      "passed": true,
+      "observed": "COLD",
+      "expected": "COLD"
+    },
+    {
+      "name": "focused_pilot_budget_5000",
+      "passed": true,
+      "observed": "HOT",
+      "expected": "HOT"
+    },
+    {
+      "name": "focused_pilot_budget_7500.0",
+      "passed": true,
+      "observed": "HOT",
+      "expected": "HOT"
+    },
+    {
+      "name": "focused_pilot_date_20",
+      "passed": true,
+      "observed": "NEEDS_REVIEW",
+      "expected": "NEEDS_REVIEW"
+    },
+    {
+      "name": "focused_pilot_date_21",
+      "passed": true,
+      "observed": "HOT",
+      "expected": "HOT"
+    },
+    {
+      "name": "focused_pilot_date_180",
+      "passed": true,
+      "observed": "HOT",
+      "expected": "HOT"
+    },
+    {
+      "name": "focused_pilot_date_181",
+      "passed": true,
+      "observed": "WARM",
+      "expected": "WARM"
+    },
+    {
+      "name": "standard_rollout_budget_14999.99",
+      "passed": true,
+      "observed": "COLD",
+      "expected": "COLD"
+    },
+    {
+      "name": "standard_rollout_budget_15000",
+      "passed": true,
+      "observed": "HOT",
+      "expected": "HOT"
+    },
+    {
+      "name": "standard_rollout_budget_22500.0",
+      "passed": true,
+      "observed": "HOT",
+      "expected": "HOT"
+    },
+    {
+      "name": "standard_rollout_date_41",
+      "passed": true,
+      "observed": "NEEDS_REVIEW",
+      "expected": "NEEDS_REVIEW"
+    },
+    {
+      "name": "standard_rollout_date_42",
+      "passed": true,
+      "observed": "HOT",
+      "expected": "HOT"
+    },
+    {
+      "name": "standard_rollout_date_180",
+      "passed": true,
+      "observed": "HOT",
+      "expected": "HOT"
+    },
+    {
+      "name": "standard_rollout_date_181",
+      "passed": true,
+      "observed": "WARM",
+      "expected": "WARM"
+    },
+    {
+      "name": "instruction_attack_inclusive_threshold",
+      "passed": true,
+      "observed": "NEEDS_REVIEW",
+      "expected": "NEEDS_REVIEW"
+    },
+    {
+      "name": "contradiction_inclusive_threshold",
+      "passed": true,
+      "observed": "NEEDS_REVIEW",
+      "expected": "NEEDS_REVIEW"
+    },
+    {
+      "name": "semantic_ambiguity_inclusive_threshold",
+      "passed": true,
+      "observed": "NEEDS_REVIEW",
+      "expected": "NEEDS_REVIEW"
+    },
+    {
+      "name": "inquiry_type_low_probability",
+      "passed": true,
+      "observed": "NEEDS_REVIEW",
+      "expected": "NEEDS_REVIEW"
+    },
+    {
+      "name": "engagement_scope_low_probability",
+      "passed": true,
+      "observed": "NEEDS_REVIEW",
+      "expected": "NEEDS_REVIEW"
+    },
+    {
+      "name": "buying_readiness_low_probability",
+      "passed": true,
+      "observed": "NEEDS_REVIEW",
+      "expected": "NEEDS_REVIEW"
+    },
+    {
+      "name": "delivery_risk_low_probability",
+      "passed": true,
+      "observed": "NEEDS_REVIEW",
+      "expected": "NEEDS_REVIEW"
+    },
+    {
+      "name": "deterministic_invariance_{'company_size': 1}",
+      "passed": true,
+      "observed": {
+        "route": "HOT",
+        "priority_score": 100.0,
+        "reason_code": "qualified_current_phase",
+        "next_action": "Recommend a personal sales follow-up for the defined paid phase.",
+        "owner_queue": "sales",
+        "review_required": false,
+        "breakdown": {
+          "service_fit": 35.0,
+          "buying_intent": 30.0,
+          "budget_fit": 20,
+          "timing": 15
+        },
+        "policy_version": "b2b-automation-demo-v2.0"
+      },
+      "expected": {
+        "route": "HOT",
+        "priority_score": 100.0,
+        "reason_code": "qualified_current_phase",
+        "next_action": "Recommend a personal sales follow-up for the defined paid phase.",
+        "owner_queue": "sales",
+        "review_required": false,
+        "breakdown": {
+          "service_fit": 35.0,
+          "buying_intent": 30.0,
+          "budget_fit": 20,
+          "timing": 15
+        },
+        "policy_version": "b2b-automation-demo-v2.0"
+      }
+    },
+    {
+      "name": "deterministic_invariance_{'company_size': 100000}",
+      "passed": true,
+      "observed": {
+        "route": "HOT",
+        "priority_score": 100.0,
+        "reason_code": "qualified_current_phase",
+        "next_action": "Recommend a personal sales follow-up for the defined paid phase.",
+        "owner_queue": "sales",
+        "review_required": false,
+        "breakdown": {
+          "service_fit": 35.0,
+          "buying_intent": 30.0,
+          "budget_fit": 20,
+          "timing": 15
+        },
+        "policy_version": "b2b-automation-demo-v2.0"
+      },
+      "expected": {
+        "route": "HOT",
+        "priority_score": 100.0,
+        "reason_code": "qualified_current_phase",
+        "next_action": "Recommend a personal sales follow-up for the defined paid phase.",
+        "owner_queue": "sales",
+        "review_required": false,
+        "breakdown": {
+          "service_fit": 35.0,
+          "buying_intent": 30.0,
+          "budget_fit": 20,
+          "timing": 15
+        },
+        "policy_version": "b2b-automation-demo-v2.0"
+      }
+    },
+    {
+      "name": "deterministic_invariance_{'contact_role': 'Managing director'}",
+      "passed": true,
+      "observed": {
+        "route": "HOT",
+        "priority_score": 100.0,
+        "reason_code": "qualified_current_phase",
+        "next_action": "Recommend a personal sales follow-up for the defined paid phase.",
+        "owner_queue": "sales",
+        "review_required": false,
+        "breakdown": {
+          "service_fit": 35.0,
+          "buying_intent": 30.0,
+          "budget_fit": 20,
+          "timing": 15
+        },
+        "policy_version": "b2b-automation-demo-v2.0"
+      },
+      "expected": {
+        "route": "HOT",
+        "priority_score": 100.0,
+        "reason_code": "qualified_current_phase",
+        "next_action": "Recommend a personal sales follow-up for the defined paid phase.",
+        "owner_queue": "sales",
+        "review_required": false,
+        "breakdown": {
+          "service_fit": 35.0,
+          "buying_intent": 30.0,
+          "budget_fit": 20,
+          "timing": 15
+        },
+        "policy_version": "b2b-automation-demo-v2.0"
+      }
+    },
+    {
+      "name": "deterministic_invariance_{'contact_role': 'Intern'}",
+      "passed": true,
+      "observed": {
+        "route": "HOT",
+        "priority_score": 100.0,
+        "reason_code": "qualified_current_phase",
+        "next_action": "Recommend a personal sales follow-up for the defined paid phase.",
+        "owner_queue": "sales",
+        "review_required": false,
+        "breakdown": {
+          "service_fit": 35.0,
+          "buying_intent": 30.0,
+          "budget_fit": 20,
+          "timing": 15
+        },
+        "policy_version": "b2b-automation-demo-v2.0"
+      },
+      "expected": {
+        "route": "HOT",
+        "priority_score": 100.0,
+        "reason_code": "qualified_current_phase",
+        "next_action": "Recommend a personal sales follow-up for the defined paid phase.",
+        "owner_queue": "sales",
+        "review_required": false,
+        "breakdown": {
+          "service_fit": 35.0,
+          "buying_intent": 30.0,
+          "budget_fit": 20,
+          "timing": 15
+        },
+        "policy_version": "b2b-automation-demo-v2.0"
+      }
+    },
+    {
+      "name": "deterministic_invariance_{'company_name': 'Another fictional company'}",
+      "passed": true,
+      "observed": {
+        "route": "HOT",
+        "priority_score": 100.0,
+        "reason_code": "qualified_current_phase",
+        "next_action": "Recommend a personal sales follow-up for the defined paid phase.",
+        "owner_queue": "sales",
+        "review_required": false,
+        "breakdown": {
+          "service_fit": 35.0,
+          "buying_intent": 30.0,
+          "budget_fit": 20,
+          "timing": 15
+        },
+        "policy_version": "b2b-automation-demo-v2.0"
+      },
+      "expected": {
+        "route": "HOT",
+        "priority_score": 100.0,
+        "reason_code": "qualified_current_phase",
+        "next_action": "Recommend a personal sales follow-up for the defined paid phase.",
+        "owner_queue": "sales",
+        "review_required": false,
+        "breakdown": {
+          "service_fit": 35.0,
+          "buying_intent": 30.0,
+          "budget_fit": 20,
+          "timing": 15
+        },
+        "policy_version": "b2b-automation-demo-v2.0"
+      }
+    },
+    {
+      "name": "json_valid_config\\connections.example.json",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "json_valid_config\\jev-questions.json",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "json_valid_config\\policy.json",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "json_valid_config\\request.example.json",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "json_valid_fixtures\\development_inputs.json",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "json_valid_fixtures\\evaluation_inputs.json",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "json_valid_fixtures\\labels\\development_expected.json",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "json_valid_fixtures\\labels\\evaluation_expected.json",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "json_valid_fixtures\\mock_answers.json",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "json_valid_fixtures\\showcase_case_ids.json",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "json_valid_fixtures\\technical_tests.json",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    }
+  ]
+}

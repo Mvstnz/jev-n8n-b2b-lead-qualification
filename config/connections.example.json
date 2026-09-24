@@ -1,0 +1,10 @@
+{
+  "n8n_base_url": "https://YOUR-INSTANCE.app.n8n.cloud",
+  "n8n_mcp_url": "https://YOUR-INSTANCE.app.n8n.cloud/mcp-server/http",
+  "n8n_mcp_token_secret": "N8N_MCP_TOKEN",
+  "vercel_key_secret": "VERCEL_AI_GATEWAY_KEY",
+  "slack_webhook_secret": "SLACK_WEBHOOK_URL",
+  "google_sheets_credential_name_hint": "Google Sheets - Lead Demo",
+  "google_sheets_credential_id": null,
+  "note": "Example only. Codex management plugins and n8n runtime credentials are separate. Verify the actual authorised connection; do not request a Google password."
+}

@@ -1,0 +1,3402 @@
+{
+  "DEV-01": {
+    "source": "HAND_AUTHORED_MOCK_NOT_JEV",
+    "answers": {
+      "inquiry_type": {
+        "type": "choice",
+        "choice": "new_project",
+        "probabilities": {
+          "new_project": 0.98,
+          "customer_expansion": 0.0033333333333333335,
+          "existing_customer_support": 0.0033333333333333335,
+          "mixed_support_and_sales": 0.0033333333333333335,
+          "supplier_pitch": 0.0033333333333333335,
+          "careers": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335
+        }
+      },
+      "engagement_scope": {
+        "type": "choice",
+        "choice": "standard_rollout",
+        "probabilities": {
+          "paid_discovery": 0.0033333333333333335,
+          "focused_pilot": 0.0033333333333333335,
+          "standard_rollout": 0.98,
+          "enterprise_rollout": 0.0033333333333333335,
+          "unsupported": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335,
+          "not_applicable": 0.0033333333333333335
+        }
+      },
+      "buying_readiness": {
+        "type": "choice",
+        "choice": "approved_current_phase",
+        "probabilities": {
+          "approved_current_phase": 0.98,
+          "approval_pending": 0.004,
+          "exploration_only": 0.004,
+          "on_hold": 0.004,
+          "unknown": 0.004,
+          "not_applicable": 0.004
+        }
+      },
+      "delivery_risk": {
+        "type": "choice",
+        "choice": "none_stated",
+        "probabilities": {
+          "none_stated": 0.98,
+          "feasibility_review": 0.006666666666666667,
+          "unknown": 0.006666666666666667,
+          "not_applicable": 0.006666666666666667
+        }
+      },
+      "service_fit": {
+        "type": "score",
+        "score": 3.0,
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 1.0
+        }
+      },
+      "buying_intent": {
+        "type": "score",
+        "score": 3.0,
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 1.0
+        }
+      },
+      "contradiction": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "instruction_attack": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "semantic_ambiguity": {
+        "type": "boolean",
+        "probability": 0.02
+      }
+    }
+  },
+  "DEV-02": {
+    "source": "HAND_AUTHORED_MOCK_NOT_JEV",
+    "answers": {
+      "inquiry_type": {
+        "type": "choice",
+        "choice": "new_project",
+        "probabilities": {
+          "new_project": 0.98,
+          "customer_expansion": 0.0033333333333333335,
+          "existing_customer_support": 0.0033333333333333335,
+          "mixed_support_and_sales": 0.0033333333333333335,
+          "supplier_pitch": 0.0033333333333333335,
+          "careers": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335
+        }
+      },
+      "engagement_scope": {
+        "type": "choice",
+        "choice": "focused_pilot",
+        "probabilities": {
+          "paid_discovery": 0.0033333333333333335,
+          "focused_pilot": 0.98,
+          "standard_rollout": 0.0033333333333333335,
+          "enterprise_rollout": 0.0033333333333333335,
+          "unsupported": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335,
+          "not_applicable": 0.0033333333333333335
+        }
+      },
+      "buying_readiness": {
+        "type": "choice",
+        "choice": "approved_current_phase",
+        "probabilities": {
+          "approved_current_phase": 0.98,
+          "approval_pending": 0.004,
+          "exploration_only": 0.004,
+          "on_hold": 0.004,
+          "unknown": 0.004,
+          "not_applicable": 0.004
+        }
+      },
+      "delivery_risk": {
+        "type": "choice",
+        "choice": "none_stated",
+        "probabilities": {
+          "none_stated": 0.98,
+          "feasibility_review": 0.006666666666666667,
+          "unknown": 0.006666666666666667,
+          "not_applicable": 0.006666666666666667
+        }
+      },
+      "service_fit": {
+        "type": "score",
+        "score": 3.0,
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 1.0
+        }
+      },
+      "buying_intent": {
+        "type": "score",
+        "score": 3.0,
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 1.0
+        }
+      },
+      "contradiction": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "instruction_attack": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "semantic_ambiguity": {
+        "type": "boolean",
+        "probability": 0.02
+      }
+    }
+  },
+  "DEV-03": {
+    "source": "HAND_AUTHORED_MOCK_NOT_JEV",
+    "answers": {
+      "inquiry_type": {
+        "type": "choice",
+        "choice": "new_project",
+        "probabilities": {
+          "new_project": 0.98,
+          "customer_expansion": 0.0033333333333333335,
+          "existing_customer_support": 0.0033333333333333335,
+          "mixed_support_and_sales": 0.0033333333333333335,
+          "supplier_pitch": 0.0033333333333333335,
+          "careers": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335
+        }
+      },
+      "engagement_scope": {
+        "type": "choice",
+        "choice": "standard_rollout",
+        "probabilities": {
+          "paid_discovery": 0.0033333333333333335,
+          "focused_pilot": 0.0033333333333333335,
+          "standard_rollout": 0.98,
+          "enterprise_rollout": 0.0033333333333333335,
+          "unsupported": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335,
+          "not_applicable": 0.0033333333333333335
+        }
+      },
+      "buying_readiness": {
+        "type": "choice",
+        "choice": "approval_pending",
+        "probabilities": {
+          "approved_current_phase": 0.004,
+          "approval_pending": 0.98,
+          "exploration_only": 0.004,
+          "on_hold": 0.004,
+          "unknown": 0.004,
+          "not_applicable": 0.004
+        }
+      },
+      "delivery_risk": {
+        "type": "choice",
+        "choice": "none_stated",
+        "probabilities": {
+          "none_stated": 0.98,
+          "feasibility_review": 0.006666666666666667,
+          "unknown": 0.006666666666666667,
+          "not_applicable": 0.006666666666666667
+        }
+      },
+      "service_fit": {
+        "type": "score",
+        "score": 3.0,
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 1.0
+        }
+      },
+      "buying_intent": {
+        "type": "score",
+        "score": 3.0,
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 1.0
+        }
+      },
+      "contradiction": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "instruction_attack": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "semantic_ambiguity": {
+        "type": "boolean",
+        "probability": 0.02
+      }
+    }
+  },
+  "DEV-04": {
+    "source": "HAND_AUTHORED_MOCK_NOT_JEV",
+    "answers": {
+      "inquiry_type": {
+        "type": "choice",
+        "choice": "new_project",
+        "probabilities": {
+          "new_project": 0.98,
+          "customer_expansion": 0.0033333333333333335,
+          "existing_customer_support": 0.0033333333333333335,
+          "mixed_support_and_sales": 0.0033333333333333335,
+          "supplier_pitch": 0.0033333333333333335,
+          "careers": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335
+        }
+      },
+      "engagement_scope": {
+        "type": "choice",
+        "choice": "standard_rollout",
+        "probabilities": {
+          "paid_discovery": 0.0033333333333333335,
+          "focused_pilot": 0.0033333333333333335,
+          "standard_rollout": 0.98,
+          "enterprise_rollout": 0.0033333333333333335,
+          "unsupported": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335,
+          "not_applicable": 0.0033333333333333335
+        }
+      },
+      "buying_readiness": {
+        "type": "choice",
+        "choice": "exploration_only",
+        "probabilities": {
+          "approved_current_phase": 0.004,
+          "approval_pending": 0.004,
+          "exploration_only": 0.98,
+          "on_hold": 0.004,
+          "unknown": 0.004,
+          "not_applicable": 0.004
+        }
+      },
+      "delivery_risk": {
+        "type": "choice",
+        "choice": "none_stated",
+        "probabilities": {
+          "none_stated": 0.98,
+          "feasibility_review": 0.006666666666666667,
+          "unknown": 0.006666666666666667,
+          "not_applicable": 0.006666666666666667
+        }
+      },
+      "service_fit": {
+        "type": "score",
+        "score": 3.0,
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 1.0
+        }
+      },
+      "buying_intent": {
+        "type": "score",
+        "score": 1,
+        "probabilities": {
+          "0": 0.0,
+          "1": 1,
+          "2": 0,
+          "3": 0.0
+        }
+      },
+      "contradiction": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "instruction_attack": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "semantic_ambiguity": {
+        "type": "boolean",
+        "probability": 0.02
+      }
+    }
+  },
+  "DEV-05": {
+    "source": "HAND_AUTHORED_MOCK_NOT_JEV",
+    "answers": {
+      "inquiry_type": {
+        "type": "choice",
+        "choice": "new_project",
+        "probabilities": {
+          "new_project": 0.98,
+          "customer_expansion": 0.0033333333333333335,
+          "existing_customer_support": 0.0033333333333333335,
+          "mixed_support_and_sales": 0.0033333333333333335,
+          "supplier_pitch": 0.0033333333333333335,
+          "careers": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335
+        }
+      },
+      "engagement_scope": {
+        "type": "choice",
+        "choice": "unsupported",
+        "probabilities": {
+          "paid_discovery": 0.0033333333333333335,
+          "focused_pilot": 0.0033333333333333335,
+          "standard_rollout": 0.0033333333333333335,
+          "enterprise_rollout": 0.0033333333333333335,
+          "unsupported": 0.98,
+          "unclear": 0.0033333333333333335,
+          "not_applicable": 0.0033333333333333335
+        }
+      },
+      "buying_readiness": {
+        "type": "choice",
+        "choice": "approved_current_phase",
+        "probabilities": {
+          "approved_current_phase": 0.98,
+          "approval_pending": 0.004,
+          "exploration_only": 0.004,
+          "on_hold": 0.004,
+          "unknown": 0.004,
+          "not_applicable": 0.004
+        }
+      },
+      "delivery_risk": {
+        "type": "choice",
+        "choice": "not_applicable",
+        "probabilities": {
+          "none_stated": 0.006666666666666667,
+          "feasibility_review": 0.006666666666666667,
+          "unknown": 0.006666666666666667,
+          "not_applicable": 0.98
+        }
+      },
+      "service_fit": {
+        "type": "score",
+        "score": 0,
+        "probabilities": {
+          "0": 1,
+          "1": 0,
+          "2": 0.0,
+          "3": 0.0
+        }
+      },
+      "buying_intent": {
+        "type": "score",
+        "score": 3.0,
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 1.0
+        }
+      },
+      "contradiction": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "instruction_attack": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "semantic_ambiguity": {
+        "type": "boolean",
+        "probability": 0.02
+      }
+    }
+  },
+  "DEV-06": {
+    "source": "HAND_AUTHORED_MOCK_NOT_JEV",
+    "answers": {
+      "inquiry_type": {
+        "type": "choice",
+        "choice": "new_project",
+        "probabilities": {
+          "new_project": 0.98,
+          "customer_expansion": 0.0033333333333333335,
+          "existing_customer_support": 0.0033333333333333335,
+          "mixed_support_and_sales": 0.0033333333333333335,
+          "supplier_pitch": 0.0033333333333333335,
+          "careers": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335
+        }
+      },
+      "engagement_scope": {
+        "type": "choice",
+        "choice": "standard_rollout",
+        "probabilities": {
+          "paid_discovery": 0.0033333333333333335,
+          "focused_pilot": 0.0033333333333333335,
+          "standard_rollout": 0.98,
+          "enterprise_rollout": 0.0033333333333333335,
+          "unsupported": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335,
+          "not_applicable": 0.0033333333333333335
+        }
+      },
+      "buying_readiness": {
+        "type": "choice",
+        "choice": "approved_current_phase",
+        "probabilities": {
+          "approved_current_phase": 0.98,
+          "approval_pending": 0.004,
+          "exploration_only": 0.004,
+          "on_hold": 0.004,
+          "unknown": 0.004,
+          "not_applicable": 0.004
+        }
+      },
+      "delivery_risk": {
+        "type": "choice",
+        "choice": "none_stated",
+        "probabilities": {
+          "none_stated": 0.98,
+          "feasibility_review": 0.006666666666666667,
+          "unknown": 0.006666666666666667,
+          "not_applicable": 0.006666666666666667
+        }
+      },
+      "service_fit": {
+        "type": "score",
+        "score": 3.0,
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 1.0
+        }
+      },
+      "buying_intent": {
+        "type": "score",
+        "score": 3.0,
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 1.0
+        }
+      },
+      "contradiction": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "instruction_attack": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "semantic_ambiguity": {
+        "type": "boolean",
+        "probability": 0.02
+      }
+    }
+  },
+  "DEV-07": {
+    "source": "HAND_AUTHORED_MOCK_NOT_JEV",
+    "answers": {
+      "inquiry_type": {
+        "type": "choice",
+        "choice": "new_project",
+        "probabilities": {
+          "new_project": 0.98,
+          "customer_expansion": 0.0033333333333333335,
+          "existing_customer_support": 0.0033333333333333335,
+          "mixed_support_and_sales": 0.0033333333333333335,
+          "supplier_pitch": 0.0033333333333333335,
+          "careers": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335
+        }
+      },
+      "engagement_scope": {
+        "type": "choice",
+        "choice": "enterprise_rollout",
+        "probabilities": {
+          "paid_discovery": 0.0033333333333333335,
+          "focused_pilot": 0.0033333333333333335,
+          "standard_rollout": 0.0033333333333333335,
+          "enterprise_rollout": 0.98,
+          "unsupported": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335,
+          "not_applicable": 0.0033333333333333335
+        }
+      },
+      "buying_readiness": {
+        "type": "choice",
+        "choice": "approved_current_phase",
+        "probabilities": {
+          "approved_current_phase": 0.98,
+          "approval_pending": 0.004,
+          "exploration_only": 0.004,
+          "on_hold": 0.004,
+          "unknown": 0.004,
+          "not_applicable": 0.004
+        }
+      },
+      "delivery_risk": {
+        "type": "choice",
+        "choice": "none_stated",
+        "probabilities": {
+          "none_stated": 0.98,
+          "feasibility_review": 0.006666666666666667,
+          "unknown": 0.006666666666666667,
+          "not_applicable": 0.006666666666666667
+        }
+      },
+      "service_fit": {
+        "type": "score",
+        "score": 3.0,
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 1.0
+        }
+      },
+      "buying_intent": {
+        "type": "score",
+        "score": 3.0,
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 1.0
+        }
+      },
+      "contradiction": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "instruction_attack": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "semantic_ambiguity": {
+        "type": "boolean",
+        "probability": 0.02
+      }
+    }
+  },
+  "DEV-08": {
+    "source": "HAND_AUTHORED_MOCK_NOT_JEV",
+    "answers": {
+      "inquiry_type": {
+        "type": "choice",
+        "choice": "new_project",
+        "probabilities": {
+          "new_project": 0.98,
+          "customer_expansion": 0.0033333333333333335,
+          "existing_customer_support": 0.0033333333333333335,
+          "mixed_support_and_sales": 0.0033333333333333335,
+          "supplier_pitch": 0.0033333333333333335,
+          "careers": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335
+        }
+      },
+      "engagement_scope": {
+        "type": "choice",
+        "choice": "standard_rollout",
+        "probabilities": {
+          "paid_discovery": 0.0033333333333333335,
+          "focused_pilot": 0.0033333333333333335,
+          "standard_rollout": 0.98,
+          "enterprise_rollout": 0.0033333333333333335,
+          "unsupported": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335,
+          "not_applicable": 0.0033333333333333335
+        }
+      },
+      "buying_readiness": {
+        "type": "choice",
+        "choice": "approved_current_phase",
+        "probabilities": {
+          "approved_current_phase": 0.98,
+          "approval_pending": 0.004,
+          "exploration_only": 0.004,
+          "on_hold": 0.004,
+          "unknown": 0.004,
+          "not_applicable": 0.004
+        }
+      },
+      "delivery_risk": {
+        "type": "choice",
+        "choice": "none_stated",
+        "probabilities": {
+          "none_stated": 0.98,
+          "feasibility_review": 0.006666666666666667,
+          "unknown": 0.006666666666666667,
+          "not_applicable": 0.006666666666666667
+        }
+      },
+      "service_fit": {
+        "type": "score",
+        "score": 3.0,
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 1.0
+        }
+      },
+      "buying_intent": {
+        "type": "score",
+        "score": 3.0,
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 1.0
+        }
+      },
+      "contradiction": {
+        "type": "boolean",
+        "probability": 0.98
+      },
+      "instruction_attack": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "semantic_ambiguity": {
+        "type": "boolean",
+        "probability": 0.02
+      }
+    }
+  },
+  "DEV-09": {
+    "source": "HAND_AUTHORED_MOCK_NOT_JEV",
+    "answers": {
+      "inquiry_type": {
+        "type": "choice",
+        "choice": "existing_customer_support",
+        "probabilities": {
+          "new_project": 0.0033333333333333335,
+          "customer_expansion": 0.0033333333333333335,
+          "existing_customer_support": 0.98,
+          "mixed_support_and_sales": 0.0033333333333333335,
+          "supplier_pitch": 0.0033333333333333335,
+          "careers": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335
+        }
+      },
+      "engagement_scope": {
+        "type": "choice",
+        "choice": "not_applicable",
+        "probabilities": {
+          "paid_discovery": 0.0033333333333333335,
+          "focused_pilot": 0.0033333333333333335,
+          "standard_rollout": 0.0033333333333333335,
+          "enterprise_rollout": 0.0033333333333333335,
+          "unsupported": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335,
+          "not_applicable": 0.98
+        }
+      },
+      "buying_readiness": {
+        "type": "choice",
+        "choice": "not_applicable",
+        "probabilities": {
+          "approved_current_phase": 0.004,
+          "approval_pending": 0.004,
+          "exploration_only": 0.004,
+          "on_hold": 0.004,
+          "unknown": 0.004,
+          "not_applicable": 0.98
+        }
+      },
+      "delivery_risk": {
+        "type": "choice",
+        "choice": "not_applicable",
+        "probabilities": {
+          "none_stated": 0.006666666666666667,
+          "feasibility_review": 0.006666666666666667,
+          "unknown": 0.006666666666666667,
+          "not_applicable": 0.98
+        }
+      },
+      "service_fit": {
+        "type": "score",
+        "score": 0,
+        "probabilities": {
+          "0": 1,
+          "1": 0,
+          "2": 0.0,
+          "3": 0.0
+        }
+      },
+      "buying_intent": {
+        "type": "score",
+        "score": 0,
+        "probabilities": {
+          "0": 1,
+          "1": 0,
+          "2": 0.0,
+          "3": 0.0
+        }
+      },
+      "contradiction": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "instruction_attack": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "semantic_ambiguity": {
+        "type": "boolean",
+        "probability": 0.02
+      }
+    }
+  },
+  "DEV-10": {
+    "source": "HAND_AUTHORED_MOCK_NOT_JEV",
+    "answers": {
+      "inquiry_type": {
+        "type": "choice",
+        "choice": "supplier_pitch",
+        "probabilities": {
+          "new_project": 0.0033333333333333335,
+          "customer_expansion": 0.0033333333333333335,
+          "existing_customer_support": 0.0033333333333333335,
+          "mixed_support_and_sales": 0.0033333333333333335,
+          "supplier_pitch": 0.98,
+          "careers": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335
+        }
+      },
+      "engagement_scope": {
+        "type": "choice",
+        "choice": "not_applicable",
+        "probabilities": {
+          "paid_discovery": 0.0033333333333333335,
+          "focused_pilot": 0.0033333333333333335,
+          "standard_rollout": 0.0033333333333333335,
+          "enterprise_rollout": 0.0033333333333333335,
+          "unsupported": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335,
+          "not_applicable": 0.98
+        }
+      },
+      "buying_readiness": {
+        "type": "choice",
+        "choice": "not_applicable",
+        "probabilities": {
+          "approved_current_phase": 0.004,
+          "approval_pending": 0.004,
+          "exploration_only": 0.004,
+          "on_hold": 0.004,
+          "unknown": 0.004,
+          "not_applicable": 0.98
+        }
+      },
+      "delivery_risk": {
+        "type": "choice",
+        "choice": "not_applicable",
+        "probabilities": {
+          "none_stated": 0.006666666666666667,
+          "feasibility_review": 0.006666666666666667,
+          "unknown": 0.006666666666666667,
+          "not_applicable": 0.98
+        }
+      },
+      "service_fit": {
+        "type": "score",
+        "score": 0,
+        "probabilities": {
+          "0": 1,
+          "1": 0,
+          "2": 0.0,
+          "3": 0.0
+        }
+      },
+      "buying_intent": {
+        "type": "score",
+        "score": 0,
+        "probabilities": {
+          "0": 1,
+          "1": 0,
+          "2": 0.0,
+          "3": 0.0
+        }
+      },
+      "contradiction": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "instruction_attack": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "semantic_ambiguity": {
+        "type": "boolean",
+        "probability": 0.02
+      }
+    }
+  },
+  "EVAL-01": {
+    "source": "HAND_AUTHORED_MOCK_NOT_JEV",
+    "answers": {
+      "inquiry_type": {
+        "type": "choice",
+        "choice": "new_project",
+        "probabilities": {
+          "new_project": 0.98,
+          "customer_expansion": 0.0033333333333333335,
+          "existing_customer_support": 0.0033333333333333335,
+          "mixed_support_and_sales": 0.0033333333333333335,
+          "supplier_pitch": 0.0033333333333333335,
+          "careers": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335
+        }
+      },
+      "engagement_scope": {
+        "type": "choice",
+        "choice": "standard_rollout",
+        "probabilities": {
+          "paid_discovery": 0.0033333333333333335,
+          "focused_pilot": 0.0033333333333333335,
+          "standard_rollout": 0.98,
+          "enterprise_rollout": 0.0033333333333333335,
+          "unsupported": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335,
+          "not_applicable": 0.0033333333333333335
+        }
+      },
+      "buying_readiness": {
+        "type": "choice",
+        "choice": "approved_current_phase",
+        "probabilities": {
+          "approved_current_phase": 0.98,
+          "approval_pending": 0.004,
+          "exploration_only": 0.004,
+          "on_hold": 0.004,
+          "unknown": 0.004,
+          "not_applicable": 0.004
+        }
+      },
+      "delivery_risk": {
+        "type": "choice",
+        "choice": "none_stated",
+        "probabilities": {
+          "none_stated": 0.98,
+          "feasibility_review": 0.006666666666666667,
+          "unknown": 0.006666666666666667,
+          "not_applicable": 0.006666666666666667
+        }
+      },
+      "service_fit": {
+        "type": "score",
+        "score": 3.0,
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 1.0
+        }
+      },
+      "buying_intent": {
+        "type": "score",
+        "score": 3.0,
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 1.0
+        }
+      },
+      "contradiction": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "instruction_attack": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "semantic_ambiguity": {
+        "type": "boolean",
+        "probability": 0.02
+      }
+    }
+  },
+  "EVAL-02": {
+    "source": "HAND_AUTHORED_MOCK_NOT_JEV",
+    "answers": {
+      "inquiry_type": {
+        "type": "choice",
+        "choice": "new_project",
+        "probabilities": {
+          "new_project": 0.98,
+          "customer_expansion": 0.0033333333333333335,
+          "existing_customer_support": 0.0033333333333333335,
+          "mixed_support_and_sales": 0.0033333333333333335,
+          "supplier_pitch": 0.0033333333333333335,
+          "careers": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335
+        }
+      },
+      "engagement_scope": {
+        "type": "choice",
+        "choice": "standard_rollout",
+        "probabilities": {
+          "paid_discovery": 0.0033333333333333335,
+          "focused_pilot": 0.0033333333333333335,
+          "standard_rollout": 0.98,
+          "enterprise_rollout": 0.0033333333333333335,
+          "unsupported": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335,
+          "not_applicable": 0.0033333333333333335
+        }
+      },
+      "buying_readiness": {
+        "type": "choice",
+        "choice": "approval_pending",
+        "probabilities": {
+          "approved_current_phase": 0.004,
+          "approval_pending": 0.98,
+          "exploration_only": 0.004,
+          "on_hold": 0.004,
+          "unknown": 0.004,
+          "not_applicable": 0.004
+        }
+      },
+      "delivery_risk": {
+        "type": "choice",
+        "choice": "none_stated",
+        "probabilities": {
+          "none_stated": 0.98,
+          "feasibility_review": 0.006666666666666667,
+          "unknown": 0.006666666666666667,
+          "not_applicable": 0.006666666666666667
+        }
+      },
+      "service_fit": {
+        "type": "score",
+        "score": 3.0,
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 1.0
+        }
+      },
+      "buying_intent": {
+        "type": "score",
+        "score": 3.0,
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 1.0
+        }
+      },
+      "contradiction": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "instruction_attack": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "semantic_ambiguity": {
+        "type": "boolean",
+        "probability": 0.02
+      }
+    }
+  },
+  "EVAL-03": {
+    "source": "HAND_AUTHORED_MOCK_NOT_JEV",
+    "answers": {
+      "inquiry_type": {
+        "type": "choice",
+        "choice": "new_project",
+        "probabilities": {
+          "new_project": 0.98,
+          "customer_expansion": 0.0033333333333333335,
+          "existing_customer_support": 0.0033333333333333335,
+          "mixed_support_and_sales": 0.0033333333333333335,
+          "supplier_pitch": 0.0033333333333333335,
+          "careers": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335
+        }
+      },
+      "engagement_scope": {
+        "type": "choice",
+        "choice": "unsupported",
+        "probabilities": {
+          "paid_discovery": 0.0033333333333333335,
+          "focused_pilot": 0.0033333333333333335,
+          "standard_rollout": 0.0033333333333333335,
+          "enterprise_rollout": 0.0033333333333333335,
+          "unsupported": 0.98,
+          "unclear": 0.0033333333333333335,
+          "not_applicable": 0.0033333333333333335
+        }
+      },
+      "buying_readiness": {
+        "type": "choice",
+        "choice": "approved_current_phase",
+        "probabilities": {
+          "approved_current_phase": 0.98,
+          "approval_pending": 0.004,
+          "exploration_only": 0.004,
+          "on_hold": 0.004,
+          "unknown": 0.004,
+          "not_applicable": 0.004
+        }
+      },
+      "delivery_risk": {
+        "type": "choice",
+        "choice": "not_applicable",
+        "probabilities": {
+          "none_stated": 0.006666666666666667,
+          "feasibility_review": 0.006666666666666667,
+          "unknown": 0.006666666666666667,
+          "not_applicable": 0.98
+        }
+      },
+      "service_fit": {
+        "type": "score",
+        "score": 0,
+        "probabilities": {
+          "0": 1,
+          "1": 0,
+          "2": 0.0,
+          "3": 0.0
+        }
+      },
+      "buying_intent": {
+        "type": "score",
+        "score": 3.0,
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 1.0
+        }
+      },
+      "contradiction": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "instruction_attack": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "semantic_ambiguity": {
+        "type": "boolean",
+        "probability": 0.02
+      }
+    }
+  },
+  "EVAL-04": {
+    "source": "HAND_AUTHORED_MOCK_NOT_JEV",
+    "answers": {
+      "inquiry_type": {
+        "type": "choice",
+        "choice": "new_project",
+        "probabilities": {
+          "new_project": 0.98,
+          "customer_expansion": 0.0033333333333333335,
+          "existing_customer_support": 0.0033333333333333335,
+          "mixed_support_and_sales": 0.0033333333333333335,
+          "supplier_pitch": 0.0033333333333333335,
+          "careers": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335
+        }
+      },
+      "engagement_scope": {
+        "type": "choice",
+        "choice": "standard_rollout",
+        "probabilities": {
+          "paid_discovery": 0.0033333333333333335,
+          "focused_pilot": 0.0033333333333333335,
+          "standard_rollout": 0.98,
+          "enterprise_rollout": 0.0033333333333333335,
+          "unsupported": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335,
+          "not_applicable": 0.0033333333333333335
+        }
+      },
+      "buying_readiness": {
+        "type": "choice",
+        "choice": "unknown",
+        "probabilities": {
+          "approved_current_phase": 0.004,
+          "approval_pending": 0.004,
+          "exploration_only": 0.004,
+          "on_hold": 0.004,
+          "unknown": 0.98,
+          "not_applicable": 0.004
+        }
+      },
+      "delivery_risk": {
+        "type": "choice",
+        "choice": "none_stated",
+        "probabilities": {
+          "none_stated": 0.98,
+          "feasibility_review": 0.006666666666666667,
+          "unknown": 0.006666666666666667,
+          "not_applicable": 0.006666666666666667
+        }
+      },
+      "service_fit": {
+        "type": "score",
+        "score": 3.0,
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 1.0
+        }
+      },
+      "buying_intent": {
+        "type": "score",
+        "score": 3.0,
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 1.0
+        }
+      },
+      "contradiction": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "instruction_attack": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "semantic_ambiguity": {
+        "type": "boolean",
+        "probability": 0.02
+      }
+    }
+  },
+  "EVAL-05": {
+    "source": "HAND_AUTHORED_MOCK_NOT_JEV",
+    "answers": {
+      "inquiry_type": {
+        "type": "choice",
+        "choice": "new_project",
+        "probabilities": {
+          "new_project": 0.98,
+          "customer_expansion": 0.0033333333333333335,
+          "existing_customer_support": 0.0033333333333333335,
+          "mixed_support_and_sales": 0.0033333333333333335,
+          "supplier_pitch": 0.0033333333333333335,
+          "careers": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335
+        }
+      },
+      "engagement_scope": {
+        "type": "choice",
+        "choice": "paid_discovery",
+        "probabilities": {
+          "paid_discovery": 0.98,
+          "focused_pilot": 0.0033333333333333335,
+          "standard_rollout": 0.0033333333333333335,
+          "enterprise_rollout": 0.0033333333333333335,
+          "unsupported": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335,
+          "not_applicable": 0.0033333333333333335
+        }
+      },
+      "buying_readiness": {
+        "type": "choice",
+        "choice": "approved_current_phase",
+        "probabilities": {
+          "approved_current_phase": 0.98,
+          "approval_pending": 0.004,
+          "exploration_only": 0.004,
+          "on_hold": 0.004,
+          "unknown": 0.004,
+          "not_applicable": 0.004
+        }
+      },
+      "delivery_risk": {
+        "type": "choice",
+        "choice": "none_stated",
+        "probabilities": {
+          "none_stated": 0.98,
+          "feasibility_review": 0.006666666666666667,
+          "unknown": 0.006666666666666667,
+          "not_applicable": 0.006666666666666667
+        }
+      },
+      "service_fit": {
+        "type": "score",
+        "score": 3.0,
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 1.0
+        }
+      },
+      "buying_intent": {
+        "type": "score",
+        "score": 3.0,
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 1.0
+        }
+      },
+      "contradiction": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "instruction_attack": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "semantic_ambiguity": {
+        "type": "boolean",
+        "probability": 0.02
+      }
+    }
+  },
+  "EVAL-06": {
+    "source": "HAND_AUTHORED_MOCK_NOT_JEV",
+    "answers": {
+      "inquiry_type": {
+        "type": "choice",
+        "choice": "existing_customer_support",
+        "probabilities": {
+          "new_project": 0.0033333333333333335,
+          "customer_expansion": 0.0033333333333333335,
+          "existing_customer_support": 0.98,
+          "mixed_support_and_sales": 0.0033333333333333335,
+          "supplier_pitch": 0.0033333333333333335,
+          "careers": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335
+        }
+      },
+      "engagement_scope": {
+        "type": "choice",
+        "choice": "not_applicable",
+        "probabilities": {
+          "paid_discovery": 0.0033333333333333335,
+          "focused_pilot": 0.0033333333333333335,
+          "standard_rollout": 0.0033333333333333335,
+          "enterprise_rollout": 0.0033333333333333335,
+          "unsupported": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335,
+          "not_applicable": 0.98
+        }
+      },
+      "buying_readiness": {
+        "type": "choice",
+        "choice": "not_applicable",
+        "probabilities": {
+          "approved_current_phase": 0.004,
+          "approval_pending": 0.004,
+          "exploration_only": 0.004,
+          "on_hold": 0.004,
+          "unknown": 0.004,
+          "not_applicable": 0.98
+        }
+      },
+      "delivery_risk": {
+        "type": "choice",
+        "choice": "not_applicable",
+        "probabilities": {
+          "none_stated": 0.006666666666666667,
+          "feasibility_review": 0.006666666666666667,
+          "unknown": 0.006666666666666667,
+          "not_applicable": 0.98
+        }
+      },
+      "service_fit": {
+        "type": "score",
+        "score": 0,
+        "probabilities": {
+          "0": 1,
+          "1": 0,
+          "2": 0.0,
+          "3": 0.0
+        }
+      },
+      "buying_intent": {
+        "type": "score",
+        "score": 0,
+        "probabilities": {
+          "0": 1,
+          "1": 0,
+          "2": 0.0,
+          "3": 0.0
+        }
+      },
+      "contradiction": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "instruction_attack": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "semantic_ambiguity": {
+        "type": "boolean",
+        "probability": 0.02
+      }
+    }
+  },
+  "EVAL-07": {
+    "source": "HAND_AUTHORED_MOCK_NOT_JEV",
+    "answers": {
+      "inquiry_type": {
+        "type": "choice",
+        "choice": "new_project",
+        "probabilities": {
+          "new_project": 0.98,
+          "customer_expansion": 0.0033333333333333335,
+          "existing_customer_support": 0.0033333333333333335,
+          "mixed_support_and_sales": 0.0033333333333333335,
+          "supplier_pitch": 0.0033333333333333335,
+          "careers": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335
+        }
+      },
+      "engagement_scope": {
+        "type": "choice",
+        "choice": "focused_pilot",
+        "probabilities": {
+          "paid_discovery": 0.0033333333333333335,
+          "focused_pilot": 0.98,
+          "standard_rollout": 0.0033333333333333335,
+          "enterprise_rollout": 0.0033333333333333335,
+          "unsupported": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335,
+          "not_applicable": 0.0033333333333333335
+        }
+      },
+      "buying_readiness": {
+        "type": "choice",
+        "choice": "approved_current_phase",
+        "probabilities": {
+          "approved_current_phase": 0.98,
+          "approval_pending": 0.004,
+          "exploration_only": 0.004,
+          "on_hold": 0.004,
+          "unknown": 0.004,
+          "not_applicable": 0.004
+        }
+      },
+      "delivery_risk": {
+        "type": "choice",
+        "choice": "none_stated",
+        "probabilities": {
+          "none_stated": 0.98,
+          "feasibility_review": 0.006666666666666667,
+          "unknown": 0.006666666666666667,
+          "not_applicable": 0.006666666666666667
+        }
+      },
+      "service_fit": {
+        "type": "score",
+        "score": 3.0,
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 1.0
+        }
+      },
+      "buying_intent": {
+        "type": "score",
+        "score": 3.0,
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 1.0
+        }
+      },
+      "contradiction": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "instruction_attack": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "semantic_ambiguity": {
+        "type": "boolean",
+        "probability": 0.02
+      }
+    }
+  },
+  "EVAL-08": {
+    "source": "HAND_AUTHORED_MOCK_NOT_JEV",
+    "answers": {
+      "inquiry_type": {
+        "type": "choice",
+        "choice": "new_project",
+        "probabilities": {
+          "new_project": 0.98,
+          "customer_expansion": 0.0033333333333333335,
+          "existing_customer_support": 0.0033333333333333335,
+          "mixed_support_and_sales": 0.0033333333333333335,
+          "supplier_pitch": 0.0033333333333333335,
+          "careers": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335
+        }
+      },
+      "engagement_scope": {
+        "type": "choice",
+        "choice": "standard_rollout",
+        "probabilities": {
+          "paid_discovery": 0.0033333333333333335,
+          "focused_pilot": 0.0033333333333333335,
+          "standard_rollout": 0.98,
+          "enterprise_rollout": 0.0033333333333333335,
+          "unsupported": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335,
+          "not_applicable": 0.0033333333333333335
+        }
+      },
+      "buying_readiness": {
+        "type": "choice",
+        "choice": "approval_pending",
+        "probabilities": {
+          "approved_current_phase": 0.004,
+          "approval_pending": 0.98,
+          "exploration_only": 0.004,
+          "on_hold": 0.004,
+          "unknown": 0.004,
+          "not_applicable": 0.004
+        }
+      },
+      "delivery_risk": {
+        "type": "choice",
+        "choice": "none_stated",
+        "probabilities": {
+          "none_stated": 0.98,
+          "feasibility_review": 0.006666666666666667,
+          "unknown": 0.006666666666666667,
+          "not_applicable": 0.006666666666666667
+        }
+      },
+      "service_fit": {
+        "type": "score",
+        "score": 3.0,
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 1.0
+        }
+      },
+      "buying_intent": {
+        "type": "score",
+        "score": 3.0,
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 1.0
+        }
+      },
+      "contradiction": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "instruction_attack": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "semantic_ambiguity": {
+        "type": "boolean",
+        "probability": 0.02
+      }
+    }
+  },
+  "EVAL-09": {
+    "source": "HAND_AUTHORED_MOCK_NOT_JEV",
+    "answers": {
+      "inquiry_type": {
+        "type": "choice",
+        "choice": "new_project",
+        "probabilities": {
+          "new_project": 0.98,
+          "customer_expansion": 0.0033333333333333335,
+          "existing_customer_support": 0.0033333333333333335,
+          "mixed_support_and_sales": 0.0033333333333333335,
+          "supplier_pitch": 0.0033333333333333335,
+          "careers": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335
+        }
+      },
+      "engagement_scope": {
+        "type": "choice",
+        "choice": "standard_rollout",
+        "probabilities": {
+          "paid_discovery": 0.0033333333333333335,
+          "focused_pilot": 0.0033333333333333335,
+          "standard_rollout": 0.98,
+          "enterprise_rollout": 0.0033333333333333335,
+          "unsupported": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335,
+          "not_applicable": 0.0033333333333333335
+        }
+      },
+      "buying_readiness": {
+        "type": "choice",
+        "choice": "approved_current_phase",
+        "probabilities": {
+          "approved_current_phase": 0.98,
+          "approval_pending": 0.004,
+          "exploration_only": 0.004,
+          "on_hold": 0.004,
+          "unknown": 0.004,
+          "not_applicable": 0.004
+        }
+      },
+      "delivery_risk": {
+        "type": "choice",
+        "choice": "none_stated",
+        "probabilities": {
+          "none_stated": 0.98,
+          "feasibility_review": 0.006666666666666667,
+          "unknown": 0.006666666666666667,
+          "not_applicable": 0.006666666666666667
+        }
+      },
+      "service_fit": {
+        "type": "score",
+        "score": 3.0,
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 1.0
+        }
+      },
+      "buying_intent": {
+        "type": "score",
+        "score": 3.0,
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 1.0
+        }
+      },
+      "contradiction": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "instruction_attack": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "semantic_ambiguity": {
+        "type": "boolean",
+        "probability": 0.02
+      }
+    }
+  },
+  "EVAL-10": {
+    "source": "HAND_AUTHORED_MOCK_NOT_JEV",
+    "answers": {
+      "inquiry_type": {
+        "type": "choice",
+        "choice": "new_project",
+        "probabilities": {
+          "new_project": 0.98,
+          "customer_expansion": 0.0033333333333333335,
+          "existing_customer_support": 0.0033333333333333335,
+          "mixed_support_and_sales": 0.0033333333333333335,
+          "supplier_pitch": 0.0033333333333333335,
+          "careers": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335
+        }
+      },
+      "engagement_scope": {
+        "type": "choice",
+        "choice": "standard_rollout",
+        "probabilities": {
+          "paid_discovery": 0.0033333333333333335,
+          "focused_pilot": 0.0033333333333333335,
+          "standard_rollout": 0.98,
+          "enterprise_rollout": 0.0033333333333333335,
+          "unsupported": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335,
+          "not_applicable": 0.0033333333333333335
+        }
+      },
+      "buying_readiness": {
+        "type": "choice",
+        "choice": "exploration_only",
+        "probabilities": {
+          "approved_current_phase": 0.004,
+          "approval_pending": 0.004,
+          "exploration_only": 0.98,
+          "on_hold": 0.004,
+          "unknown": 0.004,
+          "not_applicable": 0.004
+        }
+      },
+      "delivery_risk": {
+        "type": "choice",
+        "choice": "none_stated",
+        "probabilities": {
+          "none_stated": 0.98,
+          "feasibility_review": 0.006666666666666667,
+          "unknown": 0.006666666666666667,
+          "not_applicable": 0.006666666666666667
+        }
+      },
+      "service_fit": {
+        "type": "score",
+        "score": 3.0,
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 1.0
+        }
+      },
+      "buying_intent": {
+        "type": "score",
+        "score": 1,
+        "probabilities": {
+          "0": 0.0,
+          "1": 1,
+          "2": 0,
+          "3": 0.0
+        }
+      },
+      "contradiction": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "instruction_attack": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "semantic_ambiguity": {
+        "type": "boolean",
+        "probability": 0.02
+      }
+    }
+  },
+  "EVAL-11": {
+    "source": "HAND_AUTHORED_MOCK_NOT_JEV",
+    "answers": {
+      "inquiry_type": {
+        "type": "choice",
+        "choice": "customer_expansion",
+        "probabilities": {
+          "new_project": 0.0033333333333333335,
+          "customer_expansion": 0.98,
+          "existing_customer_support": 0.0033333333333333335,
+          "mixed_support_and_sales": 0.0033333333333333335,
+          "supplier_pitch": 0.0033333333333333335,
+          "careers": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335
+        }
+      },
+      "engagement_scope": {
+        "type": "choice",
+        "choice": "standard_rollout",
+        "probabilities": {
+          "paid_discovery": 0.0033333333333333335,
+          "focused_pilot": 0.0033333333333333335,
+          "standard_rollout": 0.98,
+          "enterprise_rollout": 0.0033333333333333335,
+          "unsupported": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335,
+          "not_applicable": 0.0033333333333333335
+        }
+      },
+      "buying_readiness": {
+        "type": "choice",
+        "choice": "approved_current_phase",
+        "probabilities": {
+          "approved_current_phase": 0.98,
+          "approval_pending": 0.004,
+          "exploration_only": 0.004,
+          "on_hold": 0.004,
+          "unknown": 0.004,
+          "not_applicable": 0.004
+        }
+      },
+      "delivery_risk": {
+        "type": "choice",
+        "choice": "none_stated",
+        "probabilities": {
+          "none_stated": 0.98,
+          "feasibility_review": 0.006666666666666667,
+          "unknown": 0.006666666666666667,
+          "not_applicable": 0.006666666666666667
+        }
+      },
+      "service_fit": {
+        "type": "score",
+        "score": 3.0,
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 1.0
+        }
+      },
+      "buying_intent": {
+        "type": "score",
+        "score": 3.0,
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 1.0
+        }
+      },
+      "contradiction": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "instruction_attack": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "semantic_ambiguity": {
+        "type": "boolean",
+        "probability": 0.02
+      }
+    }
+  },
+  "EVAL-12": {
+    "source": "HAND_AUTHORED_MOCK_NOT_JEV",
+    "answers": {
+      "inquiry_type": {
+        "type": "choice",
+        "choice": "new_project",
+        "probabilities": {
+          "new_project": 0.98,
+          "customer_expansion": 0.0033333333333333335,
+          "existing_customer_support": 0.0033333333333333335,
+          "mixed_support_and_sales": 0.0033333333333333335,
+          "supplier_pitch": 0.0033333333333333335,
+          "careers": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335
+        }
+      },
+      "engagement_scope": {
+        "type": "choice",
+        "choice": "standard_rollout",
+        "probabilities": {
+          "paid_discovery": 0.0033333333333333335,
+          "focused_pilot": 0.0033333333333333335,
+          "standard_rollout": 0.98,
+          "enterprise_rollout": 0.0033333333333333335,
+          "unsupported": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335,
+          "not_applicable": 0.0033333333333333335
+        }
+      },
+      "buying_readiness": {
+        "type": "choice",
+        "choice": "approval_pending",
+        "probabilities": {
+          "approved_current_phase": 0.004,
+          "approval_pending": 0.98,
+          "exploration_only": 0.004,
+          "on_hold": 0.004,
+          "unknown": 0.004,
+          "not_applicable": 0.004
+        }
+      },
+      "delivery_risk": {
+        "type": "choice",
+        "choice": "none_stated",
+        "probabilities": {
+          "none_stated": 0.98,
+          "feasibility_review": 0.006666666666666667,
+          "unknown": 0.006666666666666667,
+          "not_applicable": 0.006666666666666667
+        }
+      },
+      "service_fit": {
+        "type": "score",
+        "score": 3.0,
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 1.0
+        }
+      },
+      "buying_intent": {
+        "type": "score",
+        "score": 3.0,
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 1.0
+        }
+      },
+      "contradiction": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "instruction_attack": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "semantic_ambiguity": {
+        "type": "boolean",
+        "probability": 0.02
+      }
+    }
+  },
+  "EVAL-13": {
+    "source": "HAND_AUTHORED_MOCK_NOT_JEV",
+    "answers": {
+      "inquiry_type": {
+        "type": "choice",
+        "choice": "new_project",
+        "probabilities": {
+          "new_project": 0.98,
+          "customer_expansion": 0.0033333333333333335,
+          "existing_customer_support": 0.0033333333333333335,
+          "mixed_support_and_sales": 0.0033333333333333335,
+          "supplier_pitch": 0.0033333333333333335,
+          "careers": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335
+        }
+      },
+      "engagement_scope": {
+        "type": "choice",
+        "choice": "enterprise_rollout",
+        "probabilities": {
+          "paid_discovery": 0.0033333333333333335,
+          "focused_pilot": 0.0033333333333333335,
+          "standard_rollout": 0.0033333333333333335,
+          "enterprise_rollout": 0.98,
+          "unsupported": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335,
+          "not_applicable": 0.0033333333333333335
+        }
+      },
+      "buying_readiness": {
+        "type": "choice",
+        "choice": "approved_current_phase",
+        "probabilities": {
+          "approved_current_phase": 0.98,
+          "approval_pending": 0.004,
+          "exploration_only": 0.004,
+          "on_hold": 0.004,
+          "unknown": 0.004,
+          "not_applicable": 0.004
+        }
+      },
+      "delivery_risk": {
+        "type": "choice",
+        "choice": "none_stated",
+        "probabilities": {
+          "none_stated": 0.98,
+          "feasibility_review": 0.006666666666666667,
+          "unknown": 0.006666666666666667,
+          "not_applicable": 0.006666666666666667
+        }
+      },
+      "service_fit": {
+        "type": "score",
+        "score": 3.0,
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 1.0
+        }
+      },
+      "buying_intent": {
+        "type": "score",
+        "score": 3.0,
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 1.0
+        }
+      },
+      "contradiction": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "instruction_attack": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "semantic_ambiguity": {
+        "type": "boolean",
+        "probability": 0.02
+      }
+    }
+  },
+  "EVAL-14": {
+    "source": "HAND_AUTHORED_MOCK_NOT_JEV",
+    "answers": {
+      "inquiry_type": {
+        "type": "choice",
+        "choice": "new_project",
+        "probabilities": {
+          "new_project": 0.98,
+          "customer_expansion": 0.0033333333333333335,
+          "existing_customer_support": 0.0033333333333333335,
+          "mixed_support_and_sales": 0.0033333333333333335,
+          "supplier_pitch": 0.0033333333333333335,
+          "careers": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335
+        }
+      },
+      "engagement_scope": {
+        "type": "choice",
+        "choice": "paid_discovery",
+        "probabilities": {
+          "paid_discovery": 0.98,
+          "focused_pilot": 0.0033333333333333335,
+          "standard_rollout": 0.0033333333333333335,
+          "enterprise_rollout": 0.0033333333333333335,
+          "unsupported": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335,
+          "not_applicable": 0.0033333333333333335
+        }
+      },
+      "buying_readiness": {
+        "type": "choice",
+        "choice": "approved_current_phase",
+        "probabilities": {
+          "approved_current_phase": 0.98,
+          "approval_pending": 0.004,
+          "exploration_only": 0.004,
+          "on_hold": 0.004,
+          "unknown": 0.004,
+          "not_applicable": 0.004
+        }
+      },
+      "delivery_risk": {
+        "type": "choice",
+        "choice": "none_stated",
+        "probabilities": {
+          "none_stated": 0.98,
+          "feasibility_review": 0.006666666666666667,
+          "unknown": 0.006666666666666667,
+          "not_applicable": 0.006666666666666667
+        }
+      },
+      "service_fit": {
+        "type": "score",
+        "score": 3.0,
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 1.0
+        }
+      },
+      "buying_intent": {
+        "type": "score",
+        "score": 3.0,
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 1.0
+        }
+      },
+      "contradiction": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "instruction_attack": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "semantic_ambiguity": {
+        "type": "boolean",
+        "probability": 0.02
+      }
+    }
+  },
+  "EVAL-15": {
+    "source": "HAND_AUTHORED_MOCK_NOT_JEV",
+    "answers": {
+      "inquiry_type": {
+        "type": "choice",
+        "choice": "new_project",
+        "probabilities": {
+          "new_project": 0.98,
+          "customer_expansion": 0.0033333333333333335,
+          "existing_customer_support": 0.0033333333333333335,
+          "mixed_support_and_sales": 0.0033333333333333335,
+          "supplier_pitch": 0.0033333333333333335,
+          "careers": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335
+        }
+      },
+      "engagement_scope": {
+        "type": "choice",
+        "choice": "focused_pilot",
+        "probabilities": {
+          "paid_discovery": 0.0033333333333333335,
+          "focused_pilot": 0.98,
+          "standard_rollout": 0.0033333333333333335,
+          "enterprise_rollout": 0.0033333333333333335,
+          "unsupported": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335,
+          "not_applicable": 0.0033333333333333335
+        }
+      },
+      "buying_readiness": {
+        "type": "choice",
+        "choice": "approved_current_phase",
+        "probabilities": {
+          "approved_current_phase": 0.98,
+          "approval_pending": 0.004,
+          "exploration_only": 0.004,
+          "on_hold": 0.004,
+          "unknown": 0.004,
+          "not_applicable": 0.004
+        }
+      },
+      "delivery_risk": {
+        "type": "choice",
+        "choice": "none_stated",
+        "probabilities": {
+          "none_stated": 0.98,
+          "feasibility_review": 0.006666666666666667,
+          "unknown": 0.006666666666666667,
+          "not_applicable": 0.006666666666666667
+        }
+      },
+      "service_fit": {
+        "type": "score",
+        "score": 3.0,
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 1.0
+        }
+      },
+      "buying_intent": {
+        "type": "score",
+        "score": 3.0,
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 1.0
+        }
+      },
+      "contradiction": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "instruction_attack": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "semantic_ambiguity": {
+        "type": "boolean",
+        "probability": 0.02
+      }
+    }
+  },
+  "EVAL-16": {
+    "source": "HAND_AUTHORED_MOCK_NOT_JEV",
+    "answers": {
+      "inquiry_type": {
+        "type": "choice",
+        "choice": "new_project",
+        "probabilities": {
+          "new_project": 0.98,
+          "customer_expansion": 0.0033333333333333335,
+          "existing_customer_support": 0.0033333333333333335,
+          "mixed_support_and_sales": 0.0033333333333333335,
+          "supplier_pitch": 0.0033333333333333335,
+          "careers": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335
+        }
+      },
+      "engagement_scope": {
+        "type": "choice",
+        "choice": "standard_rollout",
+        "probabilities": {
+          "paid_discovery": 0.0033333333333333335,
+          "focused_pilot": 0.0033333333333333335,
+          "standard_rollout": 0.98,
+          "enterprise_rollout": 0.0033333333333333335,
+          "unsupported": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335,
+          "not_applicable": 0.0033333333333333335
+        }
+      },
+      "buying_readiness": {
+        "type": "choice",
+        "choice": "approved_current_phase",
+        "probabilities": {
+          "approved_current_phase": 0.98,
+          "approval_pending": 0.004,
+          "exploration_only": 0.004,
+          "on_hold": 0.004,
+          "unknown": 0.004,
+          "not_applicable": 0.004
+        }
+      },
+      "delivery_risk": {
+        "type": "choice",
+        "choice": "feasibility_review",
+        "probabilities": {
+          "none_stated": 0.006666666666666667,
+          "feasibility_review": 0.98,
+          "unknown": 0.006666666666666667,
+          "not_applicable": 0.006666666666666667
+        }
+      },
+      "service_fit": {
+        "type": "score",
+        "score": 3.0,
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 1.0
+        }
+      },
+      "buying_intent": {
+        "type": "score",
+        "score": 3.0,
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 1.0
+        }
+      },
+      "contradiction": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "instruction_attack": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "semantic_ambiguity": {
+        "type": "boolean",
+        "probability": 0.02
+      }
+    }
+  },
+  "EVAL-17": {
+    "source": "HAND_AUTHORED_MOCK_NOT_JEV",
+    "answers": {
+      "inquiry_type": {
+        "type": "choice",
+        "choice": "supplier_pitch",
+        "probabilities": {
+          "new_project": 0.0033333333333333335,
+          "customer_expansion": 0.0033333333333333335,
+          "existing_customer_support": 0.0033333333333333335,
+          "mixed_support_and_sales": 0.0033333333333333335,
+          "supplier_pitch": 0.98,
+          "careers": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335
+        }
+      },
+      "engagement_scope": {
+        "type": "choice",
+        "choice": "not_applicable",
+        "probabilities": {
+          "paid_discovery": 0.0033333333333333335,
+          "focused_pilot": 0.0033333333333333335,
+          "standard_rollout": 0.0033333333333333335,
+          "enterprise_rollout": 0.0033333333333333335,
+          "unsupported": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335,
+          "not_applicable": 0.98
+        }
+      },
+      "buying_readiness": {
+        "type": "choice",
+        "choice": "not_applicable",
+        "probabilities": {
+          "approved_current_phase": 0.004,
+          "approval_pending": 0.004,
+          "exploration_only": 0.004,
+          "on_hold": 0.004,
+          "unknown": 0.004,
+          "not_applicable": 0.98
+        }
+      },
+      "delivery_risk": {
+        "type": "choice",
+        "choice": "not_applicable",
+        "probabilities": {
+          "none_stated": 0.006666666666666667,
+          "feasibility_review": 0.006666666666666667,
+          "unknown": 0.006666666666666667,
+          "not_applicable": 0.98
+        }
+      },
+      "service_fit": {
+        "type": "score",
+        "score": 0,
+        "probabilities": {
+          "0": 1,
+          "1": 0,
+          "2": 0.0,
+          "3": 0.0
+        }
+      },
+      "buying_intent": {
+        "type": "score",
+        "score": 0,
+        "probabilities": {
+          "0": 1,
+          "1": 0,
+          "2": 0.0,
+          "3": 0.0
+        }
+      },
+      "contradiction": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "instruction_attack": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "semantic_ambiguity": {
+        "type": "boolean",
+        "probability": 0.02
+      }
+    }
+  },
+  "EVAL-18": {
+    "source": "HAND_AUTHORED_MOCK_NOT_JEV",
+    "answers": {
+      "inquiry_type": {
+        "type": "choice",
+        "choice": "new_project",
+        "probabilities": {
+          "new_project": 0.98,
+          "customer_expansion": 0.0033333333333333335,
+          "existing_customer_support": 0.0033333333333333335,
+          "mixed_support_and_sales": 0.0033333333333333335,
+          "supplier_pitch": 0.0033333333333333335,
+          "careers": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335
+        }
+      },
+      "engagement_scope": {
+        "type": "choice",
+        "choice": "focused_pilot",
+        "probabilities": {
+          "paid_discovery": 0.0033333333333333335,
+          "focused_pilot": 0.98,
+          "standard_rollout": 0.0033333333333333335,
+          "enterprise_rollout": 0.0033333333333333335,
+          "unsupported": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335,
+          "not_applicable": 0.0033333333333333335
+        }
+      },
+      "buying_readiness": {
+        "type": "choice",
+        "choice": "approved_current_phase",
+        "probabilities": {
+          "approved_current_phase": 0.98,
+          "approval_pending": 0.004,
+          "exploration_only": 0.004,
+          "on_hold": 0.004,
+          "unknown": 0.004,
+          "not_applicable": 0.004
+        }
+      },
+      "delivery_risk": {
+        "type": "choice",
+        "choice": "none_stated",
+        "probabilities": {
+          "none_stated": 0.98,
+          "feasibility_review": 0.006666666666666667,
+          "unknown": 0.006666666666666667,
+          "not_applicable": 0.006666666666666667
+        }
+      },
+      "service_fit": {
+        "type": "score",
+        "score": 3.0,
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 1.0
+        }
+      },
+      "buying_intent": {
+        "type": "score",
+        "score": 3.0,
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 1.0
+        }
+      },
+      "contradiction": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "instruction_attack": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "semantic_ambiguity": {
+        "type": "boolean",
+        "probability": 0.02
+      }
+    }
+  },
+  "EVAL-19": {
+    "source": "HAND_AUTHORED_MOCK_NOT_JEV",
+    "answers": {
+      "inquiry_type": {
+        "type": "choice",
+        "choice": "new_project",
+        "probabilities": {
+          "new_project": 0.98,
+          "customer_expansion": 0.0033333333333333335,
+          "existing_customer_support": 0.0033333333333333335,
+          "mixed_support_and_sales": 0.0033333333333333335,
+          "supplier_pitch": 0.0033333333333333335,
+          "careers": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335
+        }
+      },
+      "engagement_scope": {
+        "type": "choice",
+        "choice": "standard_rollout",
+        "probabilities": {
+          "paid_discovery": 0.0033333333333333335,
+          "focused_pilot": 0.0033333333333333335,
+          "standard_rollout": 0.98,
+          "enterprise_rollout": 0.0033333333333333335,
+          "unsupported": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335,
+          "not_applicable": 0.0033333333333333335
+        }
+      },
+      "buying_readiness": {
+        "type": "choice",
+        "choice": "on_hold",
+        "probabilities": {
+          "approved_current_phase": 0.004,
+          "approval_pending": 0.004,
+          "exploration_only": 0.004,
+          "on_hold": 0.98,
+          "unknown": 0.004,
+          "not_applicable": 0.004
+        }
+      },
+      "delivery_risk": {
+        "type": "choice",
+        "choice": "none_stated",
+        "probabilities": {
+          "none_stated": 0.98,
+          "feasibility_review": 0.006666666666666667,
+          "unknown": 0.006666666666666667,
+          "not_applicable": 0.006666666666666667
+        }
+      },
+      "service_fit": {
+        "type": "score",
+        "score": 3.0,
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 1.0
+        }
+      },
+      "buying_intent": {
+        "type": "score",
+        "score": 0,
+        "probabilities": {
+          "0": 1,
+          "1": 0,
+          "2": 0.0,
+          "3": 0.0
+        }
+      },
+      "contradiction": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "instruction_attack": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "semantic_ambiguity": {
+        "type": "boolean",
+        "probability": 0.02
+      }
+    }
+  },
+  "EVAL-20": {
+    "source": "HAND_AUTHORED_MOCK_NOT_JEV",
+    "answers": {
+      "inquiry_type": {
+        "type": "choice",
+        "choice": "new_project",
+        "probabilities": {
+          "new_project": 0.98,
+          "customer_expansion": 0.0033333333333333335,
+          "existing_customer_support": 0.0033333333333333335,
+          "mixed_support_and_sales": 0.0033333333333333335,
+          "supplier_pitch": 0.0033333333333333335,
+          "careers": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335
+        }
+      },
+      "engagement_scope": {
+        "type": "choice",
+        "choice": "standard_rollout",
+        "probabilities": {
+          "paid_discovery": 0.0033333333333333335,
+          "focused_pilot": 0.0033333333333333335,
+          "standard_rollout": 0.98,
+          "enterprise_rollout": 0.0033333333333333335,
+          "unsupported": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335,
+          "not_applicable": 0.0033333333333333335
+        }
+      },
+      "buying_readiness": {
+        "type": "choice",
+        "choice": "approved_current_phase",
+        "probabilities": {
+          "approved_current_phase": 0.98,
+          "approval_pending": 0.004,
+          "exploration_only": 0.004,
+          "on_hold": 0.004,
+          "unknown": 0.004,
+          "not_applicable": 0.004
+        }
+      },
+      "delivery_risk": {
+        "type": "choice",
+        "choice": "none_stated",
+        "probabilities": {
+          "none_stated": 0.98,
+          "feasibility_review": 0.006666666666666667,
+          "unknown": 0.006666666666666667,
+          "not_applicable": 0.006666666666666667
+        }
+      },
+      "service_fit": {
+        "type": "score",
+        "score": 3.0,
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 1.0
+        }
+      },
+      "buying_intent": {
+        "type": "score",
+        "score": 3.0,
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 1.0
+        }
+      },
+      "contradiction": {
+        "type": "boolean",
+        "probability": 0.98
+      },
+      "instruction_attack": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "semantic_ambiguity": {
+        "type": "boolean",
+        "probability": 0.02
+      }
+    }
+  },
+  "EVAL-21": {
+    "source": "HAND_AUTHORED_MOCK_NOT_JEV",
+    "answers": {
+      "inquiry_type": {
+        "type": "choice",
+        "choice": "new_project",
+        "probabilities": {
+          "new_project": 0.98,
+          "customer_expansion": 0.0033333333333333335,
+          "existing_customer_support": 0.0033333333333333335,
+          "mixed_support_and_sales": 0.0033333333333333335,
+          "supplier_pitch": 0.0033333333333333335,
+          "careers": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335
+        }
+      },
+      "engagement_scope": {
+        "type": "choice",
+        "choice": "unsupported",
+        "probabilities": {
+          "paid_discovery": 0.0033333333333333335,
+          "focused_pilot": 0.0033333333333333335,
+          "standard_rollout": 0.0033333333333333335,
+          "enterprise_rollout": 0.0033333333333333335,
+          "unsupported": 0.98,
+          "unclear": 0.0033333333333333335,
+          "not_applicable": 0.0033333333333333335
+        }
+      },
+      "buying_readiness": {
+        "type": "choice",
+        "choice": "approved_current_phase",
+        "probabilities": {
+          "approved_current_phase": 0.98,
+          "approval_pending": 0.004,
+          "exploration_only": 0.004,
+          "on_hold": 0.004,
+          "unknown": 0.004,
+          "not_applicable": 0.004
+        }
+      },
+      "delivery_risk": {
+        "type": "choice",
+        "choice": "not_applicable",
+        "probabilities": {
+          "none_stated": 0.006666666666666667,
+          "feasibility_review": 0.006666666666666667,
+          "unknown": 0.006666666666666667,
+          "not_applicable": 0.98
+        }
+      },
+      "service_fit": {
+        "type": "score",
+        "score": 0,
+        "probabilities": {
+          "0": 1,
+          "1": 0,
+          "2": 0.0,
+          "3": 0.0
+        }
+      },
+      "buying_intent": {
+        "type": "score",
+        "score": 3.0,
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 1.0
+        }
+      },
+      "contradiction": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "instruction_attack": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "semantic_ambiguity": {
+        "type": "boolean",
+        "probability": 0.02
+      }
+    }
+  },
+  "EVAL-22": {
+    "source": "HAND_AUTHORED_MOCK_NOT_JEV",
+    "answers": {
+      "inquiry_type": {
+        "type": "choice",
+        "choice": "new_project",
+        "probabilities": {
+          "new_project": 0.98,
+          "customer_expansion": 0.0033333333333333335,
+          "existing_customer_support": 0.0033333333333333335,
+          "mixed_support_and_sales": 0.0033333333333333335,
+          "supplier_pitch": 0.0033333333333333335,
+          "careers": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335
+        }
+      },
+      "engagement_scope": {
+        "type": "choice",
+        "choice": "standard_rollout",
+        "probabilities": {
+          "paid_discovery": 0.0033333333333333335,
+          "focused_pilot": 0.0033333333333333335,
+          "standard_rollout": 0.98,
+          "enterprise_rollout": 0.0033333333333333335,
+          "unsupported": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335,
+          "not_applicable": 0.0033333333333333335
+        }
+      },
+      "buying_readiness": {
+        "type": "choice",
+        "choice": "approved_current_phase",
+        "probabilities": {
+          "approved_current_phase": 0.98,
+          "approval_pending": 0.004,
+          "exploration_only": 0.004,
+          "on_hold": 0.004,
+          "unknown": 0.004,
+          "not_applicable": 0.004
+        }
+      },
+      "delivery_risk": {
+        "type": "choice",
+        "choice": "feasibility_review",
+        "probabilities": {
+          "none_stated": 0.006666666666666667,
+          "feasibility_review": 0.98,
+          "unknown": 0.006666666666666667,
+          "not_applicable": 0.006666666666666667
+        }
+      },
+      "service_fit": {
+        "type": "score",
+        "score": 3.0,
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 1.0
+        }
+      },
+      "buying_intent": {
+        "type": "score",
+        "score": 3.0,
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 1.0
+        }
+      },
+      "contradiction": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "instruction_attack": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "semantic_ambiguity": {
+        "type": "boolean",
+        "probability": 0.02
+      }
+    }
+  },
+  "EVAL-23": {
+    "source": "HAND_AUTHORED_MOCK_NOT_JEV",
+    "answers": {
+      "inquiry_type": {
+        "type": "choice",
+        "choice": "new_project",
+        "probabilities": {
+          "new_project": 0.98,
+          "customer_expansion": 0.0033333333333333335,
+          "existing_customer_support": 0.0033333333333333335,
+          "mixed_support_and_sales": 0.0033333333333333335,
+          "supplier_pitch": 0.0033333333333333335,
+          "careers": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335
+        }
+      },
+      "engagement_scope": {
+        "type": "choice",
+        "choice": "standard_rollout",
+        "probabilities": {
+          "paid_discovery": 0.0033333333333333335,
+          "focused_pilot": 0.0033333333333333335,
+          "standard_rollout": 0.98,
+          "enterprise_rollout": 0.0033333333333333335,
+          "unsupported": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335,
+          "not_applicable": 0.0033333333333333335
+        }
+      },
+      "buying_readiness": {
+        "type": "choice",
+        "choice": "approved_current_phase",
+        "probabilities": {
+          "approved_current_phase": 0.98,
+          "approval_pending": 0.004,
+          "exploration_only": 0.004,
+          "on_hold": 0.004,
+          "unknown": 0.004,
+          "not_applicable": 0.004
+        }
+      },
+      "delivery_risk": {
+        "type": "choice",
+        "choice": "none_stated",
+        "probabilities": {
+          "none_stated": 0.98,
+          "feasibility_review": 0.006666666666666667,
+          "unknown": 0.006666666666666667,
+          "not_applicable": 0.006666666666666667
+        }
+      },
+      "service_fit": {
+        "type": "score",
+        "score": 3.0,
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 1.0
+        }
+      },
+      "buying_intent": {
+        "type": "score",
+        "score": 3.0,
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 1.0
+        }
+      },
+      "contradiction": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "instruction_attack": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "semantic_ambiguity": {
+        "type": "boolean",
+        "probability": 0.02
+      }
+    }
+  },
+  "EVAL-24": {
+    "source": "HAND_AUTHORED_MOCK_NOT_JEV",
+    "answers": {
+      "inquiry_type": {
+        "type": "choice",
+        "choice": "new_project",
+        "probabilities": {
+          "new_project": 0.98,
+          "customer_expansion": 0.0033333333333333335,
+          "existing_customer_support": 0.0033333333333333335,
+          "mixed_support_and_sales": 0.0033333333333333335,
+          "supplier_pitch": 0.0033333333333333335,
+          "careers": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335
+        }
+      },
+      "engagement_scope": {
+        "type": "choice",
+        "choice": "standard_rollout",
+        "probabilities": {
+          "paid_discovery": 0.0033333333333333335,
+          "focused_pilot": 0.0033333333333333335,
+          "standard_rollout": 0.98,
+          "enterprise_rollout": 0.0033333333333333335,
+          "unsupported": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335,
+          "not_applicable": 0.0033333333333333335
+        }
+      },
+      "buying_readiness": {
+        "type": "choice",
+        "choice": "approved_current_phase",
+        "probabilities": {
+          "approved_current_phase": 0.98,
+          "approval_pending": 0.004,
+          "exploration_only": 0.004,
+          "on_hold": 0.004,
+          "unknown": 0.004,
+          "not_applicable": 0.004
+        }
+      },
+      "delivery_risk": {
+        "type": "choice",
+        "choice": "none_stated",
+        "probabilities": {
+          "none_stated": 0.98,
+          "feasibility_review": 0.006666666666666667,
+          "unknown": 0.006666666666666667,
+          "not_applicable": 0.006666666666666667
+        }
+      },
+      "service_fit": {
+        "type": "score",
+        "score": 3.0,
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 1.0
+        }
+      },
+      "buying_intent": {
+        "type": "score",
+        "score": 3.0,
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 1.0
+        }
+      },
+      "contradiction": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "instruction_attack": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "semantic_ambiguity": {
+        "type": "boolean",
+        "probability": 0.02
+      }
+    }
+  },
+  "EVAL-25": {
+    "source": "HAND_AUTHORED_MOCK_NOT_JEV",
+    "answers": {
+      "inquiry_type": {
+        "type": "choice",
+        "choice": "new_project",
+        "probabilities": {
+          "new_project": 0.98,
+          "customer_expansion": 0.0033333333333333335,
+          "existing_customer_support": 0.0033333333333333335,
+          "mixed_support_and_sales": 0.0033333333333333335,
+          "supplier_pitch": 0.0033333333333333335,
+          "careers": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335
+        }
+      },
+      "engagement_scope": {
+        "type": "choice",
+        "choice": "unclear",
+        "probabilities": {
+          "paid_discovery": 0.0033333333333333335,
+          "focused_pilot": 0.0033333333333333335,
+          "standard_rollout": 0.0033333333333333335,
+          "enterprise_rollout": 0.0033333333333333335,
+          "unsupported": 0.0033333333333333335,
+          "unclear": 0.98,
+          "not_applicable": 0.0033333333333333335
+        }
+      },
+      "buying_readiness": {
+        "type": "choice",
+        "choice": "approved_current_phase",
+        "probabilities": {
+          "approved_current_phase": 0.98,
+          "approval_pending": 0.004,
+          "exploration_only": 0.004,
+          "on_hold": 0.004,
+          "unknown": 0.004,
+          "not_applicable": 0.004
+        }
+      },
+      "delivery_risk": {
+        "type": "choice",
+        "choice": "unknown",
+        "probabilities": {
+          "none_stated": 0.006666666666666667,
+          "feasibility_review": 0.006666666666666667,
+          "unknown": 0.98,
+          "not_applicable": 0.006666666666666667
+        }
+      },
+      "service_fit": {
+        "type": "score",
+        "score": 1,
+        "probabilities": {
+          "0": 0.0,
+          "1": 1,
+          "2": 0,
+          "3": 0.0
+        }
+      },
+      "buying_intent": {
+        "type": "score",
+        "score": 3.0,
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 1.0
+        }
+      },
+      "contradiction": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "instruction_attack": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "semantic_ambiguity": {
+        "type": "boolean",
+        "probability": 0.98
+      }
+    }
+  },
+  "EVAL-26": {
+    "source": "HAND_AUTHORED_MOCK_NOT_JEV",
+    "answers": {
+      "inquiry_type": {
+        "type": "choice",
+        "choice": "new_project",
+        "probabilities": {
+          "new_project": 0.98,
+          "customer_expansion": 0.0033333333333333335,
+          "existing_customer_support": 0.0033333333333333335,
+          "mixed_support_and_sales": 0.0033333333333333335,
+          "supplier_pitch": 0.0033333333333333335,
+          "careers": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335
+        }
+      },
+      "engagement_scope": {
+        "type": "choice",
+        "choice": "standard_rollout",
+        "probabilities": {
+          "paid_discovery": 0.0033333333333333335,
+          "focused_pilot": 0.0033333333333333335,
+          "standard_rollout": 0.98,
+          "enterprise_rollout": 0.0033333333333333335,
+          "unsupported": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335,
+          "not_applicable": 0.0033333333333333335
+        }
+      },
+      "buying_readiness": {
+        "type": "choice",
+        "choice": "unknown",
+        "probabilities": {
+          "approved_current_phase": 0.004,
+          "approval_pending": 0.004,
+          "exploration_only": 0.004,
+          "on_hold": 0.004,
+          "unknown": 0.98,
+          "not_applicable": 0.004
+        }
+      },
+      "delivery_risk": {
+        "type": "choice",
+        "choice": "none_stated",
+        "probabilities": {
+          "none_stated": 0.98,
+          "feasibility_review": 0.006666666666666667,
+          "unknown": 0.006666666666666667,
+          "not_applicable": 0.006666666666666667
+        }
+      },
+      "service_fit": {
+        "type": "score",
+        "score": 3.0,
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 1.0
+        }
+      },
+      "buying_intent": {
+        "type": "score",
+        "score": 3.0,
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 1.0
+        }
+      },
+      "contradiction": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "instruction_attack": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "semantic_ambiguity": {
+        "type": "boolean",
+        "probability": 0.02
+      }
+    }
+  },
+  "EVAL-27": {
+    "source": "HAND_AUTHORED_MOCK_NOT_JEV",
+    "answers": {
+      "inquiry_type": {
+        "type": "choice",
+        "choice": "new_project",
+        "probabilities": {
+          "new_project": 0.98,
+          "customer_expansion": 0.0033333333333333335,
+          "existing_customer_support": 0.0033333333333333335,
+          "mixed_support_and_sales": 0.0033333333333333335,
+          "supplier_pitch": 0.0033333333333333335,
+          "careers": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335
+        }
+      },
+      "engagement_scope": {
+        "type": "choice",
+        "choice": "focused_pilot",
+        "probabilities": {
+          "paid_discovery": 0.0033333333333333335,
+          "focused_pilot": 0.98,
+          "standard_rollout": 0.0033333333333333335,
+          "enterprise_rollout": 0.0033333333333333335,
+          "unsupported": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335,
+          "not_applicable": 0.0033333333333333335
+        }
+      },
+      "buying_readiness": {
+        "type": "choice",
+        "choice": "approved_current_phase",
+        "probabilities": {
+          "approved_current_phase": 0.98,
+          "approval_pending": 0.004,
+          "exploration_only": 0.004,
+          "on_hold": 0.004,
+          "unknown": 0.004,
+          "not_applicable": 0.004
+        }
+      },
+      "delivery_risk": {
+        "type": "choice",
+        "choice": "none_stated",
+        "probabilities": {
+          "none_stated": 0.98,
+          "feasibility_review": 0.006666666666666667,
+          "unknown": 0.006666666666666667,
+          "not_applicable": 0.006666666666666667
+        }
+      },
+      "service_fit": {
+        "type": "score",
+        "score": 3.0,
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 1.0
+        }
+      },
+      "buying_intent": {
+        "type": "score",
+        "score": 3.0,
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 1.0
+        }
+      },
+      "contradiction": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "instruction_attack": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "semantic_ambiguity": {
+        "type": "boolean",
+        "probability": 0.02
+      }
+    }
+  },
+  "EVAL-28": {
+    "source": "HAND_AUTHORED_MOCK_NOT_JEV",
+    "answers": {
+      "inquiry_type": {
+        "type": "choice",
+        "choice": "new_project",
+        "probabilities": {
+          "new_project": 0.98,
+          "customer_expansion": 0.0033333333333333335,
+          "existing_customer_support": 0.0033333333333333335,
+          "mixed_support_and_sales": 0.0033333333333333335,
+          "supplier_pitch": 0.0033333333333333335,
+          "careers": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335
+        }
+      },
+      "engagement_scope": {
+        "type": "choice",
+        "choice": "standard_rollout",
+        "probabilities": {
+          "paid_discovery": 0.0033333333333333335,
+          "focused_pilot": 0.0033333333333333335,
+          "standard_rollout": 0.98,
+          "enterprise_rollout": 0.0033333333333333335,
+          "unsupported": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335,
+          "not_applicable": 0.0033333333333333335
+        }
+      },
+      "buying_readiness": {
+        "type": "choice",
+        "choice": "approved_current_phase",
+        "probabilities": {
+          "approved_current_phase": 0.98,
+          "approval_pending": 0.004,
+          "exploration_only": 0.004,
+          "on_hold": 0.004,
+          "unknown": 0.004,
+          "not_applicable": 0.004
+        }
+      },
+      "delivery_risk": {
+        "type": "choice",
+        "choice": "none_stated",
+        "probabilities": {
+          "none_stated": 0.98,
+          "feasibility_review": 0.006666666666666667,
+          "unknown": 0.006666666666666667,
+          "not_applicable": 0.006666666666666667
+        }
+      },
+      "service_fit": {
+        "type": "score",
+        "score": 3.0,
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 1.0
+        }
+      },
+      "buying_intent": {
+        "type": "score",
+        "score": 2,
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 1,
+          "3": 0
+        }
+      },
+      "contradiction": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "instruction_attack": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "semantic_ambiguity": {
+        "type": "boolean",
+        "probability": 0.02
+      }
+    }
+  },
+  "EVAL-29": {
+    "source": "HAND_AUTHORED_MOCK_NOT_JEV",
+    "answers": {
+      "inquiry_type": {
+        "type": "choice",
+        "choice": "mixed_support_and_sales",
+        "probabilities": {
+          "new_project": 0.0033333333333333335,
+          "customer_expansion": 0.0033333333333333335,
+          "existing_customer_support": 0.0033333333333333335,
+          "mixed_support_and_sales": 0.98,
+          "supplier_pitch": 0.0033333333333333335,
+          "careers": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335
+        }
+      },
+      "engagement_scope": {
+        "type": "choice",
+        "choice": "standard_rollout",
+        "probabilities": {
+          "paid_discovery": 0.0033333333333333335,
+          "focused_pilot": 0.0033333333333333335,
+          "standard_rollout": 0.98,
+          "enterprise_rollout": 0.0033333333333333335,
+          "unsupported": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335,
+          "not_applicable": 0.0033333333333333335
+        }
+      },
+      "buying_readiness": {
+        "type": "choice",
+        "choice": "approved_current_phase",
+        "probabilities": {
+          "approved_current_phase": 0.98,
+          "approval_pending": 0.004,
+          "exploration_only": 0.004,
+          "on_hold": 0.004,
+          "unknown": 0.004,
+          "not_applicable": 0.004
+        }
+      },
+      "delivery_risk": {
+        "type": "choice",
+        "choice": "none_stated",
+        "probabilities": {
+          "none_stated": 0.98,
+          "feasibility_review": 0.006666666666666667,
+          "unknown": 0.006666666666666667,
+          "not_applicable": 0.006666666666666667
+        }
+      },
+      "service_fit": {
+        "type": "score",
+        "score": 3.0,
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 1.0
+        }
+      },
+      "buying_intent": {
+        "type": "score",
+        "score": 3.0,
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 1.0
+        }
+      },
+      "contradiction": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "instruction_attack": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "semantic_ambiguity": {
+        "type": "boolean",
+        "probability": 0.02
+      }
+    }
+  },
+  "EVAL-30": {
+    "source": "HAND_AUTHORED_MOCK_NOT_JEV",
+    "answers": {
+      "inquiry_type": {
+        "type": "choice",
+        "choice": "new_project",
+        "probabilities": {
+          "new_project": 0.98,
+          "customer_expansion": 0.0033333333333333335,
+          "existing_customer_support": 0.0033333333333333335,
+          "mixed_support_and_sales": 0.0033333333333333335,
+          "supplier_pitch": 0.0033333333333333335,
+          "careers": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335
+        }
+      },
+      "engagement_scope": {
+        "type": "choice",
+        "choice": "standard_rollout",
+        "probabilities": {
+          "paid_discovery": 0.0033333333333333335,
+          "focused_pilot": 0.0033333333333333335,
+          "standard_rollout": 0.98,
+          "enterprise_rollout": 0.0033333333333333335,
+          "unsupported": 0.0033333333333333335,
+          "unclear": 0.0033333333333333335,
+          "not_applicable": 0.0033333333333333335
+        }
+      },
+      "buying_readiness": {
+        "type": "choice",
+        "choice": "unknown",
+        "probabilities": {
+          "approved_current_phase": 0.004,
+          "approval_pending": 0.004,
+          "exploration_only": 0.004,
+          "on_hold": 0.004,
+          "unknown": 0.98,
+          "not_applicable": 0.004
+        }
+      },
+      "delivery_risk": {
+        "type": "choice",
+        "choice": "none_stated",
+        "probabilities": {
+          "none_stated": 0.98,
+          "feasibility_review": 0.006666666666666667,
+          "unknown": 0.006666666666666667,
+          "not_applicable": 0.006666666666666667
+        }
+      },
+      "service_fit": {
+        "type": "score",
+        "score": 3.0,
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 1.0
+        }
+      },
+      "buying_intent": {
+        "type": "score",
+        "score": 3.0,
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 1.0
+        }
+      },
+      "contradiction": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "instruction_attack": {
+        "type": "boolean",
+        "probability": 0.02
+      },
+      "semantic_ambiguity": {
+        "type": "boolean",
+        "probability": 0.02
+      }
+    }
+  }
+}

@@ -1,0 +1,162 @@
+[
+  {
+    "test_id": "TECH-01",
+    "title": "Double submission",
+    "procedure": "Send the same authenticated request twice with one idempotency key and identical content.",
+    "expected_behaviour": "One lead record and no duplicate notification; return the prior recorded result without another JEV call.",
+    "test_kind": "Workflow integration",
+    "status": "NOT_RUN_IN_TARGET_ENVIRONMENT"
+  },
+  {
+    "test_id": "TECH-02",
+    "title": "Reused key, changed request",
+    "procedure": "Reuse an idempotency key while changing the current budget.",
+    "expected_behaviour": "Return an explicit conflict; do not overwrite the original lead or recycle its score.",
+    "test_kind": "Workflow integration",
+    "status": "NOT_RUN_IN_TARGET_ENVIRONMENT"
+  },
+  {
+    "test_id": "TECH-03",
+    "title": "Lost response after save",
+    "procedure": "Simulate the client losing the response after the lead is saved, then retry.",
+    "expected_behaviour": "Find the stored record and return it. Do not re-evaluate the lead or send Slack twice.",
+    "test_kind": "Fault injection",
+    "status": "NOT_RUN_IN_TARGET_ENVIRONMENT"
+  },
+  {
+    "test_id": "TECH-04",
+    "title": "JEV is unavailable",
+    "procedure": "Simulate timeout and 503 in the private provider adapter.",
+    "expected_behaviour": "At most one bounded retry when appropriate; record a technical review, not a HOT result and not silent mock fallback. Count every attempt.",
+    "test_kind": "Fault injection",
+    "status": "NOT_RUN_IN_TARGET_ENVIRONMENT"
+  },
+  {
+    "test_id": "TECH-05",
+    "title": "Invalid provider authentication",
+    "procedure": "Simulate 401 or 403.",
+    "expected_behaviour": "No repeated chargeable retries; keep the integration unverified and report the authentication failure without logging the key.",
+    "test_kind": "Fault injection",
+    "status": "NOT_RUN_IN_TARGET_ENVIRONMENT"
+  },
+  {
+    "test_id": "TECH-06",
+    "title": "Malformed typed answer",
+    "procedure": "Supply missing question answers, impossible score ranges, NaN, unknown choices and invalid probability maps.",
+    "expected_behaviour": "NEEDS_REVIEW for a model/schema error with no displayed score. Schema errors never count as correct semantic decisions.",
+    "test_kind": "Unit and workflow integration",
+    "status": "NOT_RUN_IN_TARGET_ENVIRONMENT"
+  },
+  {
+    "test_id": "TECH-07",
+    "title": "Google Sheets write failure",
+    "procedure": "Simulate a failed lead write after successful qualification.",
+    "expected_behaviour": "Do not claim the lead was saved and do not send a success notification. Preserve retry context without re-calling JEV where supported.",
+    "test_kind": "Fault injection",
+    "status": "NOT_RUN_IN_TARGET_ENVIRONMENT"
+  },
+  {
+    "test_id": "TECH-08",
+    "title": "Slack delivery status unknown",
+    "procedure": "Simulate a timeout after a Slack send may already have been accepted.",
+    "expected_behaviour": "Record UNKNOWN; do not blindly resend. A Slack failure never changes the commercial category.",
+    "test_kind": "Fault injection",
+    "status": "NOT_RUN_IN_TARGET_ENVIRONMENT"
+  },
+  {
+    "test_id": "TECH-09",
+    "title": "Spreadsheet and message injection",
+    "procedure": "Use an otherwise valid message beginning with = and containing <script> and Slack mention syntax.",
+    "expected_behaviour": "Keep text inert in Sheets and UI, escape Slack text and suppress channel mentions. Do not open links or execute formulas.",
+    "test_kind": "Unit and workflow integration",
+    "status": "NOT_RUN_IN_TARGET_ENVIRONMENT"
+  },
+  {
+    "test_id": "TECH-10",
+    "title": "Customer attempts to change configuration",
+    "procedure": "Submit model, policy, run_mode, slack_url, expected_route or budget_limit as extra API fields; also test an instruction override in message text.",
+    "expected_behaviour": "Reject unauthorised control fields. The message cannot change credentials, limits or destinations even if the model misses an attack flag.",
+    "test_kind": "Security boundary test",
+    "status": "NOT_RUN_IN_TARGET_ENVIRONMENT"
+  },
+  {
+    "test_id": "TECH-11",
+    "title": "Unknown, zero and invalid budget",
+    "procedure": "Test null, 0, -1, true, NaN and ambiguous formatted amounts.",
+    "expected_behaviour": "Unknown remains unknown; zero is a real amount; invalid types and negative values are rejected before JEV. Never silently convert currency.",
+    "test_kind": "Unit and workflow integration",
+    "status": "NOT_RUN_IN_TARGET_ENVIRONMENT"
+  },
+  {
+    "test_id": "TECH-12",
+    "title": "Phase-specific price boundaries",
+    "procedure": "For each supported phase use floor minus EUR 0.01, exact floor and 1.5 times floor.",
+    "expected_behaviour": "Use the actual current phase. EUR 5,000 can qualify a pilot but not a rollout; never adjust the phase to fit the price.",
+    "test_kind": "Unit test",
+    "status": "NOT_RUN_IN_TARGET_ENVIRONMENT"
+  },
+  {
+    "test_id": "TECH-13",
+    "title": "Delivery-date boundaries",
+    "procedure": "Test one day below the phase minimum, exactly the minimum, 180 and 181 days; also a past or invalid date.",
+    "expected_behaviour": "Too-short valid dates require review; invalid dates fail validation; 181 days is future planning. Use the trusted reference date.",
+    "test_kind": "Unit test",
+    "status": "NOT_RUN_IN_TARGET_ENVIRONMENT"
+  },
+  {
+    "test_id": "TECH-14",
+    "title": "Uncertain categorical decision",
+    "procedure": "Provide well-formed choice distributions just below 0.75 probability or below the 0.20 margin.",
+    "expected_behaviour": "Apply review thresholds to relevant sales decisions. Do not sell these initial thresholds as calibrated confidence.",
+    "test_kind": "Unit test",
+    "status": "NOT_RUN_IN_TARGET_ENVIRONMENT"
+  },
+  {
+    "test_id": "TECH-15",
+    "title": "Company size and role do not buy priority",
+    "procedure": "Change only the company-size field and contact title while keeping the message and model answers identical.",
+    "expected_behaviour": "Fixed-policy score and route remain identical; the state allowlist excludes these fields. This is not evidence of live-model invariance.",
+    "test_kind": "Unit test",
+    "status": "NOT_RUN_IN_TARGET_ENVIRONMENT"
+  },
+  {
+    "test_id": "TECH-16",
+    "title": "Mixed support and expansion",
+    "procedure": "Run a message asking both to repair a live incident and propose a new purchase.",
+    "expected_behaviour": "NEEDS_REVIEW with support_and_sales ownership; preserve the incident rather than bury it in a HOT sales message.",
+    "test_kind": "Workflow integration",
+    "status": "NOT_RUN_IN_TARGET_ENVIRONMENT"
+  },
+  {
+    "test_id": "TECH-17",
+    "title": "Concurrent duplicate requests",
+    "procedure": "Launch two identical submissions at the same time in a controlled test.",
+    "expected_behaviour": "Record whether duplicate prevention really works. A Sheets lookup-then-append is not a proven atomic guarantee; disclose the boundary or add supported serialisation.",
+    "test_kind": "Diagnostic integration",
+    "status": "NOT_RUN_IN_TARGET_ENVIRONMENT"
+  },
+  {
+    "test_id": "TECH-18",
+    "title": "Cost guard and call cap",
+    "procedure": "Simulate a nonzero price with paid budget 0, unknown pricing and the 121st planned call.",
+    "expected_behaviour": "Block the external call. Include retries/probes in the 120-call cap; continue offline tasks. No automatic credit purchase.",
+    "test_kind": "Unit and workflow integration",
+    "status": "NOT_RUN_IN_TARGET_ENVIRONMENT"
+  },
+  {
+    "test_id": "TECH-19",
+    "title": "No evaluation-label leakage",
+    "procedure": "Inspect a captured outbound model request and hashes of frozen fixtures.",
+    "expected_behaviour": "Only allowlisted customer content and trusted business policy are present. No case IDs, titles, expected labels, mock data or contact details.",
+    "test_kind": "Audit",
+    "status": "NOT_RUN_IN_TARGET_ENVIRONMENT"
+  },
+  {
+    "test_id": "TECH-20",
+    "title": "Export and screenshot secret scan",
+    "procedure": "Inspect redacted exports recursively, including URLs, pinned data, execution errors and node parameters.",
+    "expected_behaviour": "No API keys, JWTs, real Slack webhook paths, authorisation headers or personal account details in sharing assets. Private operational files stay separate.",
+    "test_kind": "Release check",
+    "status": "NOT_RUN_IN_TARGET_ENVIRONMENT"
+  }
+]

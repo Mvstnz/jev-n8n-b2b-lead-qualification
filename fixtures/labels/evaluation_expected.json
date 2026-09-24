@@ -1,0 +1,542 @@
+[
+  {
+    "case_id": "EVAL-01",
+    "expected_route": "HOT",
+    "rationale": "A supported departmental rollout with approved funds and a proposal request.",
+    "what_this_tests": "Identify a funded operational improvement.",
+    "expected_semantics": {
+      "inquiry_type": "new_project",
+      "engagement_scope": "standard_rollout",
+      "buying_readiness": "approved_current_phase",
+      "delivery_risk": "none_stated"
+    },
+    "expected_flags": {
+      "contradiction": false,
+      "instruction_attack": false,
+      "semantic_ambiguity": false
+    },
+    "semantic_test": true
+  },
+  {
+    "case_id": "EVAL-02",
+    "expected_route": "WARM",
+    "rationale": "A proposal is requested, but approval for this scope is still pending.",
+    "what_this_tests": "Distinguish a serious evaluation from approved buying readiness.",
+    "expected_semantics": {
+      "inquiry_type": "new_project",
+      "engagement_scope": "standard_rollout",
+      "buying_readiness": "approval_pending",
+      "delivery_risk": "none_stated"
+    },
+    "expected_flags": {
+      "contradiction": false,
+      "instruction_attack": false,
+      "semantic_ambiguity": false
+    },
+    "semantic_test": true
+  },
+  {
+    "case_id": "EVAL-03",
+    "expected_route": "COLD",
+    "rationale": "The primary service requested is outside the provider offer despite good budget and intent.",
+    "what_this_tests": "Prioritise service fit over commercial size.",
+    "expected_semantics": {
+      "inquiry_type": "new_project",
+      "engagement_scope": "unsupported",
+      "buying_readiness": "approved_current_phase",
+      "delivery_risk": "not_applicable"
+    },
+    "expected_flags": {
+      "contradiction": false,
+      "instruction_attack": false,
+      "semantic_ambiguity": false
+    },
+    "semantic_test": true
+  },
+  {
+    "case_id": "EVAL-04",
+    "expected_route": "NEEDS_REVIEW",
+    "rationale": "Current funding is unknown, not zero and not a reason for an automatic rejection.",
+    "what_this_tests": "Handle missing commercial information honestly.",
+    "expected_semantics": {
+      "inquiry_type": "new_project",
+      "engagement_scope": "standard_rollout",
+      "buying_readiness": "unknown",
+      "delivery_risk": "none_stated"
+    },
+    "expected_flags": {
+      "contradiction": false,
+      "instruction_attack": false,
+      "semantic_ambiguity": false
+    },
+    "semantic_test": true
+  },
+  {
+    "case_id": "EVAL-05",
+    "expected_route": "HOT",
+    "rationale": "Only the approved discovery phase is being bought now; a hypothetical large programme must not distort qualification.",
+    "what_this_tests": "Separate current paid scope from hypothetical future value.",
+    "expected_semantics": {
+      "inquiry_type": "new_project",
+      "engagement_scope": "paid_discovery",
+      "buying_readiness": "approved_current_phase",
+      "delivery_risk": "none_stated"
+    },
+    "expected_flags": {
+      "contradiction": false,
+      "instruction_attack": false,
+      "semantic_ambiguity": false
+    },
+    "semantic_test": true
+  },
+  {
+    "case_id": "EVAL-06",
+    "expected_route": "NOT_A_SALES_LEAD",
+    "rationale": "Support needs an owner, but the historical contract price is not new opportunity value.",
+    "what_this_tests": "Avoid treating urgency and a large historical amount as a hot lead.",
+    "expected_semantics": {
+      "inquiry_type": "existing_customer_support",
+      "engagement_scope": "not_applicable",
+      "buying_readiness": "not_applicable",
+      "delivery_risk": "not_applicable"
+    },
+    "expected_flags": {
+      "contradiction": false,
+      "instruction_attack": false,
+      "semantic_ambiguity": false
+    },
+    "semantic_test": true
+  },
+  {
+    "case_id": "EVAL-07",
+    "expected_route": "HOT",
+    "rationale": "Exactly meets the pilot budget floor; company size carries no penalty.",
+    "what_this_tests": "Use scope-relative budget fit rather than a universal large-deal rule.",
+    "expected_semantics": {
+      "inquiry_type": "new_project",
+      "engagement_scope": "focused_pilot",
+      "buying_readiness": "approved_current_phase",
+      "delivery_risk": "none_stated"
+    },
+    "expected_flags": {
+      "contradiction": false,
+      "instruction_attack": false,
+      "semantic_ambiguity": false
+    },
+    "semantic_test": true
+  },
+  {
+    "case_id": "EVAL-08",
+    "expected_route": "WARM",
+    "rationale": "The title is not a substitute for explicit funding approval.",
+    "what_this_tests": "Avoid inferring buying authority from job title.",
+    "expected_semantics": {
+      "inquiry_type": "new_project",
+      "engagement_scope": "standard_rollout",
+      "buying_readiness": "approval_pending",
+      "delivery_risk": "none_stated"
+    },
+    "expected_flags": {
+      "contradiction": false,
+      "instruction_attack": false,
+      "semantic_ambiguity": false
+    },
+    "semantic_test": true
+  },
+  {
+    "case_id": "EVAL-09",
+    "expected_route": "NEEDS_REVIEW",
+    "rationale": "The requested date is inside the minimum standard lead time. It requires feasibility discussion, not a HOT label or delivery promise.",
+    "what_this_tests": "Distinguish urgency from feasible delivery.",
+    "expected_semantics": {
+      "inquiry_type": "new_project",
+      "engagement_scope": "standard_rollout",
+      "buying_readiness": "approved_current_phase",
+      "delivery_risk": "none_stated"
+    },
+    "expected_flags": {
+      "contradiction": false,
+      "instruction_attack": false,
+      "semantic_ambiguity": false
+    },
+    "semantic_test": true
+  },
+  {
+    "case_id": "EVAL-10",
+    "expected_route": "WARM",
+    "rationale": "The message explicitly denies a current quote or selection step.",
+    "what_this_tests": "Understand negation rather than triggering on quotation.",
+    "expected_semantics": {
+      "inquiry_type": "new_project",
+      "engagement_scope": "standard_rollout",
+      "buying_readiness": "exploration_only",
+      "delivery_risk": "none_stated"
+    },
+    "expected_flags": {
+      "contradiction": false,
+      "instruction_attack": false,
+      "semantic_ambiguity": false
+    },
+    "semantic_test": true
+  },
+  {
+    "case_id": "EVAL-11",
+    "expected_route": "HOT",
+    "rationale": "A separately approved new purchase from an existing customer is a sales opportunity.",
+    "what_this_tests": "Separate expansion revenue from routine support.",
+    "expected_semantics": {
+      "inquiry_type": "customer_expansion",
+      "engagement_scope": "standard_rollout",
+      "buying_readiness": "approved_current_phase",
+      "delivery_risk": "none_stated"
+    },
+    "expected_flags": {
+      "contradiction": false,
+      "instruction_attack": false,
+      "semantic_ambiguity": false
+    },
+    "semantic_test": true
+  },
+  {
+    "case_id": "EVAL-12",
+    "expected_route": "WARM",
+    "rationale": "Approval for a previous phase is not approval for the current requested rollout.",
+    "what_this_tests": "Track what funding applies to.",
+    "expected_semantics": {
+      "inquiry_type": "new_project",
+      "engagement_scope": "standard_rollout",
+      "buying_readiness": "approval_pending",
+      "delivery_risk": "none_stated"
+    },
+    "expected_flags": {
+      "contradiction": false,
+      "instruction_attack": false,
+      "semantic_ambiguity": false
+    },
+    "semantic_test": true
+  },
+  {
+    "case_id": "EVAL-13",
+    "expected_route": "NEEDS_REVIEW",
+    "rationale": "A multi-country current commitment is an enterprise scope requiring assessment.",
+    "what_this_tests": "Keep large complex deals visible without auto-qualifying them.",
+    "expected_semantics": {
+      "inquiry_type": "new_project",
+      "engagement_scope": "enterprise_rollout",
+      "buying_readiness": "approved_current_phase",
+      "delivery_risk": "none_stated"
+    },
+    "expected_flags": {
+      "contradiction": false,
+      "instruction_attack": false,
+      "semantic_ambiguity": false
+    },
+    "semantic_test": true
+  },
+  {
+    "case_id": "EVAL-14",
+    "expected_route": "HOT",
+    "rationale": "An explicit paid discovery purchase is valid even before an implementation is chosen.",
+    "what_this_tests": "Recognise paid analysis as a real product, not weak intent.",
+    "expected_semantics": {
+      "inquiry_type": "new_project",
+      "engagement_scope": "paid_discovery",
+      "buying_readiness": "approved_current_phase",
+      "delivery_risk": "none_stated"
+    },
+    "expected_flags": {
+      "contradiction": false,
+      "instruction_attack": false,
+      "semantic_ambiguity": false
+    },
+    "semantic_test": true
+  },
+  {
+    "case_id": "EVAL-15",
+    "expected_route": "COLD",
+    "rationale": "The current pilot is below the fictional EUR 5,000 pilot floor; do not silently relabel it discovery.",
+    "what_this_tests": "Compare money to the actual deliverable.",
+    "expected_semantics": {
+      "inquiry_type": "new_project",
+      "engagement_scope": "focused_pilot",
+      "buying_readiness": "approved_current_phase",
+      "delivery_risk": "none_stated"
+    },
+    "expected_flags": {
+      "contradiction": false,
+      "instruction_attack": false,
+      "semantic_ambiguity": false
+    },
+    "semantic_test": true
+  },
+  {
+    "case_id": "EVAL-16",
+    "expected_route": "NEEDS_REVIEW",
+    "rationale": "An explicit unresolved source-data dependency prevents a normal qualification decision.",
+    "what_this_tests": "Do not turn a budget into evidence of technical feasibility.",
+    "expected_semantics": {
+      "inquiry_type": "new_project",
+      "engagement_scope": "standard_rollout",
+      "buying_readiness": "approved_current_phase",
+      "delivery_risk": "feasibility_review"
+    },
+    "expected_flags": {
+      "contradiction": false,
+      "instruction_attack": false,
+      "semantic_ambiguity": false
+    },
+    "semantic_test": true
+  },
+  {
+    "case_id": "EVAL-17",
+    "expected_route": "NOT_A_SALES_LEAD",
+    "rationale": "The sender wants us to buy their software.",
+    "what_this_tests": "Detect the direction of a commercial proposal.",
+    "expected_semantics": {
+      "inquiry_type": "supplier_pitch",
+      "engagement_scope": "not_applicable",
+      "buying_readiness": "not_applicable",
+      "delivery_risk": "not_applicable"
+    },
+    "expected_flags": {
+      "contradiction": false,
+      "instruction_attack": false,
+      "semantic_ambiguity": false
+    },
+    "semantic_test": true
+  },
+  {
+    "case_id": "EVAL-18",
+    "expected_route": "HOT",
+    "rationale": "The actual paid scope is a local pilot, not an enterprise rollout just because the buyer is large.",
+    "what_this_tests": "Avoid using company size as a scope proxy.",
+    "expected_semantics": {
+      "inquiry_type": "new_project",
+      "engagement_scope": "focused_pilot",
+      "buying_readiness": "approved_current_phase",
+      "delivery_risk": "none_stated"
+    },
+    "expected_flags": {
+      "contradiction": false,
+      "instruction_attack": false,
+      "semantic_ambiguity": false
+    },
+    "semantic_test": true
+  },
+  {
+    "case_id": "EVAL-19",
+    "expected_route": "WARM",
+    "rationale": "The opportunity is on hold; the historical approval cannot make it actionable now.",
+    "what_this_tests": "Recognise that a hold overrides prior approval.",
+    "expected_semantics": {
+      "inquiry_type": "new_project",
+      "engagement_scope": "standard_rollout",
+      "buying_readiness": "on_hold",
+      "delivery_risk": "none_stated"
+    },
+    "expected_flags": {
+      "contradiction": false,
+      "instruction_attack": false,
+      "semantic_ambiguity": false
+    },
+    "semantic_test": true
+  },
+  {
+    "case_id": "EVAL-20",
+    "expected_route": "NEEDS_REVIEW",
+    "rationale": "The message says EUR 25,000 for the current phase while the form says EUR 5,000.",
+    "what_this_tests": "Raise a concrete discrepancy instead of choosing the convenient amount.",
+    "expected_semantics": {
+      "inquiry_type": "new_project",
+      "engagement_scope": "standard_rollout",
+      "buying_readiness": "approved_current_phase",
+      "delivery_risk": "none_stated"
+    },
+    "expected_flags": {
+      "contradiction": true,
+      "instruction_attack": false,
+      "semantic_ambiguity": false
+    },
+    "semantic_test": true
+  },
+  {
+    "case_id": "EVAL-21",
+    "expected_route": "COLD",
+    "rationale": "A new software product is outside this fictional provider service offering.",
+    "what_this_tests": "Reject scope mismatch even when the potential contract is large.",
+    "expected_semantics": {
+      "inquiry_type": "new_project",
+      "engagement_scope": "unsupported",
+      "buying_readiness": "approved_current_phase",
+      "delivery_risk": "not_applicable"
+    },
+    "expected_flags": {
+      "contradiction": false,
+      "instruction_attack": false,
+      "semantic_ambiguity": false
+    },
+    "semantic_test": true
+  },
+  {
+    "case_id": "EVAL-22",
+    "expected_route": "NEEDS_REVIEW",
+    "rationale": "The hosting restriction needs technical assessment; the demo cannot assume its cloud design is acceptable.",
+    "what_this_tests": "Treat material delivery restrictions as review triggers.",
+    "expected_semantics": {
+      "inquiry_type": "new_project",
+      "engagement_scope": "standard_rollout",
+      "buying_readiness": "approved_current_phase",
+      "delivery_risk": "feasibility_review"
+    },
+    "expected_flags": {
+      "contradiction": false,
+      "instruction_attack": false,
+      "semantic_ambiguity": false
+    },
+    "semantic_test": true
+  },
+  {
+    "case_id": "EVAL-23",
+    "expected_route": "HOT",
+    "rationale": "A coordinating contact can progress a funded purchase; seniority of the sender is not a gating rule.",
+    "what_this_tests": "Do not reject a lead just because the contact is not the final signatory.",
+    "expected_semantics": {
+      "inquiry_type": "new_project",
+      "engagement_scope": "standard_rollout",
+      "buying_readiness": "approved_current_phase",
+      "delivery_risk": "none_stated"
+    },
+    "expected_flags": {
+      "contradiction": false,
+      "instruction_attack": false,
+      "semantic_ambiguity": false
+    },
+    "semantic_test": true
+  },
+  {
+    "case_id": "EVAL-24",
+    "expected_route": "WARM",
+    "rationale": "The current funding is real as stated, but the requested phase is outside the demo active-sales horizon.",
+    "what_this_tests": "Separate genuine intent from near-term priority.",
+    "expected_semantics": {
+      "inquiry_type": "new_project",
+      "engagement_scope": "standard_rollout",
+      "buying_readiness": "approved_current_phase",
+      "delivery_risk": "none_stated"
+    },
+    "expected_flags": {
+      "contradiction": false,
+      "instruction_attack": false,
+      "semantic_ambiguity": false
+    },
+    "semantic_test": true
+  },
+  {
+    "case_id": "EVAL-25",
+    "expected_route": "NEEDS_REVIEW",
+    "rationale": "A price and date do not establish a defined deliverable. Clarify the current scope before scoring it.",
+    "what_this_tests": "Do not invent a project to match an attractive budget.",
+    "expected_semantics": {
+      "inquiry_type": "new_project",
+      "engagement_scope": "unclear",
+      "buying_readiness": "approved_current_phase",
+      "delivery_risk": "unknown"
+    },
+    "expected_flags": {
+      "contradiction": false,
+      "instruction_attack": false,
+      "semantic_ambiguity": true
+    },
+    "semantic_test": true
+  },
+  {
+    "case_id": "EVAL-26",
+    "expected_route": "COLD",
+    "rationale": "An explicitly zero current budget is different from an unknown budget and fails the offer floor.",
+    "what_this_tests": "Keep missing and zero funding distinct.",
+    "expected_semantics": {
+      "inquiry_type": "new_project",
+      "engagement_scope": "standard_rollout",
+      "buying_readiness": "unknown",
+      "delivery_risk": "none_stated"
+    },
+    "expected_flags": {
+      "contradiction": false,
+      "instruction_attack": false,
+      "semantic_ambiguity": false
+    },
+    "semantic_test": true
+  },
+  {
+    "case_id": "EVAL-27",
+    "expected_route": "HOT",
+    "rationale": "One bounded workflow, sufficient pilot budget and a concrete paid proposal request.",
+    "what_this_tests": "Recognise a safe narrow first phase without inventing extra scope.",
+    "expected_semantics": {
+      "inquiry_type": "new_project",
+      "engagement_scope": "focused_pilot",
+      "buying_readiness": "approved_current_phase",
+      "delivery_risk": "none_stated"
+    },
+    "expected_flags": {
+      "contradiction": false,
+      "instruction_attack": false,
+      "semantic_ambiguity": false
+    },
+    "semantic_test": true
+  },
+  {
+    "case_id": "EVAL-28",
+    "expected_route": "WARM",
+    "rationale": "The contact is comparing approaches, not taking a concrete contracting step.",
+    "what_this_tests": "Keep approval and buying intent as separate dimensions.",
+    "expected_semantics": {
+      "inquiry_type": "new_project",
+      "engagement_scope": "standard_rollout",
+      "buying_readiness": "approved_current_phase",
+      "delivery_risk": "none_stated"
+    },
+    "expected_flags": {
+      "contradiction": false,
+      "instruction_attack": false,
+      "semantic_ambiguity": false
+    },
+    "semantic_test": true
+  },
+  {
+    "case_id": "EVAL-29",
+    "expected_route": "NEEDS_REVIEW",
+    "rationale": "Two work items need different owners: support for the incident and sales for the expansion.",
+    "what_this_tests": "Do not bury support inside a promising sales lead.",
+    "expected_semantics": {
+      "inquiry_type": "mixed_support_and_sales",
+      "engagement_scope": "standard_rollout",
+      "buying_readiness": "approved_current_phase",
+      "delivery_risk": "none_stated"
+    },
+    "expected_flags": {
+      "contradiction": false,
+      "instruction_attack": false,
+      "semantic_ambiguity": false
+    },
+    "semantic_test": true
+  },
+  {
+    "case_id": "EVAL-30",
+    "expected_route": "NEEDS_REVIEW",
+    "rationale": "An amount and proposal request do not establish authorisation; ask for the missing readiness fact.",
+    "what_this_tests": "Avoid interpreting a number as approved purchasing power.",
+    "expected_semantics": {
+      "inquiry_type": "new_project",
+      "engagement_scope": "standard_rollout",
+      "buying_readiness": "unknown",
+      "delivery_risk": "none_stated"
+    },
+    "expected_flags": {
+      "contradiction": false,
+      "instruction_attack": false,
+      "semantic_ambiguity": false
+    },
+    "semantic_test": true
+  }
+]

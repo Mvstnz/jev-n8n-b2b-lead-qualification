@@ -1,0 +1,22 @@
+name: Offline policy and release checks
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  offline:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate policy fixtures
+        run: python3 reference/check_offline.py
+      - name: Validate release guard
+        run: python3 tools/test_release_guard.py
+      - name: Validate JEV request adapter without network
+        run: python3 reference/test_jev_adapter.py
+      - name: Scan public tree
+        run: python3 tools/release_guard.py --root .
