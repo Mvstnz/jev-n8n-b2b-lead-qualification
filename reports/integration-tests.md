@@ -10,6 +10,7 @@
 | Google Sheets n8n write/read | NOT RUN | Action OAuth still needs Google authorization |
 | JEV native HTTP from n8n | NOT RUN | Positive catalog price conflicts with zero paid budget; credential unbound |
 | JEV native HTTP adapter offline | PASS | Request allowlist, typed-response checks, cost gate and transient retry tested with fake transport; no provider request |
+| Slack private sender gate | PASS | Inactive three-node workflow validated; manual execution succeeded and only the approval-gate node ran, emitting zero items |
 | Slack webhook send | NOT RUN | Preview-only gate; user approval still required |
 | 30×3 live evaluation | NOT RUN | 0 of 90 main calls |
 

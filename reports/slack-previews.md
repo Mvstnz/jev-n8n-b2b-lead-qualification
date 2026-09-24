@@ -73,7 +73,8 @@ Proposed sixth preview, a summary prepared from that same run:
 B2B DEMO SUMMARY | MOCK | PREVIEW ONLY
 Five synthetic showcase enquiries processed in n8n.
 Routes: HOT 2, WARM 1, NEEDS_REVIEW 1, NOT_A_SALES_LEAD 1.
-Live JEV evaluations: 0. Google Sheets runtime writes: 0. Slack messages sent: 0.
+Live JEV evaluations: 0. Google Sheets runtime writes: 0.
+This six-message batch is an internal mock demonstration.
 These are policy/mock checks, not model performance or sales outcomes.
 ```
 

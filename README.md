@@ -11,7 +11,7 @@ This is a synthetic portfolio demo for ClearFlow Automation, a fictional company
 | FORM VALIDATION TESTED | n8n manual form-trigger execution accepted a valid synthetic enquiry |
 | LIVE JEV TESTED | No: account model catalogue lists a positive input-token rate; paid API budget remains USD 0 |
 | SHEETS TESTED | One native Google Sheet created and read through the Codex Google connector; n8n write/read is not verified |
-| SLACK PREVIEW/SENT | Five n8n MOCK previews prepared; zero messages sent |
+| SLACK PREVIEW/SENT | Five n8n MOCK previews prepared; private six-message sender validated with approval gate closed; zero messages sent |
 | EVALUATION COMPLETE | No: 0/90 planned live evaluations; RULES ONLY baseline 24/30 on authored synthetic labels |
 
 The [integration report](reports/integration-tests.md) and [evaluation report](reports/evaluation.md) identify exactly what ran. Mock answers are hand-authored test fixtures, not JEV output. No real customers or sales outcomes are represented.
@@ -43,7 +43,7 @@ python tools/release_guard.py --root .
 1. Import/build [the mock showcase](workflows/mock-showcase.sdk.js) and [the intake preview](workflows/intake-preview.sdk.js) using an n8n Workflow SDK capable instance. The source builders are in `tools/`. Keep the form inactive until its end-to-end path and access protection are verified. The form uses n8n user authentication.
 2. Create a private Google Sheet with `Leads`, `TestRuns`, `Summary` and `Config` tabs; the required columns are in [the integration report](reports/integration-tests.md). Bind a **Google Sheets action OAuth** credential in n8n. A Codex Google connector or a Google Sheets Trigger credential does not prove an n8n write.
 3. Bind the Vercel AI Gateway key through a supported n8n HTTP credential. Use `POST https://ai-gateway.vercel.sh/v1/evaluate` with `model: typesafe-ai/jev`, one shared allowlisted state and all nine questions. The [offline HTTP adapter](reference/jev_adapter.py) builds the request, validates typed answers and fails closed under a positive catalogue price with zero paid budget. Its response contract still requires a live smoke test. Do not make calls until the account-applicable rate and paid budget are reconciled.
-4. Keep the Slack Incoming Webhook in a private sender only. Render five previews and one summary, then obtain one combined send approval before executing it. No development or evaluation loop may send Slack messages.
+4. Keep the Slack Incoming Webhook in a private sender only. The current private n8n sender is inactive and its approval gate emits zero items; the public repository contains no webhook URL or secret-bearing sender export. Review [five previews and the proposed summary](reports/slack-previews.md), then obtain one combined send approval before enabling it. No development or evaluation loop may send Slack messages.
 5. Run one n8n Sheets setup write/read, one JEV smoke test if authorised, then ten development cases. Freeze policy/questions/evaluation fixtures and run 30 evaluation cases three times each within the 120-attempt cap. Record errors, usage, cost, latency, question-level outputs and a fair baseline comparison.
 
 ## Limitations and security
