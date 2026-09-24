@@ -3,22 +3,82 @@
     "assets/screenshots/workflow.png": {
       "sha256": "d1c2c50714eed9067b748c5fb8edb696e6846badbcca103adaa5095aac907f41",
       "reviewed_for_secrets": true,
-      "reviewer": "Visual review of final cropped PNG: synthetic data only; account sidebar/avatar, private workflow ID and UI composer excluded"
+      "reviewer": "Visual review: annotated crop from real synthetic-data application capture"
     },
     "assets/screenshots/slack-mock-demo.png": {
       "sha256": "32d62c1838cf685c9c606c7747dce8118b1752fabd2bf73d99f7d82c3597c84a",
       "reviewed_for_secrets": true,
-      "reviewer": "Visual review of final cropped PNG: synthetic data only; account sidebar/avatar, private workflow ID and UI composer excluded"
+      "reviewer": "Visual review: annotated crop from real synthetic-data application capture"
     },
     "assets/screenshots/sheets-leads.png": {
       "sha256": "4c0b70147415f2950aa566e77935552d308fa1277544c14c1f388122d22555e9",
       "reviewed_for_secrets": true,
-      "reviewer": "Visual review of final cropped PNG: synthetic data only; account sidebar/avatar, private workflow ID and UI composer excluded"
+      "reviewer": "Visual review: annotated crop from real synthetic-data application capture"
     },
     "assets/screenshots/sheets-summary.png": {
       "sha256": "d9def6511b8b6e9b6cf09de3d095932ff41151a9e4b684ea214959039552ee8f",
       "reviewed_for_secrets": true,
-      "reviewer": "Visual review of final cropped PNG: synthetic data only; account sidebar/avatar, private workflow ID and UI composer excluded"
+      "reviewer": "Visual review: annotated crop from real synthetic-data application capture"
+    },
+    "assets/screenshots/jev-core.png": {
+      "sha256": "b8a7704154a448ee74b80c974c7519d3d540e27fbc36a32289aa2ef8f30d1602",
+      "reviewed_for_secrets": true,
+      "reviewer": "Visual review: annotated crop from real synthetic-data application capture"
+    },
+    "assets/screenshots/slack-sender.png": {
+      "sha256": "06c09838015d35d4ed9a74e85d3829e774296f23631243f875f6369a5fbbefe2",
+      "reviewed_for_secrets": true,
+      "reviewer": "Visual review: Real inactive n8n sender; Google Sheets, closed approval gate and native Slack logo; no secret or private URL"
+    },
+    "assets/screenshots/slack-live-recap.png": {
+      "sha256": "c1117bc99416be0d1edc69156689bfa4eafed8909fe7f8950ec5fbd8e9a0bf05",
+      "reviewed_for_secrets": true,
+      "reviewer": "Visual review: Real Slack synthetic support message and five-case summary; account sidebar excluded"
+    },
+    "assets/screenshots/slack-live-hot.png": {
+      "sha256": "0b4668494bfe78df231c0731157ea035b69c82de065abcf115a0953e2a24745d",
+      "reviewed_for_secrets": true,
+      "reviewer": "Visual review: Real Slack synthetic Alder and Beacon saved-LIVE-JEV messages; account sidebar excluded"
+    },
+    "assets/screenshots/slack-live-review.png": {
+      "sha256": "aa31e207733c5c8aaa0cdb523327a36295932786018314bdfb0855ccb60fb241",
+      "reviewed_for_secrets": true,
+      "reviewer": "Visual review: Real Slack synthetic Grove and Ivy saved-LIVE-JEV messages; account sidebar excluded"
+    },
+    "assets/linkedin/01-workflow-overview.png": {
+      "sha256": "dfc034db0fe242dcb23e06afa559078f2dd919025e21e5fd0f058b2ff34c2a49",
+      "reviewed_for_secrets": true,
+      "reviewer": "Visual review: annotated crop from real synthetic-data application capture"
+    },
+    "assets/linkedin/02-jev-and-rules.png": {
+      "sha256": "a0ef755e5b302c5a8230214a634eaf44aa6ee899d89766378a3f3d150f1688dc",
+      "reviewed_for_secrets": true,
+      "reviewer": "Visual review: annotated crop from real synthetic-data application capture"
+    },
+    "assets/linkedin/03-native-slack-step.png": {
+      "sha256": "ec5c63b7ed8f9e608f971059558505774a87e07202aac9eec4848232ac7ba18c",
+      "reviewed_for_secrets": true,
+      "reviewer": "Visual review: annotated crop from real synthetic-data application capture"
+    },
+    "assets/linkedin/04-sheets-results.png": {
+      "sha256": "3c860df660024f493bcecd8d5d2da92ecfcef0af605d6065784e6061757b33d5",
+      "reviewed_for_secrets": true,
+      "reviewer": "Visual review: annotated crop from real synthetic-data application capture"
+    },
+    "assets/linkedin/05-slack-sales-cases.png": {
+      "sha256": "8592fe8c180b13fe186be4d8922da634ddd2cf9a22fa8c7227d1f44ae4990811",
+      "reviewed_for_secrets": true,
+      "reviewer": "Visual review: annotated crop from real synthetic-data application capture"
+    },
+    "assets/linkedin/06-slack-review-support.png": {
+      "sha256": "2518a1fd3d5cd9bca0fcc7004dc512dcbafac6193d7cf0e13d4170c2c59b116b",
+      "reviewed_for_secrets": true,
+      "reviewer": "Visual review: annotated crop from real synthetic-data application capture"
+    },
+    "assets/screenshots/workflow-explained.png": {
+      "sha256": "143db6064653108b203e3d03612ea8cccacb479e84bc05899262d87ee5bf55a7",
+      "reviewed_for_secrets": true,
+      "reviewer": "Visual review: annotated crop from real synthetic-data application capture"
     }
   }
 }

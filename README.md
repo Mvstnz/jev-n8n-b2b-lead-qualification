@@ -1,6 +1,23 @@
 # B2B Lead Qualification with n8n + JEV
 
-This is a synthetic portfolio demo for ClearFlow Automation, a fictional company that connects existing business software. It shows how current scope, funding and delivery gates can matter more than a large stated budget. In the live intake, an approved EUR 6,000 focused pilot was HOT while an urgent EUR 40,000 request awaiting funding went to NEEDS_REVIEW after JEV assessed its scope differently. A broken existing workflow went to support without a sales score.
+This is a synthetic portfolio demo for ClearFlow Automation, a fictional company that connects existing business software. A business enquiry enters n8n; JEV interprets what the customer currently wants to buy; fixed business rules decide the next team and any priority score; Google Sheets stores the result. An approved, separate n8n sender turns selected saved results into readable Slack notifications.
+
+The useful contrast: a customer-reported approved **EUR 6,000 pilot** qualified for a personal sales follow-up, while a **EUR 120,000 multi-country rollout** needed a person to clarify its exact scope before scoring. A broken existing workflow went to support with no sales score. A larger budget alone does not settle the route.
+
+## The flow at a glance
+
+```mermaid
+flowchart LR
+    A[Protected enquiry form] --> B[Validate and check duplicate]
+    B --> C[JEV via Vercel AI Gateway<br/>Nine questions about the current request]
+    C --> D[Fixed business rules<br/>Sales, review or support]
+    D --> E[Google Sheets<br/>Saved decision and explanation]
+    E --> F[Slack text preview<br/>No automatic send]
+    E -. Selected saved demo rows, after approval .-> G[Separate n8n sender<br/>Closed approval gate]
+    G --> H[Private Slack demo channel]
+```
+
+**Plain-language terms:** “current paid phase” means the specific work and budget being requested now, such as a pilot rather than a future rollout. `HOT` means a sales follow-up is recommended by the demo rules; it is not a prediction that the customer will buy. `NEEDS_REVIEW` means a person checks scope or feasibility. `NOT_A_SALES_LEAD` can still be an important support request. The displayed score is business priority, not purchase probability. No Gmail or customer email is part of this lead workflow.
 
 ## Verified status (24 September 2026)
 
@@ -11,28 +28,32 @@ This is a synthetic portfolio demo for ClearFlow Automation, a fictional company
 | FORM AND LIVE PIPELINE TESTED | Invalid budget was rejected; five distinct synthetic forms completed n8n JEV, Sheets append, Slack preview and receipt; four of five routes matched authored expectations |
 | LIVE JEV TESTED | Native smoke and n8n integration succeeded. Evaluation campaign produced 28 valid responses from 90 planned slots; provider rate limits blocked 62 |
 | SHEETS TESTED | n8n appended five synthetic leads and skipped serial duplicates; Codex Google connector read back the rows and recorded all 90 evaluation slots in `TestRuns` |
-| SLACK DEMO SENT | Five n8n MOCK lead notifications and one MOCK summary reached the private demo channel in one approved sender run; the sender was relocked and remains inactive |
+| SLACK DEMOS SENT | An earlier approved six-message MOCK policy showcase, a four-message initial LIVE JEV narrative, and a final six-message clear business-case showcase based on five saved LIVE JEV results reached the private channel through a private webhook. The sender was relocked after each run and remains inactive. A newly connected native Slack node passed a read-only channel test; native posting has not been send-tested |
 | EVALUATION COMPLETE | Partial: 23/28 valid live responses matched authored routes, zero false HOT; 62/90 slots had provider errors. MOCK_REPEAT 90/90; RULES ONLY 24/30 |
 
 The [integration report](reports/integration-tests.md), [evaluation report](reports/evaluation.md) and [technical-case status](reports/technical-tests.md) identify exactly what ran. Mock answers are hand-authored test fixtures, not JEV output. No real customers or sales outcomes are represented.
 
 ## Portfolio evidence
 
-The images below are cropped from real application screens on 24 September 2026. All visible lead names and business details are synthetic. The Slack messages show **MOCK policy outputs**; the separate Sheets rows show **live JEV intake outputs**. The two are separate runs.
+The images below are cropped from real application screens on 24 September 2026. All visible lead names and business details are synthetic. The Slack screenshots show a **manually approved notification run based on previously saved live JEV results**; the intake itself remains preview-only.
 
-![Inactive n8n intake workflow with validation, duplicate lookup, JEV evaluation, Sheets append and Slack preview nodes](assets/screenshots/workflow.png)
+![Inactive n8n intake workflow with clearly labelled JEV, Google Sheets and Slack preview nodes](assets/screenshots/workflow-explained.png)
 
-| Five live JEV intake rows in Google Sheets | Approved MOCK messages delivered to Slack |
+| JEV's actual evaluation steps | The separate approved Slack sender |
 |---|---|
-| ![Five synthetic intake rows with model-assessed scope and actual categories](assets/screenshots/sheets-leads.png) | ![Two synthetic MOCK lead notifications in the private Slack demo channel](assets/screenshots/slack-mock-demo.png) |
+| ![n8n Evaluation Core calls JEV through Vercel AI Gateway then applies fixed rules](assets/screenshots/jev-core.png) | ![n8n reads saved JEV results from Sheets, formats explanations and uses an approval gate before Slack](assets/screenshots/slack-sender.png) |
 
-![Google Sheets summary showing evaluation denominators, five live intake rows and six sent MOCK notifications](assets/screenshots/sheets-summary.png)
+| Five saved live JEV intake rows | A readable sales case delivered to Slack |
+|---|---|
+| ![Five synthetic live JEV intake results saved in Google Sheets](assets/screenshots/sheets-leads.png) | ![Synthetic Beacon pilot explained in the private Slack demo channel](assets/screenshots/slack-live-hot.png) |
+
+[See the review and support cases](assets/screenshots/slack-live-review.png), the [Slack recap](assets/screenshots/slack-live-recap.png), the [evaluation summary](assets/screenshots/sheets-summary.png), and the earlier [MOCK policy notification screenshot](assets/screenshots/slack-mock-demo.png). The MOCK and LIVE JEV batches are separate demonstrations. A [six-slide annotated carousel](assets/linkedin/) highlights the real n8n and Slack screenshots with red arrows.
 
 For a suggested demonstration sequence and a copy-ready English LinkedIn draft, see [Demo and LinkedIn](docs/DEMO_AND_LINKEDIN.md).
 
 ## Architecture and business policy
 
-The intended production path is `authenticated intake → input allowlist → SHA-256 form fingerprint → 24-hour Sheets lookup → JEV native evaluate → typed-answer validation → fixed commercial gates → Google Sheets append → Slack preview/approved send`. The deployed mock showcase runs the middle policy and preview path without side effects. A separate protected Intake Preview validates form data. An inactive [Intake pipeline draft](workflows/intake-pipeline.template.sdk.js) implements the connected path and returns a stored receipt for serial duplicates. Its published source uses inert placeholders for private resource IDs. The private runtime completed five synthetic new-lead executions and two duplicate replays; public Evaluation Core source remains fail-closed. The inactive Test Runner exercises 30 mock cases three times each. [Workflow sources](workflows/README.md) are portable Workflow SDK definitions, not credential-bearing raw exports.
+The intake path is `authenticated form → input validation → SHA-256 duplicate check → JEV via Vercel AI Gateway → typed-answer validation → fixed commercial gates → Google Sheets append → human-readable Slack preview`. A separate **manual** sender reads five saved live JEV rows from Sheets, validates their provenance and route, formats five cases plus a recap, and passes a closed-by-default approval gate. The final six-message run used a private Slack webhook; a native n8n Slack node is now visible and configured but has only passed a read-only channel test. The sender is closed and inactive. The deployed mock showcase runs the middle policy and preview path without side effects. A separate protected Intake Preview validates form data. An inactive [Intake pipeline draft](workflows/intake-pipeline.template.sdk.js) implements the connected path and returns a stored receipt for serial duplicates. Its published source uses inert placeholders for private resource IDs. The private runtime completed five synthetic new-lead executions and two duplicate replays; public Evaluation Core source remains fail-closed. The inactive Test Runner exercises 30 mock cases three times each. [Workflow sources](workflows/README.md) are portable Workflow SDK definitions, not credential-bearing raw exports.
 
 JEV uses the [nine typed questions](config/jev-questions.json) against only the customer message, current-phase budget, currency, requested completion and derived days, plus the trusted fictional [policy](config/policy.json). The model must not receive names, roles, case IDs, authored labels or mock answers. [Reference code](reference/policy_reference.py) validates answer shapes and applies gates in order. The [rules-only baseline](reference/rules_baseline.py) uses fixed phrase and negation rules as a transparent comparator.
 
@@ -57,11 +78,11 @@ python tools/release_guard.py --root .
 1. Import/build [the mock showcase](workflows/mock-showcase.sdk.js), [intake preview](workflows/intake-preview.sdk.js), [mock Test Runner](workflows/test-runner.sdk.js), [native Evaluation Core](workflows/evaluation-core.sdk.js) and [gated Intake template](workflows/intake-pipeline.template.sdk.js) using an n8n Workflow SDK capable instance. Builders are in `tools/`. Supply private core/sheet IDs to the intake builder outside the public tree. Keep forms inactive until the end-to-end path and access protection are verified. The forms use n8n user authentication.
 2. Create a private Google Sheet with `Leads`, `TestRuns`, `Summary` and `Config` tabs; the required columns are in [the integration report](reports/integration-tests.md). Bind a **Google Sheets action OAuth** credential in n8n. A Codex Google connector or a Google Sheets Trigger credential does not prove an n8n write.
 3. The first Gateway request returned `customer_verification_required`; a subsequent native smoke and n8n request succeeded after account setup. The authenticated account had USD 5 free credits. The dedicated key has a USD 1 non-resetting budget and the project permits USD 0 paid spending. The [Evaluation Core source](workflows/evaluation-core.sdk.js) targets `POST https://ai-gateway.vercel.sh/v1/evaluate` with `model: typesafe-ai/jev`, one allowlisted state and nine questions. Its portable source remains fail-closed. The private n8n instance temporarily holds the key in its HTTP node header; move it to an n8n HTTP credential before activation. The [native HTTP adapter](reference/jev_adapter.py) has now validated the real response shape.
-4. Keep the Slack Incoming Webhook in a private sender only. One approved six-message MOCK batch was sent and verified; the private sender was immediately relocked and remains inactive. The public repository contains no webhook URL or secret-bearing sender export. [The exact sent texts](reports/slack-previews.md) remain separate from live JEV intake results. No development or evaluation loop sent Slack messages.
+4. Keep Slack delivery in a private sender only. An approved six-message MOCK batch and the final approved five-case-plus-recap LIVE JEV batch were sent and read back separately through a private webhook; an intermediate four-message LIVE JEV narrative was also sent before the presentation was revised. The native n8n Slack action has a connected OAuth credential and passed a read-only channel test, but it has not posted a new message. The sender was relocked and remains inactive. The public repository contains no webhook URL, channel ID or secret-bearing sender export. See the [live JEV notification report](reports/slack-live-demo.md) and [earlier MOCK texts](reports/slack-previews.md). No development or evaluation loop sent Slack messages.
 5. The synthetic n8n write/read, sequential duplicate replay and JEV smoke are complete. The 30×3 campaign hit provider rate limits after 28 valid replies; see [evaluation](reports/evaluation.md). Its 90 redacted result/error rows were written to the private `TestRuns` tab by the Codex Google connector, not by the n8n Test Runner. Re-run missing cases only after a later rate-limit window, with fresh credit and attempt checks.
 
 ## Limitations and security
 
-The mock policy and evaluation loops remain side-effect-free; a separate, explicitly approved sender delivered six synthetic MOCK notifications. The inactive Intake pipeline processed five synthetic leads through JEV and Sheets and skipped serial duplicate replays, but its private Evaluation Core holds an inline key pending native credential migration. A Sheets lookup and append are not atomic: concurrent duplicate protection, stable API-key conflict handling and recovery after partial failures remain unimplemented. Provider rate limits prevented full live evaluation. No public webhook, prospect email, automatic LinkedIn post or production sales processing is enabled. Live intake remains Slack preview-only; the one MOCK send batch has completed.
+The mock policy and evaluation loops remain side-effect-free; a separate, explicitly approved sender delivered six synthetic MOCK messages, an earlier four-message LIVE JEV narrative, and the final five-case-plus-recap LIVE JEV batch. The inactive Intake pipeline processed five synthetic leads through JEV and Sheets and skipped serial duplicate replays, but its private Evaluation Core holds an inline key pending native credential migration. A Sheets lookup and append are not atomic: concurrent duplicate protection, stable API-key conflict handling and recovery after partial failures remain unimplemented. Provider rate limits prevented full live evaluation. No public webhook, prospect email, automatic LinkedIn post or production sales processing is enabled. Live intake remains Slack preview-only; the separate demo sender is closed and inactive.
 
 Only synthetic fixtures and redacted source belong here. Do not commit credentials, private workflow exports, account URLs or raw executions. See [limitations](reports/limitations.md), [release checks](docs/PUBLIC_REPOSITORY_CHECKLIST.md) and [official references](docs/OFFICIAL_REFERENCES.md). No licence has been selected.

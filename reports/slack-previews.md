@@ -78,4 +78,4 @@ This six-message batch is an internal mock demonstration.
 These are policy/mock checks, not model performance or sales outcomes.
 ```
 
-This six-message batch was the only approved send. The summary text retains `PREVIEW ONLY` because it describes the MOCK preview outputs; its delivery does not make those outputs live JEV results. The private webhook and Slack channel identifiers are intentionally absent from this public report. No development or evaluation loop sent messages.
+This six-message batch was the first approved send. A later, separate [final six-message showcase from five saved LIVE JEV results](slack-live-demo.md) uses short, plain-English business cases; an intermediate four-message narrative was also sent before that revision. The MOCK summary text retains `PREVIEW ONLY` because it describes the original mock preview outputs; its delivery does not make those outputs live JEV results. The private webhook and Slack channel identifiers are intentionally absent from this public report. No development or evaluation loop sent messages.

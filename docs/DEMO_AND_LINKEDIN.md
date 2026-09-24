@@ -1,42 +1,59 @@
 # Demo and LinkedIn package
 
-## Evidence boundary
+## The story in one sentence
 
-ClearFlow Automation and every lead are fictional. Screenshots are real captures of the n8n, Google Sheets and Slack applications. The five `Leads` rows came from distinct **live JEV** calls through the inactive n8n intake workflow. The six Slack notifications came from a separate, approved **MOCK** showcase using hand-authored answers. No real prospect was contacted. The n8n sender is inactive and its send gate is relocked.
+JEV interprets a synthetic B2B request; fixed rules choose Sales, human review or Support; Google Sheets records the reason; a separately approved n8n sender explains saved decisions in a private Slack channel.
 
-## Suggested post images
+## Six-slide annotated carousel
 
-1. [Workflow overview](../assets/screenshots/workflow.png): validation, 24-hour duplicate check, JEV evaluation, Sheets storage and Slack preview. The private subworkflow ID was obscured.
-2. [Five live synthetic leads](../assets/screenshots/sheets-leads.png): two HOT, two NEEDS_REVIEW and one NOT_A_SALES_LEAD. DEV-03 differed from its authored WARM expectation.
-3. [Actual Slack messages](../assets/screenshots/slack-mock-demo.png): approved and delivered MOCK notifications, clearly labelled as such.
-4. Optional [evaluation summary](../assets/screenshots/sheets-summary.png): precise result denominators and provider failures.
+The red arrows are annotations over cropped **real application screenshots** captured on 24 September 2026. All companies and requests are fictional. Download these PNGs in order:
 
-All four images were cropped, metadata stripped and visually reviewed. The public images contain no credentials, private resource IDs or real lead data. Capture dates and hashes are recorded in `checks/media_review.json`.
+1. [The n8n intake](../assets/linkedin/01-workflow-overview.png): form, duplicate check, JEV, Sheets and a Slack text preview.
+2. [Where JEV runs](../assets/linkedin/02-jev-and-rules.png): a native Vercel AI Gateway request inside the Evaluation Core, then answer validation and fixed policy.
+3. [The native Slack step](../assets/linkedin/03-native-slack-step.png): a separate inactive sender reads Sheets, formats five cases, holds a closed approval gate and has a connected n8n Slack node. Its OAuth channel access passed a **read-only** test. The six delivered messages pictured later used the earlier approved private webhook path; native posting has not been send-tested.
+4. [The saved results](../assets/linkedin/04-sheets-results.png): five synthetic live JEV intake rows; two sales scores, two review cases and one support case.
+5. [A small pilot in Slack](../assets/linkedin/05-slack-sales-cases.png): Beacon Services, a customer-reported approved EUR 6,000 pilot, receives a Sales follow-up with 93.02/100 business priority.
+6. [Review and Support in Slack](../assets/linkedin/06-slack-review-support.png): a EUR 120,000 multi-country request remains unscored because its scope is uncertain; an existing-customer incident goes to Support.
 
-## Two-to-three-minute demo script
+The original redacted evidence crops are in [assets/screenshots](../assets/screenshots/). The arrows and captions were added for explanation; no application UI or decision result was invented. The final images are visually reviewed and hashed in `checks/media_review.json`.
 
-1. Open the workflow screenshot or the private inactive n8n canvas. Explain: `Enquiry → Validate → De-duplicate → JEV → Policy gates → Sheets → Slack preview`.
-2. Show five synthetic rows in Sheets. DEV-01 and DEV-02 are HOT, including a small EUR 6,000 pilot; DEV-07 is flagged for enterprise review; DEV-09 goes to support. DEV-03 is a real disagreement: JEV assessed `paid_discovery`, and the final gate routed to NEEDS_REVIEW instead of the authored WARM expectation.
-3. Show the Slack channel. Explain that the six delivered messages are a separate MOCK demonstration of the notification format. Never describe them as messages sent by the live JEV intake.
-4. Show the summary: 28 of 90 planned evaluation attempts returned valid typed results, 23 of those 28 matched authored routes, and there were no false HOT classifications. The other 62 attempts failed at the provider boundary. This does not establish full-set quality or stability.
-5. Close with the production gates: migrate the private inline gateway key into an n8n credential, make duplicate handling atomic, add partial-failure recovery and re-run provider-limited cases before activating the workflow.
+## What actually ran
+
+- Five distinct synthetic enquiries completed the inactive n8n form → live `typesafe-ai/jev` through Vercel AI Gateway → fixed rules → Google Sheets append → Slack preview path. Four of the five final routes matched the authored case expectations. Two serial duplicate replays returned stored receipts without additional writes.
+- The final **six-message** Slack showcase read all five saved live JEV rows and produced five case messages plus a recap. A closed-gate preview sent zero messages. After the explicit send approval, one private webhook execution delivered six messages, the Slack channel was read back, and the gate was closed again. The intake itself did not send Slack messages.
+- An earlier six-message MOCK policy batch used hand-authored typed answers. An intermediate four-message LIVE JEV narrative was sent before the user requested shorter, clearer business-case text. These are separate runs.
+- The native n8n Slack node and connected OAuth credential are present on the current sender canvas. A temporary read-only `get channel` operation succeeded, then the node was restored to `post message` and the gate to closed. **No native-node message send is claimed.**
+- The broader live evaluation planned 90 slots. Provider limits and errors left 28 valid typed replies; 23 of those 28 matched authored routes, with zero false HOT among valid replies. This is a partial test, not a production accuracy estimate.
+
+## Two-minute walkthrough
+
+1. **Business problem:** Inbound requests mix potential purchases, early ideas, unclear rollouts and existing-customer incidents. Budget alone does not tell the team what to do next.
+2. **JEV's role:** The intake sends allowlisted facts about the *current requested work* to nine typed JEV questions. They cover request type, current scope, service fit, buying intent, funding readiness, delivery risk, contradictions, instruction attacks and genuine ambiguity.
+3. **Where human judgment and rules enter:** Code validates JEV's response shape and confidence, then applies explicit gates. Unclear or complex scope goes to human review. Existing-contract incidents go to Support. Qualified sales cases alone receive a business-priority score. That number is **not** a purchase probability.
+4. **Business contrast:** Beacon's narrow EUR 6,000 pilot receives Sales follow-up. Grove's customer-stated EUR 120,000 nine-office rollout needs scope clarification before any sales score. Ivy's broken order notification is a Support issue.
+5. **Delivery:** Google Sheets stores each synthetic result. The intake only prepares Slack text. A separate, manually approved sender posts selected saved results to a private channel and closes again.
+
+`Current paid phase` means the work and budget requested **now**, such as a pilot rather than a hypothetical later company-wide rollout. Customer-reported approval has not been independently verified. The business thresholds are fictional demo policy, not market prices or delivery commitments.
 
 ## Copy-ready LinkedIn post (English)
 
-> EUR 6,000 pilot: HOT. EUR 120,000 rollout: NEEDS_REVIEW. 🔎
+> **A EUR 6,000 pilot went to Sales. A EUR 120,000 rollout went to human review.**
 >
-> Those were two actual outcomes in my synthetic n8n + JEV lead qualification demo. The goal is to turn an enquiry into a useful next action based on its current paid phase, funding and delivery scope.
+> I built a B2B lead qualification demo in n8n to make the next action clear when an enquiry mentions a budget, a deadline and a lot of possible scope.
 >
-> The flow is simple: **Enquiry → Validate → Check duplicates → Ask JEV → Apply business gates → Save to Sheets → Prepare a Slack notification.**
+> The flow is: **enquiry → JEV through Vercel AI Gateway → explicit business rules → Google Sheets → approved Slack notification.**
 >
-> It asks nine structured questions about the *current paid phase*. Fixed rules then decide whether to follow up, help with funding approval, request a feasibility review, or route an existing customer to support. The score appears only when the gates pass.
+> JEV interprets the current request through nine structured questions. Is this a new paid project or a support issue? Is the customer asking for one narrow pilot or a multi-country rollout? Is funding reported approved for the work requested *now*? Code validates those answers, then fixed rules choose the route and decide whether a priority score is appropriate.
 >
-> I ran five synthetic enquiries through the connected n8n → JEV → Google Sheets path. Two became HOT, two needed review, and one went to support. One case disagreed with my authored expected route; I kept that result visible. I also sent six clearly labelled MOCK messages to a private Slack demo channel to show the notification experience.
+> Three synthetic cases show why that split matters:
+> - A reported-funded EUR 6,000 pilot → personal Sales follow-up, priority 93.02/100.
+> - A EUR 120,000 rollout across nine offices → human scope review, **no score yet**.
+> - A broken workflow under an existing service agreement → Support, **not a sales lead**.
 >
-> In a separate 30-case evaluation, 23 of 28 valid responses matched my authored routes and none produced a false HOT. Provider limits blocked the other 62 planned attempts, so this remains a portfolio demo rather than a production claim.
+> Five fictional enquiries ran through the connected n8n/JEV/Sheets path. I then used a separate, approval-gated n8n sender to deliver five readable case summaries and one recap to a private Slack demo channel. The intake itself stays preview-only, and the workflow remains inactive.
 >
-> The workflow, tests, limitations and real screenshots are on GitHub: https://github.com/Mvstnz/jev-n8n-b2b-lead-qualification
+> The screenshots are from the real tools; the lead data is synthetic. The score is a business priority, not a prediction that someone will buy. The tests, partial live evaluation and remaining operational limits are documented here: https://github.com/Mvstnz/jev-n8n-b2b-lead-qualification
 >
-> #n8n #AIAutomation #JEV #BusinessAutomation #RevOps
+> #n8n #JEV #AIAutomation #BusinessAutomation #RevOps
 
-The user publishes this post personally. Do not publish, schedule, or send it automatically. If the user posts fewer than four images, use the first three and retain the MOCK/LIVE distinction in the caption.
+Post this personally after checking the carousel order and wording. No LinkedIn publishing or customer communication was automated. The private Slack webhook and operational IDs are intentionally absent from the public repository.
