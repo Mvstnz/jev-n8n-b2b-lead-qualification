@@ -14,7 +14,7 @@ This is a synthetic portfolio demo for ClearFlow Automation, a fictional company
 | SLACK PREVIEW/SENT | Five n8n MOCK previews prepared; private six-message sender validated with approval gate closed; zero messages sent |
 | EVALUATION COMPLETE | No: 0/90 planned live evaluations; n8n MOCK_REPEAT policy regression 90/90; RULES ONLY baseline 24/30 on authored synthetic labels |
 
-The [integration report](reports/integration-tests.md) and [evaluation report](reports/evaluation.md) identify exactly what ran. Mock answers are hand-authored test fixtures, not JEV output. No real customers or sales outcomes are represented.
+The [integration report](reports/integration-tests.md), [evaluation report](reports/evaluation.md) and [technical-case status](reports/technical-tests.md) identify exactly what ran. Mock answers are hand-authored test fixtures, not JEV output. No real customers or sales outcomes are represented.
 
 ## Architecture and business policy
 

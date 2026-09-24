@@ -51,6 +51,17 @@ def main() -> None:
     free_gate = CostGate(Decimal("0"))
     assert evaluate_live(body, "fake-test-key", policy, free_gate, fake_transport)["model"] == "typesafe-ai/jev"
     assert free_gate.attempts == 2 and calls == [15, 15]
+    blocked = CostGate(Decimal("0"), max_attempts=1)
+    expect_error(lambda: evaluate_live(body, "fake-test-key", policy, blocked,
+                 lambda *_: (503, {}, b"")), "attempt_cap_exhausted")
+    assert blocked.attempts == 1
+    auth_calls = []
+    def denied(*_):
+        auth_calls.append(1)
+        return 403, {}, b""
+    expect_error(lambda: evaluate_live(body, "fake-test-key", policy,
+                 CostGate(Decimal("0")), denied), "http_status:403")
+    assert auth_calls == [1]
     print("JEV adapter offline checks passed. Live calls: 0.")
 
 
