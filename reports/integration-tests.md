@@ -6,9 +6,12 @@
 | n8n mock showcase validation | PASS, 5 nodes | Workflow SDK validation |
 | n8n mock showcase manual run | PASS, five outputs | MOCK only; no external side effects |
 | n8n protected form validation | PASS, one synthetic DEV-01 input | Inactive form-trigger manual execution |
+| n8n mock Test Runner | PASS, 90/90 authored routes | Thirty cases repeated three times with hand-authored answers; no model calls or writes |
+| n8n Evaluation Core SDK | PASS, 6 nodes | Native JEV HTTP node is present, but credential is unbound and live gate closed; no core execution |
 | Google Sheet creation/read | PASS, four tabs and Summary values | Codex Google connector action, not n8n runtime |
 | Google Sheets n8n write/read | NOT RUN | Action OAuth still needs Google authorization |
-| JEV native HTTP from n8n | NOT RUN | Positive catalog price conflicts with zero paid budget; credential unbound |
+| JEV native HTTP from n8n | NOT RUN | Credential unbound, live gate closed and Vercel account verification required |
+| JEV native HTTP through private adapter | BLOCKED, 1 attempt | Gateway returned 403 `customer_verification_required`; no JEV answer, no retry |
 | JEV native HTTP adapter offline | PASS | Request allowlist, typed-response checks, cost gate and transient retry tested with fake transport; no provider request |
 | Slack private sender gate | PASS | Inactive three-node workflow validated; manual execution succeeded and only the approval-gate node ran, emitting zero items |
 | Slack webhook send | NOT RUN | Preview-only gate; user approval still required |
@@ -16,4 +19,4 @@
 
 The Google sheet has `Leads`, `TestRuns`, `Summary` and `Config` tabs. Leads has 44 named columns covering the business view, idempotency, policy/model provenance, timing, cost and notification status. TestRuns has 23 named columns. Header rows are frozen, and Leads/TestRuns have filters. The sheet uses UTC. No lead or TestRuns row is claimed to have been written by n8n.
 
-The n8n mock execution yielded HOT (DEV-01, score 100), HOT (DEV-02, score 95), WARM (DEV-03, Not scored), NEEDS_REVIEW (DEV-07, Not scored) and NOT_A_SALES_LEAD/support (DEV-09, Not scored). These came from hand-authored answers and fixed policy, not JEV. The form execution accepted a valid synthetic record; no claim is made for an invalid-input integration run.
+The n8n mock execution yielded HOT (DEV-01, score 100), HOT (DEV-02, score 95), WARM (DEV-03, Not scored), NEEDS_REVIEW (DEV-07, Not scored) and NOT_A_SALES_LEAD/support (DEV-09, Not scored). These came from hand-authored answers and fixed policy, not JEV. The form execution accepted a valid synthetic record; no claim is made for an invalid-input integration run. The mock Test Runner produced 90/90 route agreement and zero false HOT outcomes against the authored labels; repetition of the same mocks is not model stability evidence.
