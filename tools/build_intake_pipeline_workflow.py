@@ -31,6 +31,8 @@ def build(core_id: str, sheet_id: str) -> str:
     }
     normalizer = (ROOT / "workflows/intake_normalize.js").read_text(encoding="utf-8")
     invalid = "return $input.all().map(item=>({json:{status:'INVALID_INPUT',errors:item.json.errors,next_action:'Correct the submitted information. No evaluation or storage occurred.'}}));"
+    dedupe = "const lead=$('Normalize and Validate').first().json.lead;const hash=$('Fingerprint Validated Enquiry').first().json.payload_hash;const key='form:'+hash;const cutoff=Date.now()-24*60*60*1000;const rows=$input.all().map(i=>i.json);const stored=rows.find(r=>r.idempotency_key===key&&Number.isFinite(Date.parse(r['Received at']))&&Date.parse(r['Received at'])>=cutoff);return [{json:{lead,payload_hash:hash,idempotency_key:key,duplicate:!!stored,stored:stored?{route:stored.Category,priority_score:stored['Priority score'],reason_code:stored.reason_code,slack_status:stored.slack_status}:null}}];"
+    duplicate_receipt = "const x=$input.first().json;return [{json:{status:'DUPLICATE',route:x.stored.route,priority_score:x.stored.priority_score,reason_code:x.stored.reason_code,message:'This synthetic enquiry was already recorded within 24 hours. No new evaluation or row was created.',slack_status:x.stored.slack_status||'PREVIEW_ONLY'}}];"
     preview = "const x=$('Evaluate Current Paid Phase').first().json; const esc=s=>String(s??'Not stated').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/@/g,'＠').slice(0,500);const l=x.lead;const message=['B2B ENQUIRY | DEMO | LIVE JEV','Company: '+esc(l.company_name),'Current phase: '+esc(x.answers?.engagement_scope?.choice),'Budget EUR: '+esc(l.budget_eur),'Requested completion: '+esc(l.target_delivery_date),'Category: '+esc(x.route),'Priority: '+(x.priority_score===null?'Not scored':x.priority_score),'Reason: '+esc(x.reason_code),'Next action: '+esc(x.next_action),'Owner: '+esc(x.owner_queue)].join('\\n');return [{json:{status:'SAVED',run_source:x.provider_error?'LIVE JEV ERROR':'LIVE JEV',route:x.route,slack_status:'PREVIEW_ONLY',slack_preview:message,note:'No Slack message was sent.'}}];"
     finish = "return $input.all().map(item=>({json:{status:item.json.status,route:item.json.route,message:'Synthetic demo enquiry recorded for human review. No quote or delivery promise.',slack_status:'PREVIEW_ONLY'}}));"
     mapped = {
@@ -47,12 +49,17 @@ def build(core_id: str, sheet_id: str) -> str:
         "Owner queue":"{{ $json.owner_queue }}",
         "Review required":"{{ $json.review_required }}",
         "Data source":"{{ $json.provider_error ? 'LIVE JEV ERROR' : 'LIVE JEV' }}",
+        "lead_id":"{{ 'jev-form-' + $execution.id }}",
+        "request_id":"{{ $json.jev_metadata?.providerMetadata?.gateway?.generationId ?? $json.jev_metadata?.id ?? '' }}",
+        "idempotency_key":"{{ 'form:' + $('Fingerprint Validated Enquiry').first().json.payload_hash }}",
+        "payload_hash":"{{ $('Fingerprint Validated Enquiry').first().json.payload_hash }}",
+        "run_id":"{{ $execution.id }}",
         "contact_email":"{{ $json.lead.contact_email }}",
         "original_message":"{{ $json.lead.message }}",
         "reason_code":"{{ $json.reason_code }}",
         "policy_version":"{{ $json.policy_version }}",
         "model_id":"{{ $json.jev_metadata?.model ?? '' }}",
-        "provider_generation_id":"{{ $json.jev_metadata?.id ?? '' }}",
+        "provider_generation_id":"{{ $json.jev_metadata?.providerMetadata?.gateway?.generationId ?? $json.jev_metadata?.id ?? '' }}",
         "slack_status":"PREVIEW_ONLY",
         "execution_id":"{{ $execution.id }}",
     }
@@ -67,11 +74,16 @@ def build(core_id: str, sheet_id: str) -> str:
         code_node("normalize","Normalize and Validate",normalizer),
         "const valid = ifElse({ version: 2.2, config: { name: 'Valid Enquiry?', parameters: { conditions: { options: { caseSensitive: true, leftValue: '', typeValidation: 'strict' }, conditions: [{ leftValue: expr('{{ $json.status }}'), operator: { type: 'string', operation: 'equals' }, rightValue: 'VALIDATED' }], combinator: 'and' } } } });",
         code_node("invalid","Return Input Error Without Side Effects",invalid),
+        "const fingerprint = node({ type: 'n8n-nodes-base.crypto', version: 2, config: { name: 'Fingerprint Validated Enquiry', parameters: { action: 'hash', type: 'SHA256', value: expr('{{ JSON.stringify([$json.lead.contact_email.toLowerCase(), $json.lead.company_name.toLowerCase(), $json.lead.message, $json.lead.budget_eur, $json.lead.target_delivery_date]) }}'), dataPropertyName: 'payload_hash', encoding: 'hex' } } });",
+        "const lookup = node({ type: 'n8n-nodes-base.googleSheets', version: 4.7, config: { name: 'Find Matching Lead in Private Sheet', parameters: { resource: 'sheet', operation: 'read', authentication: 'oAuth2', documentId: { __rl: true, mode: 'id', value: " + json.dumps(sheet_id) + " }, sheetName: { __rl: true, mode: 'name', value: 'Leads' }, filtersUI: { values: [{ lookupColumn: 'idempotency_key', lookupValue: expr('{{ \"form:\" + $json.payload_hash }}') }] }, options: { returnAllMatches: 'returnAllMatches' } }, credentials: { googleSheetsOAuth2Api: newCredential('Google Sheets account') }, alwaysOutputData: true } });",
+        code_node("check_duplicate","Check 24-Hour Duplicate",dedupe),
+        "const duplicate = ifElse({ version: 2.2, config: { name: 'Already Recorded Within 24 Hours?', parameters: { conditions: { options: { caseSensitive: true, leftValue: '', typeValidation: 'strict' }, conditions: [{ leftValue: expr('{{ $json.duplicate ? \"DUPLICATE\" : \"NEW\" }}'), operator: { type: 'string', operation: 'equals' }, rightValue: 'DUPLICATE' }], combinator: 'and' } } } });",
+        code_node("duplicate_receipt","Return Stored Duplicate Receipt",duplicate_receipt),
         "const evaluate = node({ type: 'n8n-nodes-base.executeWorkflow', version: 1.3, config: { name: 'Evaluate Current Paid Phase', parameters: { mode: 'each', source: 'database', workflowId: { __rl: true, mode: 'id', value: " + json.dumps(core_id) + " }, workflowInputs: " + inputs + ", options: { waitForSubWorkflow: true } } } });",
         sheets,
         code_node("preview","Build Internal Slack Preview Only",preview),
         code_node("finish","Return Demo Receipt",finish),
-        "export default workflow('jev-b2b-demo-intake-gated','JEV B2B Demo | Intake').add(form).to(normalize).to(valid.onTrue(evaluate.to(save.to(preview.to(finish)))).onFalse(invalid));",
+        "export default workflow('jev-b2b-demo-intake-gated','JEV B2B Demo | Intake').add(form).to(normalize).to(valid.onTrue(fingerprint.to(lookup.to(check_duplicate.to(duplicate.onTrue(duplicate_receipt).onFalse(evaluate.to(save.to(preview.to(finish)))))))).onFalse(invalid));",
     ]
     return "\n".join(lines)
 
