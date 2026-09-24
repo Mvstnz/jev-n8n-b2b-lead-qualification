@@ -1,8 +1,8 @@
 """Native JEV HTTP adapter. No request occurs without an explicit cost gate.
 
 This module is deliberately independent of n8n credentials and side effects.
-The transport can be injected for offline failure tests. A real response shape
-still needs to be confirmed with an authorised live smoke test.
+The transport can be injected for offline failure tests. A successful native
+JEV response shape was confirmed with a live smoke test on 24 September 2026.
 """
 from __future__ import annotations
 

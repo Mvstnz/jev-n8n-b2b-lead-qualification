@@ -3,23 +3,22 @@
 | Check | Result | Evidence boundary |
 |---|---|---|
 | n8n MCP initialize/tools | PASS | Actual remote management connection |
-| n8n mock showcase validation | PASS, 5 nodes | Workflow SDK validation |
-| n8n mock showcase manual run | PASS, five outputs | MOCK only; no external side effects |
-| n8n protected form validation | PASS, one synthetic DEV-01 input | Inactive form-trigger manual execution |
-| n8n protected Intake draft validation | PASS, 8 nodes | Private core/sheet IDs bound in n8n only; published template uses placeholders |
-| n8n Intake invalid-input branch | PASS, one negative-budget form | Returned `INVALID_INPUT` and `invalid_budget`; no JEV or Sheets node ran |
-| n8n Intake valid-input gate | PASS, one synthetic DEV-01 form | Reached internal Evaluation Core; closed live gate stopped execution before JEV HTTP and Sheets |
-| n8n mock Test Runner | PASS, 90/90 authored routes | Thirty cases repeated three times with hand-authored answers; no model calls or writes |
-| n8n Evaluation Core SDK | PASS, 6 nodes | Native JEV HTTP node is present, but credential is unbound and live gate closed; no core execution |
-| Google Sheet creation/read | PASS, four tabs and Summary values | Codex Google connector action, not n8n runtime |
-| Google Sheets n8n write/read | NOT RUN | Action OAuth still needs Google authorization |
-| JEV native HTTP from n8n | NOT RUN | Credential unbound, live gate closed and Vercel account verification required |
-| JEV native HTTP through private adapter | BLOCKED, 1 attempt | Gateway returned 403 `customer_verification_required`; no JEV answer, no retry |
-| JEV native HTTP adapter offline | PASS | Request allowlist, typed-response checks, cost gate and transient retry tested with fake transport; no provider request |
-| Slack private sender gate | PASS | Inactive three-node workflow validated; manual execution succeeded and only the approval-gate node ran, emitting zero items |
-| Slack webhook send | NOT RUN | Preview-only gate; user approval still required |
-| 30×3 live evaluation | NOT RUN | 0 of 90 main calls |
+| n8n mock showcase validation and run | PASS, five outputs | MOCK only; no external side effects |
+| Protected form preview | PASS | One synthetic valid form input |
+| Protected Intake pipeline validation | PASS, eight nodes | Private IDs bound in n8n; public source has placeholders |
+| Intake invalid-input branch | PASS | Negative budget returned `INVALID_INPUT` and `invalid_budget`; no provider/storage node ran |
+| Intake valid-input run | PASS | Synthetic DEV-01 completed JEV, fixed gates, Sheets append, Slack preview and receipt |
+| n8n mock Test Runner | PASS, 90/90 authored routes | Stored hand-authored answers, not model quality |
+| n8n Evaluation Core | PASS | Native `POST /v1/evaluate` returned typed answers; private runtime key header, workflow inactive |
+| Google Sheet creation | PASS | Private four-tab Sheet created through Codex Google connector |
+| Google Sheets n8n append | PASS | Synthetic `HOT` lead appended by n8n action node |
+| Google Sheets persisted read-back | PASS | Same row and model ID read independently through Codex Google connector |
+| JEV native HTTP adapter | PASS | Second smoke returned validated response; fake-transport tests also pass |
+| Vercel free-credit control | PASS for this run | USD 5 starting credits, USD 1 lifetime key budget, model cost USD 0; no purchase |
+| Slack private sender gate | PASS | Gate emitted zero items; HTTP send node did not run |
+| Slack webhook delivery | NOT RUN | Combined send approval remains outstanding |
+| Live JEV evaluation | PARTIAL | 90 planned slots attempted; 28 valid replies, 62 provider errors; see [evaluation](evaluation.md) |
 
-The Google sheet has `Leads`, `TestRuns`, `Summary` and `Config` tabs. Leads has 44 named columns covering the business view, idempotency, policy/model provenance, timing, cost and notification status. TestRuns has 23 named columns. Header rows are frozen, and Leads/TestRuns have filters. The sheet uses UTC. No lead or TestRuns row is claimed to have been written by n8n.
+The Sheet has `Leads`, `TestRuns`, `Summary` and `Config` tabs. `Leads` has 44 named columns for business view, idempotency, provenance, cost and notification status. The one n8n-written row is synthetic: category `HOT`, score `97.8`, model `typesafe-ai/jev`, and `slack_status = PREVIEW_ONLY`. `TestRuns` was not populated by n8n; live evaluation and raw responses remain private.
 
-The n8n mock execution yielded HOT (DEV-01, score 100), HOT (DEV-02, score 95), WARM (DEV-03, Not scored), NEEDS_REVIEW (DEV-07, Not scored) and NOT_A_SALES_LEAD/support (DEV-09, Not scored). These came from hand-authored answers and fixed policy, not JEV. The form execution accepted a valid synthetic record; no claim is made for an invalid-input integration run. The mock Test Runner produced 90/90 route agreement and zero false HOT outcomes against the authored labels; repetition of the same mocks is not model stability evidence.
+The mock showcase returned HOT for DEV-01 (100), HOT for DEV-02 (95), WARM for DEV-03, NEEDS_REVIEW for DEV-07 and NOT_A_SALES_LEAD/support for DEV-09. Those use hand-authored answers. The live DEV-01 route was HOT (97.8), a distinct model-derived result. No failed JEV call was replaced by a mock answer.
