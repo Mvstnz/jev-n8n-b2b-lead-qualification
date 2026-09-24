@@ -11,7 +11,7 @@ The 20 scenarios are defined in [`fixtures/technical_tests.json`](../fixtures/te
 | TECH-05 Invalid provider authentication | Partially checked | Initial 403 was recorded; no deliberate n8n credential failure was injected |
 | TECH-06 Malformed typed answer | Offline checked | Reference policy routes malformed scores/probabilities to technical review; n8n malformed-response run not performed |
 | TECH-07 Sheets write failure | Not run | Successful n8n append/read-back proven; failure behavior remains untested |
-| TECH-08 Unknown Slack delivery | Not run | No webhook sends; private sender gate correctly emitted zero send items |
+| TECH-08 Unknown Slack delivery | Not run | Six MOCK messages were sent and read back successfully; ambiguous/unknown delivery was not injected |
 | TECH-09 Spreadsheet/message injection | Partially checked | Slack preview source escapes markup and suppresses ASCII `@`; no adversarial n8n/Sheets run |
 | TECH-10 Customer configuration override | Partially checked | Model-state allowlist checked offline; 28 live replies were parsed, but no adversarial n8n form run |
 | TECH-11 Unknown, zero and invalid budget | Offline and n8n checked | Reference null/zero/negative cases pass; protected Intake returned `INVALID_INPUT` for a negative budget without external calls |
@@ -23,6 +23,6 @@ The 20 scenarios are defined in [`fixtures/technical_tests.json`](../fixtures/te
 | TECH-17 Concurrent duplicates | Not run | Sheets lookup plus append is not atomic; parallel submissions remain unsafe |
 | TECH-18 Cost guard/call cap | Offline and runtime checked | Zero paid budget blocks locally; dedicated key has USD 1 non-resetting Gateway budget inside USD 5 free credits. Private campaign stopped below 120 attempts; n8n cross-execution cap is not implemented |
 | TECH-19 Label leakage | Offline and runtime checked | All 40 fixture states use the five-field lead allowlist and exclude authored labels; successful native requests use that builder |
-| TECH-20 Export/secret scan | Release checked | Exact supplied-value, staged/history and forbidden-file scans passed; no screenshots were submitted for visual review |
+| TECH-20 Export/secret scan | Release checked | Exact supplied-value, staged/history and forbidden-file scans passed; four final application screenshots were visually reviewed and hashed |
 
-The first Gateway smoke returned 403. A subsequent smoke, two distinct n8n end-to-end executions and 28 evaluation replies succeeded. Two serial n8n duplicate replays returned stored receipts. Provider rate limits interrupted the rest of the evaluation; see [evaluation](evaluation.md). Technical statuses distinguish a successful path from concurrent or failure recovery behavior.
+The first Gateway smoke returned 403. A subsequent smoke, five distinct n8n end-to-end executions and 28 evaluation replies succeeded. Two serial n8n duplicate replays returned stored receipts. Provider rate limits interrupted the rest of the evaluation; see [evaluation](evaluation.md). Technical statuses distinguish a successful path from concurrent or failure recovery behavior.

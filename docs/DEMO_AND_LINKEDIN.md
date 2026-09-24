@@ -1,60 +1,42 @@
-# Demo and LinkedIn evidence plan
+# Demo and LinkedIn package
 
-## Story
+## Evidence boundary
 
-A large budget does not automatically make a good lead. This demo distinguishes a funded project from early research, a small realistic pilot from a mislabelled rollout, and a sales opportunity from an urgent support issue.
+ClearFlow Automation and every lead are fictional. Screenshots are real captures of the n8n, Google Sheets and Slack applications. The five `Leads` rows came from distinct **live JEV** calls through the inactive n8n intake workflow. The six Slack notifications came from a separate, approved **MOCK** showcase using hand-authored answers. No real prospect was contacted. The n8n sender is inactive and its send gate is relocked.
 
-All names and numbers are synthetic. The video must label the business as fictional and distinguish MOCK, LIVE JEV and RULES ONLY results.
+## Suggested post images
 
-## A two-to-three-minute demonstration
+1. [Workflow overview](../assets/screenshots/workflow.png): validation, 24-hour duplicate check, JEV evaluation, Sheets storage and Slack preview. The private subworkflow ID was obscured.
+2. [Five live synthetic leads](../assets/screenshots/sheets-leads.png): two HOT, two NEEDS_REVIEW and one NOT_A_SALES_LEAD. DEV-03 differed from its authored WARM expectation.
+3. [Actual Slack messages](../assets/screenshots/slack-mock-demo.png): approved and delivered MOCK notifications, clearly labelled as such.
+4. Optional [evaluation summary](../assets/screenshots/sheets-summary.png): precise result denominators and provider failures.
 
-1. Show the n8n workflow overview and explain the service in one sentence.
-2. DEV-01: a manufacturer with approved EUR 30,000 funding for reporting automation. Show the actual evaluated route and score breakdown.
-3. DEV-02: a small company with EUR 6,000 approved for a narrow quotation-follow-up pilot. Explain why a smaller budget can still qualify.
-4. DEV-03: an urgent EUR 40,000 request with no approved funding. Show whether the system separates urgency from readiness.
-5. DEV-07: an approved EUR 120,000 multi-country programme. Explain why human feasibility review is appropriate rather than claiming the delivery is straightforward.
-6. DEV-09: an existing customer with a broken workflow. Show a support owner instead of a sales score.
-7. End with the Google Sheet and the real evaluation summary, including any wrong decisions or technical failures.
+All four images were cropped, metadata stripped and visually reviewed. The public images contain no credentials, private resource IDs or real lead data. Capture dates and hashes are recorded in `checks/media_review.json`.
 
-These are expected behaviours. When demonstrating live results, show what actually happened. Never substitute the hand-authored answers if the model disagrees. Other development cases may appear in the worksheet, but the Slack showcase remains five messages plus one summary after permission.
+## Two-to-three-minute demo script
 
-## Screenshot sequence
+1. Open the workflow screenshot or the private inactive n8n canvas. Explain: `Enquiry → Validate → De-duplicate → JEV → Policy gates → Sheets → Slack preview`.
+2. Show five synthetic rows in Sheets. DEV-01 and DEV-02 are HOT, including a small EUR 6,000 pilot; DEV-07 is flagged for enterprise review; DEV-09 goes to support. DEV-03 is a real disagreement: JEV assessed `paid_discovery`, and the final gate routed to NEEDS_REVIEW instead of the authored WARM expectation.
+3. Show the Slack channel. Explain that the six delivered messages are a separate MOCK demonstration of the notification format. Never describe them as messages sent by the live JEV intake.
+4. Show the summary: 28 of 90 planned evaluation attempts returned valid typed results, 23 of those 28 matched authored routes, and there were no false HOT classifications. The other 62 attempts failed at the provider boundary. This does not establish full-set quality or stability.
+5. Close with the production gates: migrate the private inline gateway key into an n8n credential, make duplicate handling atomic, add partial-failure recovery and re-run provider-limited cases before activating the workflow.
 
-- Full workflow: readable left-to-right nodes, no secrets, account menu, personal email or private node URLs.
-- One synthetic form submission showing current paid phase, budget and requested completion date.
-- Actual result with model-assessed scope, customer-reported readiness, policy gate and next action.
-- Google Sheets showing the five showcase records and different categories.
-- An actual accepted Slack message, only after the sender has been approved.
-- Evaluation summary with denominator, data source, failed cases and model alias.
+## Copy-ready LinkedIn post (English)
 
-Do not fabricate UI screenshots or imply a private preview was sent. If screenshot capture is unavailable, deliver instructions for capturing the real UI.
+> I built an AI-powered B2B lead qualification workflow with n8n and JEV. 🔧
+>
+> The goal: turn a new enquiry into a useful next action, instead of treating a big budget or an urgent message as an automatic sales opportunity.
+>
+> The flow is simple: **Enquiry → Validate → Check duplicates → Ask JEV → Apply business gates → Save to Sheets → Prepare a Slack notification.**
+>
+> It asks nine structured questions about the *current paid phase*. Fixed rules then decide whether to follow up, help with funding approval, request a feasibility review, or route an existing customer to support. The score appears only when the gates pass.
+>
+> I ran five synthetic enquiries through the connected n8n → JEV → Google Sheets path. Two became HOT, two needed review, and one went to support. One case disagreed with my authored expected route; I kept that result visible. I also sent six clearly labelled MOCK messages to a private Slack demo channel to show the notification experience.
+>
+> In a separate 30-case evaluation, 23 of 28 valid responses matched my authored routes and none produced a false HOT. Provider limits blocked the other 62 planned attempts, so this remains a portfolio demo rather than a production claim.
+>
+> The workflow, tests, limitations and real screenshots are on GitHub: https://github.com/Mvstnz/jev-n8n-b2b-lead-qualification
+>
+> #n8n #AIAutomation #JEV #BusinessAutomation #RevOps
 
-## Claims permitted only after measured implementation
-
-A short post can describe what was built and tested. A measured-results post may additionally state the number of synthetic cases, first-run policy agreement, false-HOT count, review rate and latency, provided the report contains those numbers. State that the policy and dataset were self-authored. Final routing combines JEV with fixed rules, so do not label routing agreement as model accuracy without separate model-specific analysis.
-
-No claims of production deployment, actual sales conversion, real customer ROI, saved employee hours, or superiority to another model without appropriate evidence. Customer-stated hours of manual work are part of the synthetic lead, not measured savings.
-
-## Current evidence-based draft (mock stage)
-
-I built a synthetic B2B lead-qualification demo around n8n, fixed business rules and a planned JEV evaluation step.
-
-The interesting part was not giving every enquiry a score. It was deciding what actually deserves attention:
-
-A funded reporting project.
-A small, realistic paid pilot.
-An urgent request with no approved budget.
-A large programme that needs a feasibility review.
-An existing customer who needs support, not another sales conversation.
-
-The n8n mock workflow ran five synthetic enquiries and prepared five internal Slack previews. Its answers were hand-authored fixtures. The rules-only comparator matched 24 of 30 authored evaluation labels. A private Google Sheet has been created, while its n8n write path and the JEV live evaluation are still awaiting runtime verification.
-
-This demo keeps any future model assessment separate from the final business decision. No Slack messages were sent.
-
-This is a portfolio demo, not a production sales system.
-
-#n8n #JEV #AIAutomation #BusinessAutomation
-
-## Measured version
-
-After evaluation, generate a second post of roughly 150-220 words using verified results only. If a section is incomplete, remove its numerical claim rather than inserting illustrative numbers. Describe difficult or failed cases. The user approves and publishes the post personally; do not publish it automatically.
+The user publishes this post personally. Do not publish, schedule, or send it automatically. If the user posts fewer than four images, use the first three and retain the MOCK/LIVE distinction in the caption.

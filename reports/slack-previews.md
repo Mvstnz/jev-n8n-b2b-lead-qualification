@@ -1,6 +1,6 @@
-# Slack previews: NOT SENT
+# Slack MOCK demo: six messages sent
 
-These five texts were produced by an actual n8n MOCK execution. `MOCK` means hand-authored typed answers; none is a live JEV result. Customer-facing names and messages are synthetic. No webhook request was made.
+These five texts were produced by an actual n8n MOCK execution and delivered in one approved private sender run on 24 September 2026. `MOCK` means hand-authored typed answers; none is a live JEV result. Names and messages are synthetic. A read-back of the private Slack demo channel confirmed all six messages. The sender's gate was relocked after delivery and the workflow remains inactive.
 
 ```text
 B2B ENQUIRY | DEMO | MOCK
@@ -67,7 +67,7 @@ Next action: Route for support triage; do not discard or sales-score.
 Owner: support
 ```
 
-Proposed sixth preview, a summary prepared from that same run:
+Sixth sent message, a summary prepared from that same run:
 
 ```text
 B2B DEMO SUMMARY | MOCK | PREVIEW ONLY
@@ -78,4 +78,4 @@ This six-message batch is an internal mock demonstration.
 These are policy/mock checks, not model performance or sales outcomes.
 ```
 
-Sending these six messages through the private Slack webhook requires one combined approval. The summary is a prepared preview, not a sixth n8n sender output.
+This six-message batch was the only approved send. The summary text retains `PREVIEW ONLY` because it describes the MOCK preview outputs; its delivery does not make those outputs live JEV results. The private webhook and Slack channel identifiers are intentionally absent from this public report. No development or evaluation loop sent messages.

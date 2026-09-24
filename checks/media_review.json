@@ -1,3 +1,24 @@
 {
-  "files": {}
+  "files": {
+    "assets/screenshots/workflow.png": {
+      "sha256": "d1c2c50714eed9067b748c5fb8edb696e6846badbcca103adaa5095aac907f41",
+      "reviewed_for_secrets": true,
+      "reviewer": "Visual review of final cropped PNG: synthetic data only; account sidebar/avatar, private workflow ID and UI composer excluded"
+    },
+    "assets/screenshots/slack-mock-demo.png": {
+      "sha256": "32d62c1838cf685c9c606c7747dce8118b1752fabd2bf73d99f7d82c3597c84a",
+      "reviewed_for_secrets": true,
+      "reviewer": "Visual review of final cropped PNG: synthetic data only; account sidebar/avatar, private workflow ID and UI composer excluded"
+    },
+    "assets/screenshots/sheets-leads.png": {
+      "sha256": "4c0b70147415f2950aa566e77935552d308fa1277544c14c1f388122d22555e9",
+      "reviewed_for_secrets": true,
+      "reviewer": "Visual review of final cropped PNG: synthetic data only; account sidebar/avatar, private workflow ID and UI composer excluded"
+    },
+    "assets/screenshots/sheets-summary.png": {
+      "sha256": "d9def6511b8b6e9b6cf09de3d095932ff41151a9e4b684ea214959039552ee8f",
+      "reviewed_for_secrets": true,
+      "reviewer": "Visual review of final cropped PNG: synthetic data only; account sidebar/avatar, private workflow ID and UI composer excluded"
+    }
+  }
 }
