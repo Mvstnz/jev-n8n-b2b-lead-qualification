@@ -6,6 +6,9 @@
 | n8n mock showcase validation | PASS, 5 nodes | Workflow SDK validation |
 | n8n mock showcase manual run | PASS, five outputs | MOCK only; no external side effects |
 | n8n protected form validation | PASS, one synthetic DEV-01 input | Inactive form-trigger manual execution |
+| n8n protected Intake draft validation | PASS, 8 nodes | Private core/sheet IDs bound in n8n only; published template uses placeholders |
+| n8n Intake invalid-input branch | PASS, one negative-budget form | Returned `INVALID_INPUT` and `invalid_budget`; no JEV or Sheets node ran |
+| n8n Intake valid-input gate | PASS, one synthetic DEV-01 form | Reached internal Evaluation Core; closed live gate stopped execution before JEV HTTP and Sheets |
 | n8n mock Test Runner | PASS, 90/90 authored routes | Thirty cases repeated three times with hand-authored answers; no model calls or writes |
 | n8n Evaluation Core SDK | PASS, 6 nodes | Native JEV HTTP node is present, but credential is unbound and live gate closed; no core execution |
 | Google Sheet creation/read | PASS, four tabs and Summary values | Codex Google connector action, not n8n runtime |
