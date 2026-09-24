@@ -23,9 +23,9 @@ All four images were cropped, metadata stripped and visually reviewed. The publi
 
 ## Copy-ready LinkedIn post (English)
 
-> I built an AI-powered B2B lead qualification workflow with n8n and JEV. 🔧
+> EUR 6,000 pilot: HOT. EUR 120,000 rollout: NEEDS_REVIEW. 🔎
 >
-> The goal: turn a new enquiry into a useful next action, instead of treating a big budget or an urgent message as an automatic sales opportunity.
+> Those were two actual outcomes in my synthetic n8n + JEV lead qualification demo. The goal is to turn an enquiry into a useful next action based on its current paid phase, funding and delivery scope.
 >
 > The flow is simple: **Enquiry → Validate → Check duplicates → Ask JEV → Apply business gates → Save to Sheets → Prepare a Slack notification.**
 >
