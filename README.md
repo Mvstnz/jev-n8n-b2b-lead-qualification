@@ -1,6 +1,6 @@
 # B2B Lead Qualification with n8n + JEV
 
-This is a synthetic portfolio demo for ClearFlow Automation, a fictional company that connects existing business software. It shows how current scope, funding and delivery gates can matter more than a large stated budget. An approved EUR 6,000 focused pilot can be HOT while an urgent EUR 40,000 rollout awaiting funding remains WARM. A broken existing workflow goes to support without a sales score.
+This is a synthetic portfolio demo for ClearFlow Automation, a fictional company that connects existing business software. It shows how current scope, funding and delivery gates can matter more than a large stated budget. In the live intake, an approved EUR 6,000 focused pilot was HOT while an urgent EUR 40,000 request awaiting funding went to NEEDS_REVIEW after JEV assessed its scope differently. A broken existing workflow went to support without a sales score.
 
 ## Verified status (24 September 2026)
 
