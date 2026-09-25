@@ -4,18 +4,18 @@
 
 JEV interprets a synthetic B2B request; fixed rules choose Sales, human review or Support; Google Sheets records the reason; a separately approved n8n sender explains saved decisions in a private Slack channel.
 
-## Eight individual, annotated PNG slides
+## Eight individual, annotated Roboto PNG slides
 
-The red arrows point to cropped **real application screenshots** captured on 24 September 2026. The 1200 × 1500 portrait slides preserve the screenshots' aspect ratios and include enlarged decision details. All companies and requests are fictional. Use these PNGs in order:
+The red arrows point to cropped **real application screenshots** captured on 24 September 2026. The 1200 × 1500 portrait slides use Roboto for added titles and explanations, preserve the screenshots' aspect ratios and include enlarged decision details. All companies and requests are fictional. Use these PNGs in order:
 
-1. [The business contrast](../assets/linkedin-v2/01-business-contrast.png): why a smaller, clear pilot can go to Sales while a larger, unclear rollout needs review.
-2. [The n8n intake](../assets/linkedin-v2/02-intake-validation.png): form, validation and duplicate check before JEV runs.
-3. [Where JEV runs](../assets/linkedin-v2/03-jev-and-policy.png): Vercel AI Gateway request inside the Evaluation Core, then answer validation and fixed policy.
-4. [The saved results](../assets/linkedin-v2/04-google-sheets.png): five synthetic live JEV intake rows; two sales scores, two review cases and one support case.
-5. [The visible Slack step](../assets/linkedin-v2/05-slack-workflow.png): a separate inactive sender reads Sheets, formats cases and has a native n8n Slack node behind a closed approval gate. Its OAuth channel access passed a **read-only** test. The six delivered messages pictured next used the earlier approved private webhook path; native posting has not been send-tested.
-6. [A small pilot in Slack](../assets/linkedin-v2/06-slack-sales-message.png): Beacon Services, a customer-reported approved EUR 6,000 pilot, receives a Sales follow-up with 93.02/100 business priority.
-7. [An unclear rollout in Slack](../assets/linkedin-v2/07-slack-review-message.png): a EUR 120,000 nine-office request remains unscored because its scope is uncertain.
-8. [A support case in Slack](../assets/linkedin-v2/08-slack-support-message.png): an existing-customer incident is handled by Support and receives no sales score.
+1. [The business contrast](../assets/linkedin-roboto/01-business-contrast.png): why a smaller, clear pilot can go to Sales while a larger, unclear rollout needs review.
+2. [The n8n intake](../assets/linkedin-roboto/02-intake-validation.png): form, validation and duplicate check before JEV runs.
+3. [Where JEV runs](../assets/linkedin-roboto/03-jev-and-policy.png): Vercel AI Gateway request inside the Evaluation Core, then answer validation and fixed policy.
+4. [The saved results](../assets/linkedin-roboto/04-google-sheets.png): five synthetic live JEV intake rows; two sales scores, two review cases and one support case.
+5. [The visible Slack step](../assets/linkedin-roboto/05-slack-workflow.png): a separate inactive sender reads Sheets, formats cases and has a native n8n Slack node behind a closed approval gate. Its OAuth channel access passed a **read-only** test. The six delivered messages pictured next used the earlier approved private webhook path; native posting has not been send-tested.
+6. [A small pilot in Slack](../assets/linkedin-roboto/06-slack-sales-message.png): Beacon Services, a customer-reported approved EUR 6,000 pilot, receives a Sales follow-up with 93.02/100 business priority.
+7. [An unclear rollout in Slack](../assets/linkedin-roboto/07-slack-review-message.png): a EUR 120,000 nine-office request remains unscored because its scope is uncertain.
+8. [A support case in Slack](../assets/linkedin-roboto/08-slack-support-message.png): an existing-customer incident is handled by Support and receives no sales score.
 
 The original redacted evidence crops are in [assets/screenshots](../assets/screenshots/). The arrows and captions were added for explanation; no application UI or decision result was invented. The final images are visually reviewed and hashed in `checks/media_review.json`.
 

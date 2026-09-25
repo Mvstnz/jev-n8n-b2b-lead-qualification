@@ -119,6 +119,46 @@
       "sha256": "b2b6ea7542d86ada865e372afdfdefb2a5de64b55a48cdfb1ebcec774bbd7de4",
       "reviewed_for_secrets": true,
       "reviewer": "Visual review: real redacted UI crop with explanatory overlay; aspect ratio preserved"
+    },
+    "assets/linkedin-roboto/01-business-contrast.png": {
+      "sha256": "df96732c8277150cb366461d912c426364042c621c086f1dfaa59b9a4211aba1",
+      "reviewed_for_secrets": true,
+      "reviewer": "Visual review: Roboto slide with real redacted UI crop and explanatory overlay; aspect ratio preserved"
+    },
+    "assets/linkedin-roboto/02-intake-validation.png": {
+      "sha256": "990ccf4ace60e48eab1e35ab599b621cbfaf73093c9a3112c8a0fd387b3d65fb",
+      "reviewed_for_secrets": true,
+      "reviewer": "Visual review: Roboto slide with real redacted UI crop and explanatory overlay; aspect ratio preserved"
+    },
+    "assets/linkedin-roboto/03-jev-and-policy.png": {
+      "sha256": "db6b4563a8758bd74a1f1091c43ad7d8e4a5bd421da460abd8b8d3e8902abc96",
+      "reviewed_for_secrets": true,
+      "reviewer": "Visual review: Roboto slide with real redacted UI crop and explanatory overlay; aspect ratio preserved"
+    },
+    "assets/linkedin-roboto/04-google-sheets.png": {
+      "sha256": "14d30012fa9b4913445440d7b1e3952e2560e3bf2d97fa76e6e832c6ff478ba3",
+      "reviewed_for_secrets": true,
+      "reviewer": "Visual review: Roboto slide with real redacted UI crop and explanatory overlay; aspect ratio preserved"
+    },
+    "assets/linkedin-roboto/05-slack-workflow.png": {
+      "sha256": "c8db7e7f615a6e31261b92e738baf5572784946a749c933c99d153813862c3f7",
+      "reviewed_for_secrets": true,
+      "reviewer": "Visual review: Roboto slide with real redacted UI crop and explanatory overlay; aspect ratio preserved"
+    },
+    "assets/linkedin-roboto/06-slack-sales-message.png": {
+      "sha256": "2af448a83903f96b71fa87ad8a512e371189ad5f0a6ddaa24fd731b9e2ae58ab",
+      "reviewed_for_secrets": true,
+      "reviewer": "Visual review: Roboto slide with real redacted UI crop and explanatory overlay; aspect ratio preserved"
+    },
+    "assets/linkedin-roboto/07-slack-review-message.png": {
+      "sha256": "4a6e60361f62a344e7883f4e4f74ea4e1b471572391d0e0ce89159e4d03e9cd1",
+      "reviewed_for_secrets": true,
+      "reviewer": "Visual review: Roboto slide with real redacted UI crop and explanatory overlay; aspect ratio preserved"
+    },
+    "assets/linkedin-roboto/08-slack-support-message.png": {
+      "sha256": "7e383c07f699a44e054c9a3342f5691f7658cb5da4eac5f7f1b2f796a79bfdac",
+      "reviewed_for_secrets": true,
+      "reviewer": "Visual review: Roboto slide with real redacted UI crop and explanatory overlay; aspect ratio preserved"
     }
   }
 }
