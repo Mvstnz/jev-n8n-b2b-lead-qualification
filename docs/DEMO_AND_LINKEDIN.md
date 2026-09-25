@@ -41,37 +41,33 @@ JEV was chosen for its [typed decision interface](https://vercel.com/ai-gateway/
 
 ## Copy-ready LinkedIn post (English)
 
-> Built an AI-assisted B2B Lead Qualification Workflow in n8n 🤖
+> Built my first JEV-powered workflow in n8n 🤖
 >
-> I've been working on another automation project. This one turns an incoming B2B enquiry into a clear next action for the right internal team.
+> I recently started exploring JEV and wanted to see how a decision-focused AI model works inside an actual automation. So I built a B2B lead qualification demo around it: an incoming enquiry becomes a clear next action for the right internal team.
 >
-> The workflow handles the process from request to internal notification:
+> Here is what the workflow does:
 >
 > 🔹 Receive and validate an enquiry in n8n
 > 🔹 Check for an existing record in Google Sheets
-> 🔹 Use JEV through Vercel AI Gateway to understand the work requested **now**
-> 🔹 Apply explicit business rules to choose Sales, human review or Support
-> 🔹 Save the result and prepare an internal Slack summary
-> 🔹 Send selected saved demo results through a separate approval-gated n8n sender
+> 🔹 Ask JEV nine focused questions about the work requested **now**
+> 🔹 Validate JEV's answers and apply clear business rules
+> 🔹 Route the enquiry to Sales, human review or Support
+> 🔹 Save the decision in Sheets and prepare a readable Slack summary
+> 🔹 Send selected demo results to a private Slack channel after manual approval
 >
-> The process is basically:
-> **Request → Understand → Check → Route → Store → Notify**
+> Request → JEV understands → Rules decide → Sheets stores → Slack informs
 >
-> 🛠️ Tech stack:
-> • n8n
-> • JEV via Vercel AI Gateway
-> • Google Sheets
-> • Slack
+> Why JEV instead of a low-cost model like GPT-6 Luna? Luna can return structured output too. I chose JEV because its interface is built around focused, typed decisions and uncertainty. That fits the exact job here: identify what the customer wants now, then let testable code decide what happens next. I haven't benchmarked Luna on these leads, so this is a choice about workflow fit, not a claim that JEV is more accurate.
 >
-> Why JEV instead of a low-cost general model like GPT-6 Luna? Luna can return structured output too. But this step needs nine focused judgements about the current request, not generated sales copy. JEV is built to return typed answers and uncertainty for that kind of decision. My code validates those answers; fixed business rules decide the route and priority. I chose JEV for that fit, not because I proved it more accurate than Luna on these leads.
+> The contrast makes the point: a fictional EUR 6,000 pilot went to Sales with a 93.02/100 **business-priority** score. A EUR 120,000 nine-office rollout needed human scope review and received no score. An existing customer issue went to Support. The biggest budget was not automatically the hottest lead.
 >
-> What I like about this project is that the AI helps **interpret** a messy request, while clear rules decide what happens next. A fictional EUR 6,000 pilot received a Sales follow-up and a 93.02/100 **business-priority** score. A EUR 120,000 nine-office rollout needed human scope review and no score yet. An existing customer issue went to Support.
+> This was my first hands-on JEV integration. What I learned: the model can help interpret a messy request, while the business decision stays visible and testable in code.
 >
-> I tested five synthetic live JEV enquiries through n8n and Sheets, then sent five case summaries plus a recap to a private Slack demo channel after manual approval. Four of the five intake routes matched the predefined expectations. The screenshots show real app screens with fictional companies; this is a portfolio demo, and the workflows remain inactive.
+> I ran five fictional enquiries through the connected JEV and Sheets path; four routes matched my predefined expectations. After manual approval, a separate n8n sender delivered five case summaries and a recap to a private Slack demo channel. The screenshots show real app screens with synthetic data. The workflows remain inactive.
 >
-> Code, tests and the limits of the live evaluation: https://github.com/Mvstnz/jev-n8n-b2b-lead-qualification
+> Workflow screenshots, code, tests and limits: https://github.com/Mvstnz/jev-n8n-b2b-lead-qualification
 >
-> More automation projects coming soon.
+> 🛠️ n8n · JEV via Vercel AI Gateway · Google Sheets · Slack
 >
 > #n8n #JEV #AIAutomation #WorkflowAutomation #BusinessAutomation
 
