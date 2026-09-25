@@ -79,6 +79,46 @@
       "sha256": "143db6064653108b203e3d03612ea8cccacb479e84bc05899262d87ee5bf55a7",
       "reviewed_for_secrets": true,
       "reviewer": "Visual review: annotated crop from real synthetic-data application capture"
+    },
+    "assets/linkedin-v2/01-business-contrast.png": {
+      "sha256": "7e463cb55aafca1acec65f4ee464cb93fe493c5e54669b24d69d320429cd4a0f",
+      "reviewed_for_secrets": true,
+      "reviewer": "Visual review: real redacted UI crop with explanatory overlay; aspect ratio preserved"
+    },
+    "assets/linkedin-v2/02-intake-validation.png": {
+      "sha256": "caf9a6f275fd210b180017c8e32d4afffeda785a53bfd2e8ec648b127fd89ccb",
+      "reviewed_for_secrets": true,
+      "reviewer": "Visual review: real redacted UI crop with explanatory overlay; aspect ratio preserved"
+    },
+    "assets/linkedin-v2/03-jev-and-policy.png": {
+      "sha256": "2550341dcb2605a0e856823742890d975610639091a36c5f43896e8598caea8d",
+      "reviewed_for_secrets": true,
+      "reviewer": "Visual review: real redacted UI crop with explanatory overlay; aspect ratio preserved"
+    },
+    "assets/linkedin-v2/04-google-sheets.png": {
+      "sha256": "db26619745ca2b0d82b91932db067d92629b81a6203cee6c53f9bc6c77275756",
+      "reviewed_for_secrets": true,
+      "reviewer": "Visual review: real redacted UI crop with explanatory overlay; aspect ratio preserved"
+    },
+    "assets/linkedin-v2/05-slack-workflow.png": {
+      "sha256": "44ad724c1b7aa48102e6030b363cc7b18b467e513d6e525d56413b704e32aa09",
+      "reviewed_for_secrets": true,
+      "reviewer": "Visual review: real redacted UI crop with explanatory overlay; aspect ratio preserved"
+    },
+    "assets/linkedin-v2/06-slack-sales-message.png": {
+      "sha256": "15223de5331143250c49dedf414b6f9ed1975af63f3a6a6f7f7d0d7a0ab3b35c",
+      "reviewed_for_secrets": true,
+      "reviewer": "Visual review: real redacted UI crop with explanatory overlay; aspect ratio preserved"
+    },
+    "assets/linkedin-v2/07-slack-review-message.png": {
+      "sha256": "ac3f8cf56bdf71a3bbd0baf144079302d4eb6657acea40b836d43d1ada571cd6",
+      "reviewed_for_secrets": true,
+      "reviewer": "Visual review: real redacted UI crop with explanatory overlay; aspect ratio preserved"
+    },
+    "assets/linkedin-v2/08-slack-support-message.png": {
+      "sha256": "b2b6ea7542d86ada865e372afdfdefb2a5de64b55a48cdfb1ebcec774bbd7de4",
+      "reviewed_for_secrets": true,
+      "reviewer": "Visual review: real redacted UI crop with explanatory overlay; aspect ratio preserved"
     }
   }
 }

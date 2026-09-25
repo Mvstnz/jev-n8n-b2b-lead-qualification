@@ -47,7 +47,7 @@ The images below are cropped from real application screens on 24 September 2026.
 |---|---|
 | ![Five synthetic live JEV intake results saved in Google Sheets](assets/screenshots/sheets-leads.png) | ![Synthetic Beacon pilot explained in the private Slack demo channel](assets/screenshots/slack-live-hot.png) |
 
-[See the review and support cases](assets/screenshots/slack-live-review.png), the [Slack recap](assets/screenshots/slack-live-recap.png), the [evaluation summary](assets/screenshots/sheets-summary.png), and the earlier [MOCK policy notification screenshot](assets/screenshots/slack-mock-demo.png). The MOCK and LIVE JEV batches are separate demonstrations. A [six-slide annotated carousel](assets/linkedin/) highlights the real n8n and Slack screenshots with red arrows.
+[See the review and support cases](assets/screenshots/slack-live-review.png), the [Slack recap](assets/screenshots/slack-live-recap.png), the [evaluation summary](assets/screenshots/sheets-summary.png), and the earlier [MOCK policy notification screenshot](assets/screenshots/slack-mock-demo.png). The MOCK and LIVE JEV batches are separate demonstrations. [Eight portrait PNG slides](assets/linkedin-v2/) show the real n8n, Sheets and Slack screenshots at readable size with red arrows and short explanations. The earlier six landscape slides remain in [the archive](assets/linkedin/).
 
 For a suggested demonstration sequence and a copy-ready English LinkedIn draft, see [Demo and LinkedIn](docs/DEMO_AND_LINKEDIN.md).
 

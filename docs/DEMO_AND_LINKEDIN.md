@@ -4,16 +4,18 @@
 
 JEV interprets a synthetic B2B request; fixed rules choose Sales, human review or Support; Google Sheets records the reason; a separately approved n8n sender explains saved decisions in a private Slack channel.
 
-## Six-slide annotated carousel
+## Eight individual, annotated PNG slides
 
-The red arrows are annotations over cropped **real application screenshots** captured on 24 September 2026. All companies and requests are fictional. Download these PNGs in order:
+The red arrows point to cropped **real application screenshots** captured on 24 September 2026. The 1200 × 1500 portrait slides preserve the screenshots' aspect ratios and include enlarged decision details. All companies and requests are fictional. Use these PNGs in order:
 
-1. [The n8n intake](../assets/linkedin/01-workflow-overview.png): form, duplicate check, JEV, Sheets and a Slack text preview.
-2. [Where JEV runs](../assets/linkedin/02-jev-and-rules.png): a native Vercel AI Gateway request inside the Evaluation Core, then answer validation and fixed policy.
-3. [The native Slack step](../assets/linkedin/03-native-slack-step.png): a separate inactive sender reads Sheets, formats five cases, holds a closed approval gate and has a connected n8n Slack node. Its OAuth channel access passed a **read-only** test. The six delivered messages pictured later used the earlier approved private webhook path; native posting has not been send-tested.
-4. [The saved results](../assets/linkedin/04-sheets-results.png): five synthetic live JEV intake rows; two sales scores, two review cases and one support case.
-5. [A small pilot in Slack](../assets/linkedin/05-slack-sales-cases.png): Beacon Services, a customer-reported approved EUR 6,000 pilot, receives a Sales follow-up with 93.02/100 business priority.
-6. [Review and Support in Slack](../assets/linkedin/06-slack-review-support.png): a EUR 120,000 multi-country request remains unscored because its scope is uncertain; an existing-customer incident goes to Support.
+1. [The business contrast](../assets/linkedin-v2/01-business-contrast.png): why a smaller, clear pilot can go to Sales while a larger, unclear rollout needs review.
+2. [The n8n intake](../assets/linkedin-v2/02-intake-validation.png): form, validation and duplicate check before JEV runs.
+3. [Where JEV runs](../assets/linkedin-v2/03-jev-and-policy.png): Vercel AI Gateway request inside the Evaluation Core, then answer validation and fixed policy.
+4. [The saved results](../assets/linkedin-v2/04-google-sheets.png): five synthetic live JEV intake rows; two sales scores, two review cases and one support case.
+5. [The visible Slack step](../assets/linkedin-v2/05-slack-workflow.png): a separate inactive sender reads Sheets, formats cases and has a native n8n Slack node behind a closed approval gate. Its OAuth channel access passed a **read-only** test. The six delivered messages pictured next used the earlier approved private webhook path; native posting has not been send-tested.
+6. [A small pilot in Slack](../assets/linkedin-v2/06-slack-sales-message.png): Beacon Services, a customer-reported approved EUR 6,000 pilot, receives a Sales follow-up with 93.02/100 business priority.
+7. [An unclear rollout in Slack](../assets/linkedin-v2/07-slack-review-message.png): a EUR 120,000 nine-office request remains unscored because its scope is uncertain.
+8. [A support case in Slack](../assets/linkedin-v2/08-slack-support-message.png): an existing-customer incident is handled by Support and receives no sales score.
 
 The original redacted evidence crops are in [assets/screenshots](../assets/screenshots/). The arrows and captions were added for explanation; no application UI or decision result was invented. The final images are visually reviewed and hashed in `checks/media_review.json`.
 
@@ -37,23 +39,36 @@ The original redacted evidence crops are in [assets/screenshots](../assets/scree
 
 ## Copy-ready LinkedIn post (English)
 
-> **The EUR 120,000 request got no score. The EUR 6,000 pilot went to Sales.**
+> Built an AI-assisted B2B Lead Qualification Workflow in n8n 🤖
 >
-> I built this B2B lead qualification demo to answer a simple question: **Who should handle an enquiry next, and why?**
+> I've been working on another automation project. This one turns an incoming B2B enquiry into a clear next action for the right internal team.
 >
-> The n8n flow is: **enquiry → JEV through Vercel AI Gateway → explicit business rules → Google Sheets → approved Slack notification.**
+> The workflow handles the process from request to internal notification:
 >
-> JEV interprets the work requested *now* through nine structured questions. Is it a new purchase or an existing service issue? A narrow pilot or a multi-country rollout? Is funding for this exact phase reported as approved? Code validates the answers; fixed rules choose the next team and decide whether a priority score is appropriate.
+> 🔹 Receive and validate an enquiry in n8n
+> 🔹 Check for an existing record in Google Sheets
+> 🔹 Use JEV through Vercel AI Gateway to understand the work requested **now**
+> 🔹 Apply explicit business rules to choose Sales, human review or Support
+> 🔹 Save the result and prepare an internal Slack summary
+> 🔹 Send selected saved demo results through a separate approval-gated n8n sender
 >
-> Three synthetic cases show why that split matters:
-> - A EUR 6,000 pilot with customer-reported funding approval → personal Sales follow-up, priority 93.02/100.
-> - A EUR 120,000 rollout across nine offices → human scope review, **no score yet**.
-> - A broken workflow under an existing service agreement → Support, **not a sales lead**.
+> The process is basically:
+> **Request → Understand → Check → Route → Store → Notify**
 >
-> I ran five fictional enquiries through the connected n8n/JEV/Sheets path. A separate, approval-gated n8n sender delivered five readable case summaries and a recap to a private Slack demo channel. The intake itself stays preview-only, and the workflow remains inactive.
+> 🛠️ Tech stack:
+> • n8n
+> • JEV via Vercel AI Gateway
+> • Google Sheets
+> • Slack
 >
-> The screenshots are from the real tools; the lead data is synthetic. The score is a business priority, not a prediction that someone will buy. The tests, partial live evaluation and remaining operational limits are documented here: https://github.com/Mvstnz/jev-n8n-b2b-lead-qualification
+> What I like about this project is that the AI helps **interpret** a messy request, while clear rules decide what happens next. A fictional EUR 6,000 pilot received a Sales follow-up and a 93.02/100 **business-priority** score. A EUR 120,000 nine-office rollout needed human scope review and no score yet. An existing customer issue went to Support.
 >
-> #n8n #JEV #AIAutomation #BusinessAutomation #RevOps
+> I tested five synthetic live JEV enquiries through n8n and Sheets, then sent five case summaries plus a recap to a private Slack demo channel after manual approval. Four of the five intake routes matched the predefined expectations. The screenshots show real app screens with fictional companies; this is a portfolio demo, and the workflows remain inactive.
+>
+> Code, tests and the limits of the live evaluation: https://github.com/Mvstnz/jev-n8n-b2b-lead-qualification
+>
+> More automation projects coming soon.
+>
+> #n8n #JEV #AIAutomation #WorkflowAutomation #BusinessAutomation
 
 Post this personally after checking the carousel order and wording. No LinkedIn publishing or customer communication was automated. The private Slack webhook and operational IDs are intentionally absent from the public repository.

@@ -18,4 +18,4 @@ The final images were cropped, visually reviewed, converted to metadata-free RGB
 PNGs and hashed in `checks/media_review.json`. The release scanner verifies those
 hashes, not pixels. Do not add fabricated evidence, account details, browser
 runtime URLs, secrets or the private setup ZIP. The red-arrow versions for
-LinkedIn are in `assets/linkedin/`. See `tools/README.md`.
+LinkedIn are in `assets/linkedin-v2/`; the earlier landscape set remains in `assets/linkedin/`. See `tools/README.md`.
