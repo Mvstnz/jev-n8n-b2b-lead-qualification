@@ -37,6 +37,8 @@ The original redacted evidence crops are in [assets/screenshots](../assets/scree
 
 `Current paid phase` means the work and budget requested **now**, such as a pilot rather than a hypothetical later company-wide rollout. Customer-reported approval has not been independently verified. The business thresholds are fictional demo policy, not market prices or delivery commitments.
 
+JEV was chosen for its [typed decision interface](https://vercel.com/ai-gateway/models/jev): it evaluates a supplied state against focused questions and returns machine-readable choices and uncertainty. [GPT-6 Luna](https://developers.openai.com/api/docs/models/gpt-6-luna) is an affordable general-purpose model that also supports structured outputs. Luna was not run on this lead set, so the post explains a workload-fit decision rather than claiming superior accuracy, latency or end-to-end cost.
+
 ## Copy-ready LinkedIn post (English)
 
 > Built an AI-assisted B2B Lead Qualification Workflow in n8n 🤖
@@ -60,6 +62,8 @@ The original redacted evidence crops are in [assets/screenshots](../assets/scree
 > • JEV via Vercel AI Gateway
 > • Google Sheets
 > • Slack
+>
+> Why JEV instead of a low-cost general model like GPT-6 Luna? Luna can return structured output too. But this step needs nine focused judgements about the current request, not generated sales copy. JEV is built to return typed answers and uncertainty for that kind of decision. My code validates those answers; fixed business rules decide the route and priority. I chose JEV for that fit, not because I proved it more accurate than Luna on these leads.
 >
 > What I like about this project is that the AI helps **interpret** a messy request, while clear rules decide what happens next. A fictional EUR 6,000 pilot received a Sales follow-up and a 93.02/100 **business-priority** score. A EUR 120,000 nine-office rollout needed human scope review and no score yet. An existing customer issue went to Support.
 >
